@@ -21,13 +21,18 @@
         https://www.furryfriendsgear.com/how-do-i-know-what-size-boots-to-get-my-dog/
     */
     --size-base: 1rem;
-    --size-yorkie: calc(var(var(--size-base) * 0.25));
-    --size-beagle: calc(var(var(--size-base) * 0.5));
-    --size-collie: var(--size-base);
+    --size-yorkie: calc(var(--size-base) * 0.25);
+    --size-beagle: calc(var(--size-base) * 0.5);
+    --size-collie: calc(var(--size-base) * 0.75);
     --size-labrador: calc(var(--size-base) * 1.25);
     --size-akita: calc(var(--size-base) * 1.5);
     --size-dane: calc(var(--size-base) * 1.75);
     --size-wolf: calc(var(--size-base) * 2);
+
+    /*
+        Misc variables
+    */
+    --transition: 0.2s ease-out;
 }
 
 /*
@@ -50,7 +55,7 @@ body {
     min-height: 100vh;
     font-family: 'Poppins', sans-serif;
     font-weight: 300;
-    background-color: rgb(var(--color-meta));
+    background-color: rgb(var(--color-wyoming));
     color: rgb(var(--color-texas));
 }
 
@@ -60,33 +65,17 @@ b, strong {
 
 svg {
     fill: currentColor;
+    transition: color var(--transition);
 }
 
 a {
-    color: rgb(var(--color-carolina));
-    transform: color 0.2s ease-out;
+    color: rgb(var(--color-caboose));
+    transition: color var(--transition);
 }
 
 a:hover,
 a:focus {
     color: rgb(var(--color-tucker));
-}
-
-/*
-    Custom styles
-*/
-
-.social {
-    margin: 0 var(--size-wolf);
-}
-
-.icon {
-    width: var(--size-wolf);
-    height: var(--size-wolf);
-}
-
-.footer {
-    font-size: var(--size-beagle);
 }
 
 /*
@@ -102,7 +91,7 @@ a:focus {
 }
 
 .h-list > * + * {
-    margin-left: var(--size-collie);
+    margin-left: var(--size-base);
 }
 
 .no-display {
@@ -121,4 +110,42 @@ a:focus {
     position: absolute;
     white-space: nowrap;
     width: 1px;
-  }
+}
+
+/*
+    Custom styles
+*/
+.title {
+    margin: var(--size-collie);
+    font-size: calc(var(--size-wolf) * 2);
+    color: rgba(var(--color-simmons), 0.5);
+}
+
+.social {
+    margin: var(--size-akita) 0;
+}
+
+.icon {
+    width: var(--size-wolf);
+    height: var(--size-wolf);
+    color: rgb(var(--color-texas));
+}
+
+.icon--github:hover,
+.icon--github:active {
+    color: rgb(var(--color-wash));
+}
+
+.icon--linkedin:hover,
+.icon--linkedin:active {
+    color: rgb(var(--color-caboose));
+}
+
+.icon--email:hover,
+.icon--email:active {
+    color: rgb(var(--color-simmons));
+}
+
+.footer {
+    font-size: var(--size-collie);
+}
