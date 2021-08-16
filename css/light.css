@@ -11,52 +11,14 @@
     --color-caboose: 9, 93, 179;
 
     /*
-        Sizing
-
-        Swiped from this dog foot sizing chart:
-        https://www.furryfriendsgear.com/how-do-i-know-what-size-boots-to-get-my-dog/
-    */
-    --size-base: 1rem;
-    --size-yorkie: calc(var(--size-base) * 0.25);
-    --size-beagle: calc(var(--size-base) * 0.5);
-    --size-collie: calc(var(--size-base) * 0.75);
-    --size-labrador: calc(var(--size-base) * 1.25);
-    --size-akita: calc(var(--size-base) * 1.5);
-    --size-dane: calc(var(--size-base) * 1.75);
-    --size-wolf: calc(var(--size-base) * 2);
-
-    /*
         Misc variables
     */
     --transition: 0.2s ease-out;
 }
 
-/*
-    Base styles
-*/
-html,
 body {
-    font-size: 18px;
-    line-height: 1.25;
-}
-
-body {
-    padding: 0;
-    margin: 0;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    min-height: 100vh;
-    font-family: 'Poppins', sans-serif;
-    font-weight: 300;
     background-color: rgb(var(--color-wyoming));
     color: rgb(var(--color-texas));
-}
-
-h1, b, strong {
-    font-weight: 600;
 }
 
 svg {
@@ -74,43 +36,6 @@ a:focus {
     color: rgb(var(--color-tucker));
 }
 
-/*
-    Trumps, helpers and utilities
-*/
-.h-list {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.h-list > * + * {
-    margin-left: var(--size-base);
-}
-
-.no-display {
-    display: none !important;
-}
-
-/*
-    Swiped directly from CSS tricks:
-    https://css-tricks.com/comparing-various-ways-to-hide-things-in-css/#method-5-the-visually-hidden-class
-*/
-.visually-hidden:not(:focus):not(:active) {
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
-}
-
-/*
-    Custom styles
-*/
 .title {
     margin: var(--size-collie);
     font-size: calc(var(--size-wolf) * 2);

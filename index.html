@@ -1,14 +1,104 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>lynds.dev | Lyndsey Herbert, Senior Front-End Developer</title>
         <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
-        <link rel="stylesheet" href="css/light.css" />
-        <link rel="stylesheet" href="css/dark.css" media="screen and (prefers-color-scheme: dark)" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,600;1,300;1,600&display=swap" rel="stylesheet">
+        <style type="text/css">
+            :root {
+                /*
+                    Sizing
+
+                    Name source:
+                    https://www.furryfriendsgear.com/how-do-i-know-what-size-boots-to-get-my-dog/
+                */
+                --size-base: 1rem;
+                --size-yorkie: calc(var(--size-base) * 0.25);
+                --size-beagle: calc(var(--size-base) * 0.5);
+                --size-collie: calc(var(--size-base) * 0.75);
+                --size-labrador: calc(var(--size-base) * 1.25);
+                --size-akita: calc(var(--size-base) * 1.5);
+                --size-dane: calc(var(--size-base) * 1.75);
+                --size-wolf: calc(var(--size-base) * 2);
+            }
+
+            html,
+            body {
+                font-size: 18px;
+                line-height: 1.25;
+            }
+
+            body {
+                padding: 0;
+                margin: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                text-align: center;
+                min-height: 100vh;
+                font-family: 'Poppins', sans-serif;
+                font-weight: 300;
+            }
+
+            h1, b, strong {
+                font-weight: 600;
+            }
+
+            .h-list {
+                list-style-type: none;
+                margin: 0;
+                padding: 0;
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .h-list > * + * {
+                margin-left: var(--size-base);
+            }
+
+            .no-display {
+                display: none !important;
+            }
+
+            /*
+                Source:
+                https://css-tricks.com/comparing-various-ways-to-hide-things-in-css/#method-5-the-visually-hidden-class
+            */
+            .visually-hidden:not(:focus):not(:active) {
+                clip: rect(0 0 0 0);
+                clip-path: inset(50%);
+                height: 1px;
+                overflow: hidden;
+                position: absolute;
+                white-space: nowrap;
+                width: 1px;
+            }
+
+            .title {
+                margin: var(--size-collie);
+                font-size: calc(var(--size-wolf) * 2);
+            }
+
+            .social {
+                margin: var(--size-akita) 0;
+            }
+
+            .icon {
+                width: var(--size-wolf);
+                height: var(--size-wolf);
+            }
+
+            .footer {
+                font-size: var(--size-collie);
+            }
+        </style>
+        <link rel="stylesheet" href="css/light.css" />
+        <link rel="stylesheet" href="css/dark.css" media="screen and (prefers-color-scheme: dark)" />
     </head>
 
     <body>
@@ -25,7 +115,7 @@
             <ul class="h-list social">
                 <li class="h-list__item">
                     <a href="https://github.com/lyndsherb" target="_blank" rel="noreferrer noopener">
-                        <svg role="image" class="icon icon--github">
+                        <svg role="img" class="icon icon--github">
                             <use xlink:href="#icon--github" />
                         </svg>
                         <span class="visually-hidden">
@@ -35,7 +125,7 @@
                 </li>
                 <li>
                     <a href="https://www.linkedin.com/in/lyndsey-herbert-98a865108/" target="_blank" rel="noreferrer noopener">
-                        <svg role="image" class="icon icon--linkedin">
+                        <svg role="img" class="icon icon--linkedin">
                             <use xlink:href="#icon--linkedin" />
                         </svg>
                         <span class="visually-hidden">
@@ -45,7 +135,7 @@
                 </li>
                 <li>
                     <a href="mailto:lyndsey+website@lynds.dev" target="_blank" rel="noreferrer noopener">
-                        <svg role="image" class="icon icon--email">
+                        <svg role="img" class="icon icon--email">
                             <use xlink:href="#icon--email" />
                         </svg>
                         <span class="visually-hidden">
