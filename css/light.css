@@ -59,7 +59,7 @@ body {
     color: rgb(var(--color-texas));
 }
 
-b, strong {
+h1, b, strong {
     font-weight: 600;
 }
 
