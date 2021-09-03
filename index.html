@@ -16,13 +16,13 @@
                     https://www.furryfriendsgear.com/how-do-i-know-what-size-boots-to-get-my-dog/
                 */
                 --size-base: 1rem;
-                --size-yorkie: calc(var(--size-base) * 0.25);
-                --size-beagle: calc(var(--size-base) * 0.5);
-                --size-collie: calc(var(--size-base) * 0.75);
-                --size-labrador: calc(var(--size-base) * 1.25);
-                --size-akita: calc(var(--size-base) * 1.5);
-                --size-dane: calc(var(--size-base) * 1.75);
-                --size-wolf: calc(var(--size-base) * 2);
+                --size-yorkie: calc(var(--size-base, 1rem) * 0.25);
+                --size-beagle: calc(var(--size-base, 1rem) * 0.5);
+                --size-collie: calc(var(--size-base, 1rem) * 0.75);
+                --size-labrador: calc(var(--size-base, 1rem) * 1.25);
+                --size-akita: calc(var(--size-base, 1rem) * 1.5);
+                --size-dane: calc(var(--size-base, 1rem) * 1.75);
+                --size-wolf: calc(var(--size-base, 1rem) * 2);
             }
 
             html,
@@ -32,7 +32,7 @@
             }
 
             body {
-                padding: 0;
+                padding: var(--size-base, 1rem);
                 margin: 0;
                 display: flex;
                 flex-direction: column;
@@ -59,7 +59,7 @@
             }
 
             .h-list > * + * {
-                margin-left: var(--size-base);
+                margin-left: var(--size-base, 1rem);
             }
 
             .no-display {
@@ -81,21 +81,27 @@
             }
 
             .title {
-                margin: var(--size-collie);
-                font-size: calc(var(--size-wolf) * 2);
+                margin: var(--size-collie, 0.75rem);
+                font-size: calc(var(--size-wolf, 2rem) * 1.5);
             }
 
             .social {
-                margin: var(--size-akita) 0;
+                margin: var(--size-akita, 1.5rem) 0;
             }
 
             .icon {
-                width: var(--size-wolf);
-                height: var(--size-wolf);
+                width: var(--size-wolf, 2rem);
+                height: var(--size-wolf, 2rem);
             }
 
             .footer {
-                font-size: var(--size-collie);
+                font-size: var(--size-collie, 0.75rem);
+            }
+
+            @media (min-width: 400px) {
+                .title {
+                    font-size: calc(var(--size-wolf, 2rem) * 2)
+                }
             }
         </style>
         <link rel="stylesheet" href="css/light.css" />

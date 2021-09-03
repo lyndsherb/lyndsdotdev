@@ -17,8 +17,8 @@
 }
 
 body {
-    background-color: rgb(var(--color-wyoming));
-    color: rgb(var(--color-texas));
+    background-color: rgb(var(--color-wyoming, 232, 232, 232));
+    color: rgb(var(--color-texas, 13, 27, 42));
 }
 
 svg {
@@ -27,46 +27,34 @@ svg {
 }
 
 a {
-    color: rgb(var(--color-caboose));
+    color: rgb(var(--color-caboose, 9, 93, 179));
     transition: color var(--transition);
 }
 
 a:hover,
 a:focus {
-    color: rgb(var(--color-tucker));
+    color: rgb(var(--color-tucker, 17, 157, 164));
 }
 
 .title {
-    margin: var(--size-collie);
-    font-size: calc(var(--size-wolf) * 2);
-    color: rgba(var(--color-simmons), 0.75);
-}
-
-.social {
-    margin: var(--size-akita) 0;
+    color: rgba(var(--color-simmons, 179, 9, 75), 0.75);
 }
 
 .icon {
-    width: var(--size-wolf);
-    height: var(--size-wolf);
-    color: rgb(var(--color-texas));
+    color: rgb(var(--color-texas, 13, 27, 42));
 }
 
 .icon--github:hover,
 .icon--github:active {
-    color: rgb(var(--color-wash));
+    color: rgb(var(--color-wash, 147, 163, 177));
 }
 
 .icon--linkedin:hover,
 .icon--linkedin:active {
-    color: rgb(var(--color-caboose));
+    color: rgb(var(--color-caboose, 9, 93, 179));
 }
 
 .icon--email:hover,
 .icon--email:active {
-    color: rgb(var(--color-simmons));
-}
-
-.footer {
-    font-size: var(--size-collie);
+    color: rgb(var(--color-simmons, 179, 9, 75));
 }
