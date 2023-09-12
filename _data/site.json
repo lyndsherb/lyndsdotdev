@@ -1,0 +1,21 @@
+{
+    "title": "lynds.dev",
+    "subtitle": "Lyndsey Herbert, Principal Developer",
+    "contact": [
+        {
+            "title": "Check out my projects on Github",
+            "icon": "github",
+            "url": "https://www.github.com/lyndsherb/"
+        },
+        {
+            "title": "View my employment history on Linkedin",
+            "icon": "linkedin",
+            "url": "https://www.linkedin.com/in/lyndsherb/"
+        },
+        {
+            "title": "Want to chat? Send me an email! (email is obfuscated for spam prevention)",
+            "icon": "email",
+            "url": "mailto: website plus hello at lynds dot dev"
+        }
+    ]
+}

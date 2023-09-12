@@ -1,0 +1,23 @@
+{
+  "name": "lyndsdotdev",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "eleventy",
+    "serve": "eleventy --serve"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lyndsherb/lyndsdotdev.git"
+  },
+  "author": "Lyndsey Herbert",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lyndsherb/lyndsdotdev/issues"
+  },
+  "homepage": "https://github.com/lyndsherb/lyndsdotdev#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^2.0.1"
+  }
+}
