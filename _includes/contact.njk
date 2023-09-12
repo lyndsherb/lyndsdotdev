@@ -1,0 +1,13 @@
+{% if site.contact.length %}
+<ul class="h-list social">
+    {% for item in site.contact %}
+        <li class="h-list__item">
+            <a href="{{ item.url }}" target="_blank" rel="noreferrer noopener" title="{{ item.title }}">
+                <svg role="img" class="icon icon--{{ item.icon }}">
+                    <use xlink:href="#icon--{{ item.icon }}" />
+                </svg>
+            </a>
+        </li>
+    {% endfor %}
+</ul>
+{% endif %}

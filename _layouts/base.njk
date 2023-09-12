@@ -23,29 +23,7 @@
         </header>
         <main>
             {{ content | safe }}
-            <ul class="h-list social">
-                <li class="h-list__item">
-                    <a href="https://github.com/lyndsherb" target="_blank" rel="noreferrer noopener" title="Check out my projects on Github">
-                        <svg role="img" class="icon icon--github">
-                            <use xlink:href="#icon--github" />
-                        </svg>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://www.linkedin.com/in/lyndsey-herbert-98a865108/" target="_blank" rel="noreferrer noopener" title="View my employment history on Linkedin">
-                        <svg role="img" class="icon icon--linkedin">
-                            <use xlink:href="#icon--linkedin" />
-                        </svg>
-                    </a>
-                </li>
-                <li>
-                    <a href="mailto:website plus hello at lynds dot dev" target="_blank" rel="noreferrer noopener" title="Want to chat? Send me an email! (email is obfuscated for spam prevention)">
-                        <svg role="img" class="icon icon--email">
-                            <use xlink:href="#icon--email" />
-                        </svg>
-                    </a>
-                </li>
-            </ul>
+            {% include 'contact.njk' %}
         </main>
         <footer class="footer">
             <p>Icons from <a href="https://icomoon.io/app/" target="_blank" rel="noreferrer noopener">IcoMoon</a> and <a href="https://material.io/icons/" target="_blank" rel="noreferrer noopener">Material Design</a>.</p>
