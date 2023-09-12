@@ -1,6 +1,16 @@
 {
     "title": "lynds.dev",
     "subtitle": "Lyndsey Herbert, Principal Developer",
+    "navigation": [
+        {
+            "title": "Home",
+            "url": "/"
+        },
+        {
+            "title": "About",
+            "url": "/about/"
+        }
+    ],
     "contact": [
         {
             "title": "Check out my projects on Github",

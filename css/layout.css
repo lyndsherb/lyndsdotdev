@@ -48,7 +48,10 @@ aside {
 }
 
 header {
-    grid-area: header;
+    margin: auto 0 0;
+}
+
+nav {
     margin: 0 0 auto 0;
 }
 
