@@ -127,7 +127,6 @@ h1, b, strong {
         grid-template-areas:
             "header main"
             "nav main"
-            "aside main"
             "footer main";
     }
 
@@ -137,5 +136,10 @@ h1, b, strong {
 
     nav {
         align-self: start;
+    }
+
+    aside {
+        grid-area: footer;
+        margin-bottom: 10vh;
     }
 }
