@@ -1,0 +1,60 @@
+:root {
+    /*
+        Colours
+        Coolors Exported Palette - https://coolors.co/0d1b2a-e8e8e8-93a3b1-119da4-b3094b
+    */
+    --color-texas: 13, 27, 42;
+    --color-wyoming: 232, 232, 232;
+    --color-wash: 147, 163, 177;
+    --color-tucker: 17, 157, 164;
+    --color-simmons: 179, 9, 75;
+    --color-caboose: 9, 93, 179;
+
+    /*
+        Misc variables
+    */
+    --transition: 0.2s ease-out;
+}
+
+body {
+    background-color: rgb(var(--color-wyoming, 232, 232, 232));
+    color: rgb(var(--color-texas, 13, 27, 42));
+}
+
+svg {
+    fill: currentColor;
+    transition: color var(--transition);
+}
+
+a {
+    color: rgb(var(--color-caboose, 9, 93, 179));
+    transition: color var(--transition);
+}
+
+a:hover,
+a:focus {
+    color: rgb(var(--color-tucker, 17, 157, 164));
+}
+
+.title {
+    color: rgba(var(--color-simmons, 179, 9, 75), 0.75);
+}
+
+.icon {
+    color: rgb(var(--color-texas, 13, 27, 42));
+}
+
+.icon--github:hover,
+.icon--github:active {
+    color: rgb(var(--color-wash, 147, 163, 177));
+}
+
+.icon--linkedin:hover,
+.icon--linkedin:active {
+    color: rgb(var(--color-caboose, 9, 93, 179));
+}
+
+.icon--email:hover,
+.icon--email:active {
+    color: rgb(var(--color-simmons, 179, 9, 75));
+}
