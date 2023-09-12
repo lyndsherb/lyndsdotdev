@@ -26,25 +26,22 @@ body {
     margin: 0;
     display: grid;
     grid-template-columns: min-content 1fr;
+    grid-template-columns: min-content 1fr;
     grid-template-areas:
-        "aside main";
+        "header nav"
+        "main main"
+        "aside aside"
+        "footer footer";
     grid-gap: var(--size-labrador, 1.25rem);
     font-family: sans-serif;
     font-weight: 300;
 }
 
+header,
 aside,
-main {
+main,
+footer {
     padding: var(--size-beagle, 0.5rem);
-}
-
-aside {
-    position: sticky;
-    top: 0;
-    width: 20vw;
-    height: 98vh;
-    display: flex;
-    flex-direction: column;
 }
 
 header {
@@ -52,7 +49,7 @@ header {
 }
 
 nav {
-    margin: 0 0 auto 0;
+    align-self: center;
 }
 
 main {
@@ -60,9 +57,13 @@ main {
     max-width: 80ch;
 }
 
+aside {
+    align-self: end;
+}
+
 footer {
     grid-area: footer;
-    align-content: end;
+    align-self: end;
 }
 
 h1, b, strong {
@@ -101,7 +102,10 @@ h1, b, strong {
 }
 
 .title {
-    font-size: calc(var(--size-akita, 1.5rem) * 1.5);
+    --min-size: var(--size-akita, 1.5rem);
+    --middle-value: 100vw;
+    --max-size: calc(var(--size-akita, 1.5rem) * 2);
+    font-size: clamp(var(--min-size), var(--middle-value), var(--max-size));
     margin: 0;
 }
 
@@ -118,8 +122,20 @@ h1, b, strong {
     font-size: var(--size-collie, 0.75rem);
 }
 
-@media (min-width: 400px) {
-    .title {
-        font-size: calc(var(--size-akita, 1.5rem) * 2)
+@media (min-width: 768px) {
+    body {
+        grid-template-areas:
+            "header main"
+            "nav main"
+            "aside main"
+            "footer main";
+    }
+
+    header {
+        align-self: end;
+    }
+
+    nav {
+        align-self: start;
     }
 }

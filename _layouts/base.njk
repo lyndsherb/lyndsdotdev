@@ -18,22 +18,22 @@
     </head>
 
     <body>
-        <aside>
-            <header>
-                <h1 class="title">{{site.title}}</h1>
-            </header>
-            {% include 'navigation.njk' %}
-            {% include 'contact.njk' %}
-            <footer class="footer">
-                <p>Icons from <a href="https://icomoon.io/app/" target="_blank" rel="noreferrer noopener">IcoMoon</a> and <a href="https://material.io/icons/" target="_blank" rel="noreferrer noopener">Material Design</a>.</p>
-                <p>&copy; Lyndsey Herbert 2023, all rights reserved. Powered by <a href="https://www.11ty.dev" target="_blank" rel="noopener noreferrer">11ty.</a></p>
-            </footer>
-        </aside>
+        <header>
+            <h1 class="title">{{site.title}}</h1>
+        </header>
+        {% include 'navigation.njk' %}
         <main>
             {{ content | safe }}
         </main>
+        <aside>
+            {% include 'contact.njk' %}
+        </aside>
+        <footer class="footer">
+            <p>Icons from <a href="https://icomoon.io/app/" target="_blank" rel="noreferrer noopener">IcoMoon</a> and <a href="https://material.io/icons/" target="_blank" rel="noreferrer noopener">Material Design</a>.</p>
+            <p>&copy; Lyndsey Herbert 2023, all rights reserved. Powered by <a href="https://www.11ty.dev" target="_blank" rel="noopener noreferrer">11ty.</a></p>
+        </footer>
         <div class="no-display">
-            {% include 'images/icons/icons-mini.svg' %}
+            {% include 'images/icons/svg-symbols.svg' %}
         </div>
     </body>
 </html>
