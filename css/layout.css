@@ -76,7 +76,6 @@ h1, b, strong {
     padding: 0;
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
 }
 
 .h-list__item {
@@ -107,10 +106,6 @@ h1, b, strong {
     --max-size: calc(var(--size-akita, 1.5rem) * 2);
     font-size: clamp(var(--min-size), var(--middle-value), var(--max-size));
     margin: 0;
-}
-
-.social {
-    margin: var(--size-akita, 1.5rem) 0;
 }
 
 .icon {
