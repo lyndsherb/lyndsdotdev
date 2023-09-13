@@ -1,6 +1,6 @@
 ---
 title: Posts
-layout: base.njk
+layout: posts.njk
 ---
 
 Posts will go here...
