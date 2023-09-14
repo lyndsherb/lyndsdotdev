@@ -41,9 +41,12 @@ body {
 header,
 nav,
 aside,
-main,
 footer {
     padding: var(--size-beagle, 0.5rem);
+}
+
+main {
+    padding: var(--size-beagle, 0.5rem) var(--size-base, 1rem);
 }
 
 header {

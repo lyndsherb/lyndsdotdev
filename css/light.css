@@ -17,8 +17,12 @@
 }
 
 body {
-    background-color: rgb(var(--color-wyoming, 232, 232, 232));
+    background-color: rgb(var(--color-wash, 147, 163, 177));
     color: rgb(var(--color-texas, 13, 27, 42));
+}
+
+main {
+    background-color: rgba(var(--color-texas), 0.05);
 }
 
 svg {
@@ -46,7 +50,7 @@ a:focus {
 
 .icon--github:hover,
 .icon--github:active {
-    color: rgb(var(--color-wash, 147, 163, 177));
+    color: rgba(var(--color-texas), 0.75);
 }
 
 .icon--linkedin:hover,
