@@ -1,6 +1,7 @@
 {
     "title": "lynds.dev",
     "subtitle": "Lyndsey Herbert, Principal Developer",
+    "description": "The site and tech blog of Lyndsey Herbert, principal front-end developer at <a href='https://ampersandcommerce.com' target='_blank' rel='noopener noreferrer'>Ampersand Commerce</a>",
     "meta": [
         {
             "name": "viewport",
@@ -8,7 +9,7 @@
         },
         {
             "name": "description",
-            "content": "A technical blog written by a Frontend Developer to pass information out to the world"
+            "content": "The texh blog of Lyndsey Herbert, a principal frontend developer"
         },
         {
             "name": "robots",
@@ -19,16 +20,6 @@
             "content": "#B3094B"
         }
     ],
-    "navigation": [
-        {
-            "title": "Home",
-            "url": "/"
-        },
-        {
-            "title": "Posts",
-            "url": "/posts/"
-        }
-    ],
     "contact": [
         {
             "title": "Check out my projects on Github",
@@ -36,7 +27,7 @@
             "url": "https://www.github.com/lyndsherb/"
         },
         {
-            "title": "View my employment history on Linkedin",
+            "title": "Find me on Linkedin",
             "icon": "linkedin",
             "url": "https://www.linkedin.com/in/lyndsherb/"
         },

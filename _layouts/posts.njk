@@ -1,6 +1,3 @@
----
-layout: base.njk
----
 <section>
     <h2>Recent posts</h2>
     {% if collections.post.length %}
@@ -19,7 +16,7 @@ layout: base.njk
                 </div>
               </div>
               <footer>
-                <a href="{{ post.url }}" class="button is-fullwidth is-link card-footer-item">Read article</a>
+                <a href="{{ post.url }}">Read article</a>
               </footer>
             </article>
           {% endif %}

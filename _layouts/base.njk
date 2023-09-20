@@ -22,13 +22,15 @@
 
     <body>
         <header>
-            <h1 class="title">{{site.title}}</h1>
+            <h1 class="title">{{ site.title }}</h1>
         </header>
         {% include 'navigation.njk' %}
         <main>
             {{ content | safe }}
         </main>
         <aside>
+            <p>{{ site.description | safe }}</p>
+            <h3>Find me on social media</h3>
             {% include 'contact.njk' %}
         </aside>
         <footer class="footer">
