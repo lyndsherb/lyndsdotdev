@@ -22,18 +22,20 @@
     </head>
 
     <body>
-        <header>
-            <h1 class="title">{{ site.title }}</h1>
+        <header class="page-header">
+            <h1 class="title">
+                <a href="/" class="title-link">{{ site.title }}</a>
+            </h1>
         </header>
         {% include 'navigation.njk' %}
-        <main>
+        <main class="content">
             {{ content | safe }}
         </main>
-        <aside class="no-print">
+        <aside class="page-aside no-print">
             <p>{{ site.description | safe }}</p>
             {% include 'contact.njk' %}
         </aside>
-        <footer class="footer">
+        <footer class="page-footer">
             <p class="no-print">Icons from <a href="https://icomoon.io/app/" target="_blank" rel="noreferrer noopener">IcoMoon</a> and <a href="https://material.io/icons/" target="_blank" rel="noreferrer noopener">Material Design</a>.</p>
             <p class="no-print">Powered by <a href="https://www.11ty.dev" target="_blank" rel="noopener noreferrer">11ty.</a></p>
             <p>&copy; Lyndsey Herbert {{ '' | currentYear }}, all rights reserved.</p>
