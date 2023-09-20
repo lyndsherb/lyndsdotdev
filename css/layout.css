@@ -37,6 +37,10 @@ body {
     font-weight: 300;
 }
 
+h1, b, strong {
+    font-weight: 600;
+}
+
 .page-aside {
     grid-area: aside;
     display: flex;
@@ -44,12 +48,8 @@ body {
     justify-content: space-between;
 }
 
-aside h3 {
+.social-title {
     margin-top: auto;
-}
-
-h1, b, strong {
-    font-weight: 600;
 }
 
 .page-aside,
