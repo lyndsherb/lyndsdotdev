@@ -107,16 +107,24 @@ h1, b, strong {
     font-size: var(--size-collie, 0.75rem);
 }
 
+.no-display {
+    grid-area: no-display;
+}
+
 @media (min-width: 768px) {
     body {
         grid-template-areas:
             "header main"
-            ". main"
             "aside main"
             "footer main";
     }
 
     main {
+        /*
+            on displays that show the sidebar, ensure the
+            main content area is full height to keep the sidebar
+            correctly spaced
+        */
         min-height: calc(100vh - var(--size-base, 1rem));
     }
 }
