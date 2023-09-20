@@ -9,14 +9,17 @@ layout: base.njk
             <h2>
                 {{ post.data.title }}
             </h2>
-            {{ post.data.date | readableDate }}
+            <timedate>{{ post.data.date | readableDate }}</timedate>
             </header>
             <main>
             {{ post.data.content | safe }}
             </main>
+            <footer>
+                <a href="{{ post.url }}">Permalink</a>
+            </footer>
         </article>
         {% endif %}
     {% endfor %}
 {% else %}
-Nothing found...
+    No posts could be found. Is everything rendering as expected?
 {% endif %}
