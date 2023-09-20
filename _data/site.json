@@ -9,11 +9,11 @@
         },
         {
             "name": "description",
-            "content": "The texh blog of Lyndsey Herbert, a principal frontend developer"
+            "content": "The tech blog of frontend developer Lyndsey Herbert"
         },
         {
             "name": "robots",
-            "content": "index, follow"
+            "content": "index,follow"
         },
         {
             "name": "theme-color",
