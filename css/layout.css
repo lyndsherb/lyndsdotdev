@@ -25,15 +25,14 @@ body {
     padding: 0;
     margin: 0;
     display: grid;
-    grid-template-columns: min-content 1fr;
+    grid-template-rows: max-content 1fr;
     grid-template-columns: min-content 1fr;
     grid-template-areas:
-        "header nav"
+        "header header"
         "main main"
         "aside aside"
         "footer footer";
     grid-gap: var(--size-labrador, 1.25rem);
-    min-height: 100vh;
     font-family: sans-serif;
     font-weight: 300;
 }
@@ -43,10 +42,6 @@ nav,
 aside,
 footer {
     padding: var(--size-beagle, 0.5rem);
-}
-
-main {
-    padding: var(--size-beagle, 0.5rem) var(--size-base, 1rem);
 }
 
 header {
@@ -59,13 +54,19 @@ nav {
 
 main {
     grid-area: main;
+    padding: var(--size-beagle, 0.5rem) var(--size-base, 1rem);
     max-width: 80ch;
-    /* Temp addition so shorter-than-100vh pages on mobile don't look awful */
-    min-height: 75vh;
 }
 
 aside {
-    align-self: end;
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+aside h3 {
+    margin-top: auto;
 }
 
 footer {
@@ -86,32 +87,14 @@ h1, b, strong {
 }
 
 .h-list__item {
-    margin-right: var(--size-base, 1rem);
-}
-
-.no-display {
-    display: none !important;
-}
-
-/*
-    Source:
-    https://css-tricks.com/comparing-various-ways-to-hide-things-in-css/#method-5-the-visually-hidden-class
-*/
-.visually-hidden:not(:focus):not(:active) {
-    clip: rect(0 0 0 0);
-    clip-path: inset(50%);
-    height: 1px;
-    overflow: hidden;
-    position: absolute;
-    white-space: nowrap;
-    width: 1px;
+    margin-right: var(--size-base);
 }
 
 .title {
     --min-size: var(--size-akita, 1.5rem);
     --middle-value: 100vw;
     --max-size: calc(var(--size-akita, 1.5rem) * 2);
-    font-size: clamp(var(--min-size), var(--middle-value), var(--max-size));
+    font-size: clamp(var(--min-size, 1.5rem), var(--middle-value, 100vw), var(--max-size, 3rem));
     margin: 0;
 }
 
@@ -128,20 +111,12 @@ h1, b, strong {
     body {
         grid-template-areas:
             "header main"
-            "nav main"
+            ". main"
+            "aside main"
             "footer main";
     }
 
-    header {
-        align-self: end;
-    }
-
-    nav {
-        align-self: start;
-    }
-
-    aside {
-        grid-area: footer;
-        margin-bottom: 10vh;
+    main {
+        min-height: calc(100vh - var(--size-base, 1rem));
     }
 }

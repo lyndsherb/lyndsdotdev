@@ -8,5 +8,5 @@
 }
 
 body {
-    background-color: rgb(var(--color-wyoming));
+    background-color: rgb(var(--color-wyoming, 13, 27, 42));
 }
