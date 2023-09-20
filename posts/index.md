@@ -1,4 +1,4 @@
 ---
 title: Posts
-layout: base.njk
+layout: posts.njk
 ---

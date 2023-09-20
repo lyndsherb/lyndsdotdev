@@ -1,6 +1,6 @@
 ---
 title: Hello world!
-layout: post.njk
+layout: latest-post.njk
 tags: introduction, first post, 11ty, tech blog
 description: A welcome to my blog and all of the plans I have coming up.
 date: 2023-09-20
