@@ -4,7 +4,7 @@ description: This is the first post on my blog
 tags: post
 date: 2023-09-13
 layout: post.njk
-permalink: '{{ date | readableDate | slugify }}'
+permalink: '/posts/{{ date | shortDate | slugify }}/{{ title | slugify }}'
 ---
 
 * Welcome to my blog
