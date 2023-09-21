@@ -48,6 +48,10 @@ h1, b, strong {
     justify-content: space-between;
 }
 
+.mini-about {
+    margin-top: 0;
+}
+
 .social-title {
     margin-top: auto;
 }
