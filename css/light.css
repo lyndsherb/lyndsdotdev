@@ -9,26 +9,19 @@
     --color-tucker: 17, 157, 164;
     --color-simmons: 179, 9, 75;
     --color-caboose: 9, 93, 179;
-
-    /*
-        Misc variables
-    */
-    --transition: 0.2s ease-out;
 }
 
 body {
-    background-color: rgb(var(--color-wyoming, 232, 232, 232));
+    background-color: rgb(var(--color-wash, 147, 163, 177));
     color: rgb(var(--color-texas, 13, 27, 42));
 }
 
 svg {
     fill: currentColor;
-    transition: color var(--transition);
 }
 
 a {
     color: rgb(var(--color-caboose, 9, 93, 179));
-    transition: color var(--transition);
 }
 
 a:hover,
@@ -36,8 +29,12 @@ a:focus {
     color: rgb(var(--color-tucker, 17, 157, 164));
 }
 
-.title {
+.title-link {
     color: rgba(var(--color-simmons, 179, 9, 75), 0.75);
+}
+
+.content {
+    background-color: rgba(var(--color-texas, 13, 27, 4), 0.05);
 }
 
 .icon {
@@ -46,7 +43,7 @@ a:focus {
 
 .icon--github:hover,
 .icon--github:active {
-    color: rgb(var(--color-wash, 147, 163, 177));
+    color: rgba(var(--color-texas), 0.75);
 }
 
 .icon--linkedin:hover,
@@ -57,4 +54,18 @@ a:focus {
 .icon--email:hover,
 .icon--email:active {
     color: rgb(var(--color-simmons, 179, 9, 75));
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+    :root {
+        /*
+            Misc variables
+        */
+        --transition: 0.2s ease-out;
+    }
+
+    svg,
+    a {
+        transition: color var(--transition, 0.2s ease-out);
+    }
 }

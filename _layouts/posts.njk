@@ -1,0 +1,30 @@
+---
+layout: base.njk
+---
+<section>
+    <h2>Recent posts</h2>
+    {% if collections.post.length %}
+      {% for post in collections.post | reverse %}
+        {% if loop.index0 < 3 %}
+            <article>
+              <header>
+                <h3>
+                  {{ post.data.title }}
+                </h3>
+                {{ post.data.date | readableDate }}
+              </header>
+              <div>
+                <div>
+                  {{ post.data.description }}
+                </div>
+              </div>
+              <footer>
+                <a href="{{ post.url }}">Read article</a>
+              </footer>
+            </article>
+          {% endif %}
+      {% endfor %}
+    {% else %}
+    <p>No posts found...</p>
+    {% endif %}
+</section>

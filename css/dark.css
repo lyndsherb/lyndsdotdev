@@ -6,3 +6,7 @@
     --color-simmons: 249, 174, 203;
     --color-caboose: 139, 194, 249;
 }
+
+body {
+    background-color: rgb(var(--color-wyoming, 13, 27, 42));
+}

@@ -3,13 +3,17 @@
     <head>
         <title>{{ site.title }} | {{ site.subtitle }}</title>
         <meta charset="UTF-8"/>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        {% if site.meta %}
+            {% for meta in site.meta %}
+                <meta name="{{ meta.name }}" content="{{ meta.content }}" />
+            {% endfor %}
+        {% endif %}
         <style type="text/css">
             {% include 'css/layout.css' %}
+            {% include 'css/utility.css' %}
         </style>
-        <link rel="stylesheet" href="css/light.css" />
-        <link rel="stylesheet" href="css/dark.css" media="screen and (prefers-color-scheme: dark)" />
-        <meta name="theme-color" content="#B3094B" />
+        <link rel="stylesheet" href="/css/light.css" media="screen" />
+        <link rel="stylesheet" href="/css/dark.css" media="screen and (prefers-color-scheme: dark)" />
         <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="images/favicons/favicon-32x32.png" media="(prefers-color-scheme: light)" />
         <link rel="icon" type="image/png" sizes="16x16" href="images/favicons/favicon-16x16.png" media="(prefers-color-scheme: light)" />
@@ -18,19 +22,26 @@
     </head>
 
     <body>
-        <header>
-            <h1 class="title">{{site.title}}</h1>
+        <header class="page-header">
+            <h1 class="title">
+                <a href="/" class="title-link">{{ site.title }}</a>
+            </h1>
         </header>
-        <main>
+        {% include 'navigation.njk' %}
+        <main class="content">
             {{ content | safe }}
-            {% include 'contact.njk' %}
         </main>
-        <footer class="footer">
-            <p>Icons from <a href="https://icomoon.io/app/" target="_blank" rel="noreferrer noopener">IcoMoon</a> and <a href="https://material.io/icons/" target="_blank" rel="noreferrer noopener">Material Design</a>.</p>
-            <p>&copy; Lyndsey Herbert 2023, all rights reserved. Powered by <a href="https://www.11ty.dev" target="_blank" rel="noopener noreferrer">11ty.</a></p>
+        <aside class="page-aside no-print">
+            <p class="mini-about">{{ site.description | safe }}</p>
+            {% include 'contact.njk' %}
+        </aside>
+        <footer class="page-footer">
+            <p class="no-print">Icons from <a href="https://icomoon.io/app/" target="_blank" rel="noreferrer noopener">IcoMoon</a> and <a href="https://material.io/icons/" target="_blank" rel="noreferrer noopener">Material Design</a>.</p>
+            <p class="no-print">Powered by <a href="https://www.11ty.dev" target="_blank" rel="noopener noreferrer">11ty</a>.</p>
+            <p>&copy; Lyndsey Herbert {{ '' | currentYear }}, all rights reserved.</p>
         </footer>
         <div class="no-display">
-            {% include 'images/icons/icons-mini.svg' %}
+            {% include 'images/icons/svg-symbols.svg' %}
         </div>
     </body>
 </html>
