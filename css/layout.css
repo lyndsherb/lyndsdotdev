@@ -104,6 +104,31 @@ h1, b, strong {
     font-size: var(--size-collie, 0.75rem);
 }
 
+.post-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    container-name: postList;
+    container-type: inline-size;
+}
+
+.card {
+    border: 1px solid red;
+    width: 100%;
+    margin-bottom: var(--size-base, 1rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card-content {
+    margin: var(--space-base, 1rem) 0 auto;
+}
+
+.card-footer {
+    margin-top: var(--space-base, 1rem);
+}
+
 .no-display {
     grid-area: no-display;
 }
@@ -123,5 +148,11 @@ h1, b, strong {
             correctly spaced
         */
         min-height: calc(100vh - var(--size-wolf, 2rem));
+    }
+}
+
+@container postList (min-width: 60ch) {
+    .card {
+        width: calc(50% - var(--size-beagle, 0.5rem));
     }
 }
