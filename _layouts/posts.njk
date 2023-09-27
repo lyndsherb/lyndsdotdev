@@ -8,7 +8,7 @@ layout: base.njk
       {% if loop.index0 < 5 %}
           <article class="card">
             <header class="card-header">
-              <h3>
+              <h3 class="card-title">
                 {{ post.data.title }}
               </h3>
               <timedate class="card-time">{{ post.data.date | readableDate }}</timedate>

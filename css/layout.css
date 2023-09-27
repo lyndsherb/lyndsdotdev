@@ -41,6 +41,11 @@ h1, b, strong {
     font-weight: 600;
 }
 
+timedate {
+    font-size: var(--size-collie, 0.75rem);
+    font-style: italic;
+}
+
 .page-aside {
     grid-area: aside;
     display: flex;
@@ -113,7 +118,8 @@ h1, b, strong {
 }
 
 .card {
-    border: 1px solid red;
+    border: 1px solid;
+    border-radius: var(--size-yorkie, 0.25rem);
     width: 100%;
     margin-bottom: var(--size-base, 1rem);
     display: flex;
@@ -121,16 +127,20 @@ h1, b, strong {
     justify-content: space-between;
 }
 
+.card > * {
+    padding: var(--size-beagle, 0.5rem);
+}
+
+.card > * + * {
+    border-top: 1px solid;
+}
+
+.card-title {
+    margin: var(--size-yorkie, 0.25rem) 0;
+}
+
 .card-content {
-    margin: var(--space-base, 1rem) 0 auto;
-}
-
-.card-footer {
-    margin-top: var(--space-base, 1rem);
-}
-
-.no-display {
-    grid-area: no-display;
+    margin-bottom: auto;
 }
 
 @media (min-width: 768px) {

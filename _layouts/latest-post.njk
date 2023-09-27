@@ -22,26 +22,30 @@ layout: base.njk
     {% endfor %}
     {% if collections.post.length > 1 %}
         <h3>Recent posts</h3>
+        <section class="post-list">
         {% for post in collections.post | reverse %}
         {% if loop.index0 > 1 %}
-            <article>
-                <header>
-                    <h3>
+            <article class="card">
+                <header class="card-header">
+                <h3 class="card-title">
                     {{ post.data.title }}
-                    </h3>
-                    {{ post.data.date | readableDate }}
+                </h3>
+                <timedate class="card-time">{{ post.data.date | readableDate }}</timedate>
                 </header>
-                <div>
-                    <div>
+                <div class="card-content">
+                    {% if post.data.description %}
                     {{ post.data.description }}
-                    </div>
+                    {% else %}
+                    {{ post.data.content | striptags(true) | escape | nl2br | truncate }}
+                    {% endif %}
                 </div>
-                <footer>
-                    <a href="{{ post.url }}">Read article</a>
+                <footer class="card-footer">
+                <a href="{{ post.url }}">Read article</a>
                 </footer>
-                </article>
+            </article>
             {% endif %}
         {% endfor %}
+        </section>
     {% endif %}
 {% else %}
     No posts could be found. Is everything rendering as expected?
