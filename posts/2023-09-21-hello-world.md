@@ -1,6 +1,6 @@
 ---
 title: Hello, world!
-description: This is the first post on my blog
+description: A bit about me, about this blog and what you can expect to see.
 tags: post
 date: 2023-09-13
 layout: post.njk

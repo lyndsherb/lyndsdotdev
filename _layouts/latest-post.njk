@@ -20,6 +20,29 @@ layout: base.njk
         </article>
         {% endif %}
     {% endfor %}
+    {% if collections.post.length > 1 %}
+        <h3>Recent posts</h3>
+        {% for post in collections.post | reverse %}
+        {% if loop.index0 > 1 %}
+            <article>
+                <header>
+                    <h3>
+                    {{ post.data.title }}
+                    </h3>
+                    {{ post.data.date | readableDate }}
+                </header>
+                <div>
+                    <div>
+                    {{ post.data.description }}
+                    </div>
+                </div>
+                <footer>
+                    <a href="{{ post.url }}">Read article</a>
+                </footer>
+                </article>
+            {% endif %}
+        {% endfor %}
+    {% endif %}
 {% else %}
     No posts could be found. Is everything rendering as expected?
 {% endif %}
