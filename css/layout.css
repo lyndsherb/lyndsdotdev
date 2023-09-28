@@ -41,6 +41,11 @@ h1, b, strong {
     font-weight: 600;
 }
 
+timedate {
+    font-size: var(--size-collie, 0.75rem);
+    font-style: italic;
+}
+
 .page-aside {
     grid-area: aside;
     display: flex;
@@ -104,8 +109,38 @@ h1, b, strong {
     font-size: var(--size-collie, 0.75rem);
 }
 
-.no-display {
-    grid-area: no-display;
+.post-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    container-name: postList;
+    container-type: inline-size;
+}
+
+.card {
+    border: 1px solid;
+    border-radius: var(--size-yorkie, 0.25rem);
+    width: 100%;
+    margin-bottom: var(--size-base, 1rem);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card > * {
+    padding: var(--size-beagle, 0.5rem);
+}
+
+.card > * + * {
+    border-top: 1px solid;
+}
+
+.card-title {
+    margin: var(--size-yorkie, 0.25rem) 0;
+}
+
+.card-content {
+    margin-bottom: auto;
 }
 
 @media (min-width: 768px) {
@@ -123,5 +158,11 @@ h1, b, strong {
             correctly spaced
         */
         min-height: calc(100vh - var(--size-wolf, 2rem));
+    }
+}
+
+@container postList (min-width: 60ch) {
+    .card {
+        width: calc(50% - var(--size-beagle, 0.5rem));
     }
 }
