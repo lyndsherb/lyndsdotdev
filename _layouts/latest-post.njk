@@ -9,7 +9,7 @@ layout: base.njk
             <h2>
                 {{ post.data.title }}
             </h2>
-            <timedate>{{ post.data.date | readableDate }}</timedate>
+            <time datetime="{{post.data.date}}">{{ post.data.date | readableDate }}</time>
             </header>
             <main>
             {{ post.data.content | safe }}
@@ -30,7 +30,7 @@ layout: base.njk
                 <h3 class="card-title">
                     {{ post.data.title }}
                 </h3>
-                <timedate class="card-time">{{ post.data.date | readableDate }}</timedate>
+                <time datetime="{{post.data.date}}" class="card-time">{{ post.data.date | readableDate }}</time>
                 </header>
                 <div class="card-content">
                     {% if post.data.description %}

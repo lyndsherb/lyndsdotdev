@@ -41,7 +41,7 @@ h1, b, strong {
     font-weight: 600;
 }
 
-timedate {
+time {
     font-size: var(--size-collie, 0.75rem);
     font-style: italic;
 }
