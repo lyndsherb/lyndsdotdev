@@ -6,24 +6,7 @@ layout: base.njk
   {% if collections.post.length %}
     {% for post in collections.post | reverse %}
       {% if loop.index0 < 5 %}
-          <article class="card">
-            <header class="card-header">
-              <h3 class="card-title">
-                {{ post.data.title }}
-              </h3>
-              <time datetime="{{post.data.date}}" class="card-time">{{ post.data.date | readableDate }}</time>
-            </header>
-            <div class="card-content">
-                {% if post.data.description %}
-                  {{ post.data.description }}
-                {% else %}
-                  {{ post.data.content | striptags(true) | escape | nl2br | truncate }}
-                {% endif %}
-            </div>
-            <footer class="card-footer">
-              <a href="{{ post.url }}">Read article</a>
-            </footer>
-          </article>
+          {% include './card.njk' %}
         {% endif %}
     {% endfor %}
   {% else %}
