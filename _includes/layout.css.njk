@@ -1,0 +1,7 @@
+:root {
+    {% for size in theme.sizes %}
+        --size-{{ size.name -}}: {{ size.value }};
+    {% endfor %}
+}
+
+{% include 'css/base.css' %}
