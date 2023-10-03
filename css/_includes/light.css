@@ -1,6 +1,6 @@
 body {
-    background-color: rgb(var(--color-wash, 147, 163, 177));
-    color: rgb(var(--color-texas, 13, 27, 42));
+    background-color: rgb(var(--color-wash));
+    color: rgb(var(--color-texas));
 }
 
 svg {
@@ -8,44 +8,44 @@ svg {
 }
 
 a {
-    color: rgb(var(--color-caboose, 9, 93, 179));
+    color: rgb(var(--color-caboose));
 }
 
 a:hover,
 a:focus {
-    color: rgb(var(--color-tucker, 17, 157, 164));
+    color: rgb(var(--color-tucker));
 }
 
 .title-link {
-    color: rgba(var(--color-simmons, 179, 9, 75), 0.75);
+    color: rgba(var(--color-simmons), 0.75);
 }
 
 .content {
-    background-color: rgba(var(--color-texas, 13, 27, 4), 0.05);
+    background-color: rgba(var(--color-texas), 0.05);
 }
 
 .icon {
-    color: rgb(var(--color-texas, 13, 27, 42));
+    color: rgb(var(--color-texas));
 }
 
 .icon--github:hover,
 .icon--github:active {
-    color: rgba(var(--color-texas, 13, 27, 4), 0.75);
+    color: rgba(var(--color-texas), 0.75);
 }
 
 .icon--linkedin:hover,
 .icon--linkedin:active {
-    color: rgb(var(--color-caboose, 9, 93, 179));
+    color: rgb(var(--color-caboose));
 }
 
 .icon--email:hover,
 .icon--email:active {
-    color: rgb(var(--color-simmons, 179, 9, 75));
+    color: rgb(var(--color-simmons));
 }
 
 .card,
 .card > * + * {
-    border-color: rgba(var(--color-texas, 13, 27, 4), 0.5);
+    border-color: rgba(var(--color-texas), 0.5);
 }
 
 @media screen and (prefers-reduced-motion: no-preference) {
