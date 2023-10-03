@@ -7,12 +7,9 @@ permalink: 'css/light.css'
         Colours
         Coolors Exported Palette - https://coolors.co/0d1b2a-e8e8e8-93a3b1-119da4-b3094b
     */
-    --color-texas: 13, 27, 42;
-    --color-wyoming: 232, 232, 232;
-    --color-wash: 147, 163, 177;
-    --color-tucker: 17, 157, 164;
-    --color-simmons: 179, 9, 75;
-    --color-caboose: 9, 93, 179;
+{% for color in theme.colors.light -%}
+    --color-{{ color.name -}}: {{ color.value }};
+{% endfor -%}
 }
 
 {% include 'css/_includes/light.css' %}

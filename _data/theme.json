@@ -10,7 +10,20 @@
         {"name": "wolf", "value": "calc(var(--size-base, 1rem) * 2)" }
     ],
     "colors": {
-        "light": [],
-        "dark": []
+        "light": [
+            {"name": "texas", "value": "13, 27, 42"},
+            {"name": "wyoming", "value": "232, 232, 232"},
+            {"name": "wash", "value": "147, 163, 177"},
+            {"name": "tucker", "value": "17, 157, 164"},
+            {"name": "simmons", "value": "179, 9, 75"},
+            {"name": "caboose", "value": "9, 93, 179"}
+        ],
+        "dark": [
+            { "name": "texas", "value": "247, 247, 247"},
+            { "name": "wyoming", "value": "13, 27, 42"},
+            { "name": "tucker", "value": "70, 227, 236"},
+            { "name": "simmons", "value": "249, 174, 203"},
+            { "name": "caboose", "value": "139, 194, 249"}
+        ]
     }
 }
