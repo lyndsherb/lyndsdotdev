@@ -1,12 +1,3 @@
-:root {
-    --color-texas: 247, 247, 247;
-    --color-wyoming: 13, 27, 42;
-    --color-wash: 147, 163, 177;
-    --color-tucker: 70, 227, 236;
-    --color-simmons: 249, 174, 203;
-    --color-caboose: 139, 194, 249;
-}
-
 body {
     background-color: rgb(var(--color-wyoming, 13, 27, 42));
 }
