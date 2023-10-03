@@ -15,7 +15,7 @@ body {
         "main main"
         "aside aside"
         "footer footer";
-    grid-gap: var(--size-labrador, 1.25rem);
+    grid-gap: var(--size-labrador);
     font-family: sans-serif;
     font-weight: 300;
 }
@@ -25,7 +25,7 @@ h1, b, strong {
 }
 
 time {
-    font-size: var(--size-collie, 0.75rem);
+    font-size: var(--size-collie);
     font-style: italic;
 }
 
@@ -47,7 +47,7 @@ time {
 .page-aside,
 .page-header,
 .page-footer {
-    padding: var(--size-beagle, 0.5rem);
+    padding: var(--size-beagle);
 }
 
 .page-header {
@@ -56,7 +56,7 @@ time {
 
 .content {
     grid-area: main;
-    padding: var(--size-base, 1rem);
+    padding: var(--size-base);
     max-width: 80ch;
 }
 
@@ -73,7 +73,7 @@ time {
 }
 
 .title {
-    font-size: calc(var(--size-akita, 1.5rem) * 2);
+    font-size: calc(var(--size-akita) * 2);
     margin: 0;
 }
 
@@ -82,14 +82,14 @@ time {
 }
 
 .icon {
-    width: var(--size-wolf, 2rem);
-    height: var(--size-wolf, 2rem);
+    width: var(--size-wolf);
+    height: var(--size-wolf)
 }
 
 .page-footer {
     grid-area: footer;
     align-self: end;
-    font-size: var(--size-collie, 0.75rem);
+    font-size: var(--size-collie);
 }
 
 .post-list {
@@ -102,16 +102,16 @@ time {
 
 .card {
     border: 1px solid;
-    border-radius: var(--size-yorkie, 0.25rem);
+    border-radius: var(--size-yorkie);
     width: 100%;
-    margin-bottom: var(--size-base, 1rem);
+    margin-bottom: var(--size-base);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .card > * {
-    padding: var(--size-beagle, 0.5rem);
+    padding: var(--size-beagle);
 }
 
 .card > * + * {
@@ -119,7 +119,7 @@ time {
 }
 
 .card-title {
-    margin: var(--size-yorkie, 0.25rem) 0;
+    margin: var(--size-yorkie) 0;
 }
 
 .card-content {
@@ -140,12 +140,12 @@ time {
             main content area is full height to keep the sidebar
             correctly spaced
         */
-        min-height: calc(100vh - var(--size-wolf, 2rem));
+        min-height: calc(100vh - var(--size-wolf));
     }
 }
 
 @container postList (min-width: 60ch) {
     .card {
-        width: calc(50% - var(--size-beagle, 0.5rem));
+        width: calc(50% - var(--size-beagle));
     }
 }
