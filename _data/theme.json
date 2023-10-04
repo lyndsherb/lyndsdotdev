@@ -25,5 +25,9 @@
             { "name": "simmons", "value": "249, 174, 203"},
             { "name": "caboose", "value": "139, 194, 249"}
         ]
+    },
+    "themeColor": {
+        "light": "simmons",
+        "dark": "wyoming"
     }
 }

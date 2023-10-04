@@ -30,6 +30,20 @@ module.exports = function(config) {
         });
     });
 
+    config.addFilter('getLightThemeColor', function () {
+        const { themeColor: { light: lightTheme }, colors: { light } } = require('./_data/theme.json');
+        const value = light.find(({ name }) => name === lightTheme).value;
+
+        return `rgb(${value})`;
+    });
+
+    config.addFilter('getDarkThemeColor', function () {
+        const { themeColor: { dark: darkTheme }, colors: { dark } } = require('./_data/theme.json');
+        const value = dark.find(({ name }) => name === darkTheme).value;
+
+        return `rgb(${value})`;
+    });
+
     return {
         dir: {
             layouts: '_layouts',
