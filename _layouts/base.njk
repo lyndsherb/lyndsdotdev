@@ -7,8 +7,8 @@
             {% for meta in site.meta %}
                 <meta name="{{ meta.name }}" content="{{ meta.content }}" />
             {% endfor %}
-            <meta name="theme-color" content="{{ '' | getLightThemeColor }}" media="(prefers-color-scheme: dark)" />
-            <meta name="theme-color" content="{{ '' | getDarkThemeColor }}" media="(prefers-color-scheme: dark)" />
+            <meta name="theme-color" content="{{ theme.colors.light | findColor(theme.themeColor.light) }}" media="(prefers-color-scheme: light)" />
+            <meta name="theme-color" content="{{ theme.colors.dark | findColor(theme.themeColor.dark) }}" media="(prefers-color-scheme: dark)" />
         {% endif %}
         <style type="text/css">
             {% include 'css/layout.njk' %}

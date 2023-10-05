@@ -30,18 +30,29 @@ module.exports = function(config) {
         });
     });
 
-    config.addFilter('getLightThemeColor', function () {
-        const { themeColor: { light: lightTheme }, colors: { light } } = require('./_data/theme.json');
-        const value = light.find(({ name }) => name === lightTheme).value;
+    config.addFilter('findColor', function (colors, colorName, alpha = 1) {
+        if (!colors?.length) {
+            console.warn('No colours passed to findColor');
+            return null;
+        }
 
-        return `rgb(${value})`;
-    });
+        if (!colorName) {
+            console.warn('No colour name passed to findColor');
+            return null;
+        }
 
-    config.addFilter('getDarkThemeColor', function () {
-        const { themeColor: { dark: darkTheme }, colors: { dark } } = require('./_data/theme.json');
-        const value = dark.find(({ name }) => name === darkTheme).value;
+        const color = colors.find(({ name }) => name === colorName);
 
-        return `rgb(${value})`;
+        if (!color?.value) {
+            console.warn(`Could not find associated value for ${colorName}`);
+            return null;
+        }
+
+        if (alpha < 1) {
+            return `rgba(${color.value}, ${alpha})`;
+        }
+
+        return `rgb(${color.value})`;
     });
 
     return {
