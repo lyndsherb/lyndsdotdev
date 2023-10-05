@@ -1,13 +1,13 @@
 {
     "sizes": [
         {"name": "base", "value": "1rem" },
-        {"name": "yorkie", "value": "calc(var(--size-base, 1rem) * 0.25)" },
-        {"name": "beagle", "value": "calc(var(--size-base, 1rem) * 0.5)" },
-        {"name": "collie", "value": "calc(var(--size-base, 1rem) * 0.75)" },
-        {"name": "labrador", "value": "calc(var(--size-base, 1rem) * 1.25)" },
-        {"name": "akita", "value": "calc(var(--size-base, 1rem) * 1.5)" },
-        {"name": "dane", "value": "calc(var(--size-base, 1rem) * 1.75)" },
-        {"name": "wolf", "value": "calc(var(--size-base, 1rem) * 2)" }
+        {"name": "yorkie", "value": "0.25rem" },
+        {"name": "beagle", "value": "0.5rem" },
+        {"name": "collie", "value": "0.75rem" },
+        {"name": "labrador", "value": "1.25rem" },
+        {"name": "akita", "value": "1.5rem" },
+        {"name": "dane", "value": "1.75rem" },
+        {"name": "wolf", "value": "2rem" }
     ],
     "colors": {
         "light": [

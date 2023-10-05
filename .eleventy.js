@@ -55,6 +55,27 @@ module.exports = function(config) {
         return `rgb(${color.value})`;
     });
 
+    config.addFilter('findSize', function (sizes, sizeName) {
+        if (!sizes?.length) {
+            console.warn('No sizes passed to findSize');
+            return null;
+        }
+
+        if (!sizeName) {
+            console.warn('No size name passed to findSize');
+            return null;
+        }
+
+        const size = sizes.find(({ name }) => name === sizeName);
+
+        if (!size?.value) {
+            console.warn(`Could not find associated value for ${sizeName}`);
+            return null;
+        }
+
+        return size.value;
+    });
+
     return {
         dir: {
             layouts: '_layouts',

@@ -1,8 +1,153 @@
-:root {
-{% for size in theme.sizes -%}
-    --size-{{ size.name -}}: {{ size.value }};
-{% endfor -%}
+html,
+body {
+    font-size: 18px;
+    line-height: 1.5;
 }
 
-{% include 'css/_includes/base.css' %}
+body {
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-rows: max-content 1fr;
+    grid-template-columns: min-content 1fr;
+    grid-template-areas:
+        "header header"
+        "main main"
+        "aside aside"
+        "footer footer";
+    grid-gap: {{ theme.sizes | findSize('labrador') }};
+    font-family: sans-serif;
+    font-weight: 300;
+}
+
+h1, b, strong {
+    font-weight: 600;
+}
+
+time {
+    font-size: {{ theme.sizes | findSize('collie') }};
+    font-style: italic;
+}
+
+.page-aside {
+    grid-area: aside;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.mini-about {
+    margin-top: 0;
+}
+
+.social-title {
+    margin-top: auto;
+}
+
+.page-aside,
+.page-header,
+.page-footer {
+    padding: {{ theme.sizes | findSize('beagle') }};
+}
+
+.page-header {
+    margin: auto 0 0;
+}
+
+.content {
+    grid-area: main;
+    padding: {{ theme.sizes | findSize('base') }};
+    max-width: 80ch;
+}
+
+.h-list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.h-list__item {
+    margin-right: {{ theme.sizes | findSize('base') }};
+}
+
+.title {
+    font-size: calc({{ theme.sizes | findSize('akita') }} * 2);
+    margin: 0;
+}
+
+.title-link {
+    text-decoration: none;
+}
+
+.icon {
+    width: {{ theme.sizes | findSize('wolf') }};
+    height: {{ theme.sizes | findSize('wolf') }};
+}
+
+.page-footer {
+    grid-area: footer;
+    align-self: end;
+    font-size: {{ theme.sizes | findSize('collie') }};
+}
+
+.post-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    container-name: postList;
+    container-type: inline-size;
+}
+
+.card {
+    border: 1px solid;
+    border-radius: {{ theme.sizes | findSize('yorkie') }};
+    width: 100%;
+    margin-bottom: {{ theme.sizes | findSize('base') }};
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card > * {
+    padding: {{ theme.sizes | findSize('beagle') }};
+}
+
+.card > * + * {
+    border-top: 1px solid;
+}
+
+.card-title {
+    margin: {{ theme.sizes | findSize('yorkie') }} 0;
+}
+
+.card-content {
+    margin-bottom: auto;
+}
+
+@media (min-width: 768px) {
+    body {
+        grid-template-areas:
+            "header main"
+            "aside main"
+            "footer main";
+    }
+
+    .content {
+        /*
+            on displays that show the sidebar, ensure the
+            main content area is full height to keep the sidebar
+            correctly spaced
+        */
+        min-height: calc(100vh - {{ theme.sizes | findSize('wolf') }});
+    }
+}
+
+@container postList (min-width: 60ch) {
+    .card {
+        width: calc(50% - {{ theme.sizes | findSize('beagle') }});
+    }
+}
+
 {% include 'css/_includes/utility.css' %}
