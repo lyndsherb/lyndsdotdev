@@ -55,25 +55,25 @@ module.exports = function(config) {
         return `rgb(${color.value})`;
     });
 
-    config.addFilter('findSize', function (sizes, sizeName) {
-        if (!sizes?.length) {
-            console.warn('No sizes passed to findSize');
+    config.addFilter('findOption', function (options, optionName) {
+        if (!options?.length) {
+            console.warn('No options passed to findoption');
             return null;
         }
 
-        if (!sizeName) {
-            console.warn('No size name passed to findSize');
+        if (!optionName) {
+            console.warn('No option name passed to findoption');
             return null;
         }
 
-        const size = sizes.find(({ name }) => name === sizeName);
+        const option = options.find(({ name }) => name === optionName);
 
-        if (!size?.value) {
-            console.warn(`Could not find associated value for ${sizeName}`);
+        if (!option?.value) {
+            console.warn(`Could not find associated value for ${optionName}`);
             return null;
         }
 
-        return size.value;
+        return option.value;
     });
 
     return {

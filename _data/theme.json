@@ -26,6 +26,9 @@
             { "name": "caboose", "value": "139, 194, 249"}
         ]
     },
+    "transitions": [
+        { "name": "default", "value": "0.2s ease-out" }
+    ],
     "themeColor": {
         "light": "simmons",
         "dark": "wyoming"
