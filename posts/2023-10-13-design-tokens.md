@@ -25,4 +25,4 @@ permalink: '/posts/{{ date | shortDate | slugify }}/{{ title | slugify }}'
   * Useful - allows me to define things in a single file and change them if I want to
   * Struggling with consistency - colours are CSS vars, layout is injected directly
   * For now, just while I figure out the positives and negatives of how they work, see how effective they might be on larger projects
-  * Similar to Tailwind's config files, I guess? Something I want to explore
+  * Similar to Tailwind's config files, I guess? Something I want to explore in the future
