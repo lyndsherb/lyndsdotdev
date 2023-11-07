@@ -1,3 +1,9 @@
+:root {
+    {% for size in theme.sizes -%}
+        --size-{{ size.name -}}: {{ size.value }};
+    {% endfor -%}
+}
+
 html,
 body {
     font-size: 18px;
@@ -15,7 +21,7 @@ body {
         "main main"
         "aside aside"
         "footer footer";
-    grid-gap: {{ theme.sizes | findOption('labrador') }};
+    grid-gap: var(--size-labrador);
     font-family: sans-serif;
     font-weight: 300;
 }
@@ -25,8 +31,13 @@ h1, b, strong {
 }
 
 time {
-    font-size: {{ theme.sizes | findOption('collie') }};
+    font-size: var(--size-collie);
     font-style: italic;
+}
+
+pre {
+    padding: var(--size-base);
+    font-size: var(--size-collie);
 }
 
 .page-aside {
@@ -47,7 +58,7 @@ time {
 .page-aside,
 .page-header,
 .page-footer {
-    padding: {{ theme.sizes | findOption('beagle') }};
+    padding: var(--size-beagle);
 }
 
 .page-header {
@@ -56,7 +67,7 @@ time {
 
 .content {
     grid-area: main;
-    padding: {{ theme.sizes | findOption('base') }};
+    padding: var(--size-base);
     max-width: 80ch;
 }
 
@@ -69,11 +80,11 @@ time {
 }
 
 .h-list__item {
-    margin-right: {{ theme.sizes | findOption('base') }};
+    margin-right: var(--size-base);
 }
 
 .title {
-    font-size: calc({{ theme.sizes | findOption('akita') }} * 2);
+    font-size: calc(var(--size-akita) * 2);
     margin: 0;
 }
 
@@ -82,14 +93,14 @@ time {
 }
 
 .icon {
-    width: {{ theme.sizes | findOption('wolf') }};
-    height: {{ theme.sizes | findOption('wolf') }};
+    width: var(--size-wolf);
+    height: var(--size-wolf);
 }
 
 .page-footer {
     grid-area: footer;
     align-self: end;
-    font-size: {{ theme.sizes | findOption('collie') }};
+    font-size: var(--size-collie);
 }
 
 .post-list {
@@ -102,16 +113,16 @@ time {
 
 .card {
     border: 1px solid;
-    border-radius: {{ theme.sizes | findOption('yorkie') }};
+    border-radius: var(--size-yorkie);
     width: 100%;
-    margin-bottom: {{ theme.sizes | findOption('base') }};
+    margin-bottom: var(--size-base);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 }
 
 .card > * {
-    padding: {{ theme.sizes | findOption('beagle') }};
+    padding: var(--size-beagle);
 }
 
 .card > * + * {
@@ -119,7 +130,7 @@ time {
 }
 
 .card-title {
-    margin: {{ theme.sizes | findOption('yorkie') }} 0;
+    margin: var(--size-yorkie) 0;
 }
 
 .card-content {
@@ -140,13 +151,13 @@ time {
             main content area is full height to keep the sidebar
             correctly spaced
         */
-        min-height: calc(100vh - {{ theme.sizes | findOption('wolf') }});
+        min-height: calc(100vh - var(--size-wolf));
     }
 }
 
 @container postList (min-width: 60ch) {
     .card {
-        width: calc(50% - {{ theme.sizes | findOption('beagle') }});
+        width: calc(50% - var(--size-beagle));
     }
 }
 

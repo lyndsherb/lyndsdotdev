@@ -11,6 +11,10 @@ a {
     color: rgb(var(--color-caboose));
 }
 
+pre {
+    background-color: rgba(var(--color-texas), 0.05);
+}
+
 a:hover,
 a:focus {
     color: rgb(var(--color-tucker));
