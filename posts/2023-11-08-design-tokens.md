@@ -6,7 +6,7 @@ tags:
     - blog
     - design tokens
     - development
-date: 2023-11-07
+date: 2023-11-08
 layout: post.njk
 permalink: '/posts/{{ date | shortDate | slugify }}/{{ title | slugify }}'
 ---
@@ -33,9 +33,9 @@ To start with - what *are* design tokens? On initial reading, it sounds like dif
 >
 > <a href="https://thedesignsystem.guide/design-tokens" target="_blank" rel="noopener noreferrer">The Design System Guide</a>
 
-To the developers out there - does this sound familiar? Surprise! **Design tokens are variables!** Often you'll include them in a JSON file and import them into your project.
+To the developers reading this - does this sound familiar? Surprise! **Design tokens are variables!** Often you'll include them in a JSON file and import them into your project.
 
-For this 11ty blog, I followed a useful post from <a href="https://heydonworks.com/article/design-tokens-in-eleventy/" target="_blank" rel="noopener noreferrer">Heydon Works</a>. This has been great to build the styles; we can simply loop through the data to create CSS variables, like so:
+For this 11ty blog, I followed a useful post from <a href="https://heydonworks.com/article/design-tokens-in-eleventy/" target="_blank" rel="noopener noreferrer">Heydon Works</a>. This has been great to build the styles; we can loop through the data to create CSS variables, like so:
 
 <pre class="code css">
 /* for example, the following loop... */
@@ -57,7 +57,7 @@ For this 11ty blog, I followed a useful post from <a href="https://heydonworks.c
 }
 </pre>
 
-It's been great to try these out - to quickly make variables, adding the loop is super helpful, and you have one file to change them. It also means, further inspired by Heydon's blog post, I could easily use this to set the meta colours in the base site template, as you can see below:
+I've enjoyed trying this out. Adding the loop is super helpful, and I only have to update one file to change variables sitewide. It means, further inspired by Heydon's blog post, I can easily use this to set the meta colours in the base site template, as you can see below:
 
 <pre class="code js">
 // file: _data/theme.json
@@ -85,12 +85,14 @@ It's been great to try these out - to quickly make variables, adding the loop is
 {% endraw %}
 </pre>
 
-And with that, not only do I have the same colours everywhere, I can update one variable in one place and it changes sitewide!
+With that, not only do I have the same colours everywhere, I can update one variable in one place and it changes sitewide!
 
-For this project, this setup is great; my theme definitions are in one place for me to change, add to and remove as I will. I believe Tailwind already does something very similar, though. Tailwind is definitely on my list of things to investigate in the future, so look forward to seeing a post about that!
+This setup is great for this project. I believe Tailwind does something very similar however. I do aim to investigate Tailwind in the future, so look forward to seeing a Tailwind post in the future!
 
 Design tokens are something I've wanted to use for a while, and where better to start on my own project? I've been wanting to try them ever since attending a talk at <a href="https://frontendnorth.com/" target="_blank" rel="noopener noreferrer">Frontend North</a> a few years ago.
 
-The concept of design tokens really fired my imagination - I wanted to start using them as soon as possible in projects because it could really help our designers and developers work more smoothly together. We use (S)CSS variables in our styles, of course - but currently it's a very manual process of picking the variable from the design document and adding it manually. If we could automate that process even slightly, that'd really help!
+The concept of design tokens really fired my imagination - I wanted to start using them as soon as possible in projects because it could really help our designers and developers work more smoothly together.
+
+At present we use variables in our styles - currently it's a very manual process where we pick the variables from the design document and adding it manually. If we could automate that process even slightly with design tokens, that'd really help!
 
 Anyway, I think that's all for now - thank you for reading and see you again soon!
