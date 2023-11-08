@@ -1,7 +1,11 @@
 ---
 title: Hello, world!
 description: A bit about me, about this blog and what you can expect to see.
-tags: post
+tags:
+    - post
+    - first post
+    - blog
+    - about me
 date: 2023-09-13
 layout: post.njk
 permalink: '/posts/{{ date | shortDate | slugify }}/{{ title | slugify }}'

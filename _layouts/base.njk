@@ -7,16 +7,16 @@
             {% for meta in site.meta %}
                 <meta name="{{ meta.name }}" content="{{ meta.content }}" />
             {% endfor %}
+            <meta name="theme-color" content="{{ theme.colors.light | findColor(theme.themeColor.light) }}" />
+            <meta name="theme-color" content="{{ theme.colors.dark | findColor(theme.themeColor.dark) }}" media="(prefers-color-scheme: dark)" />
         {% endif %}
         <style type="text/css">
-            {% include 'css/layout.css' %}
-            {% include 'css/utility.css' %}
+            {% include 'css/layout.njk' %}
         </style>
-        <link rel="stylesheet" href="/css/light.css" media="screen" />
-        <link rel="stylesheet" href="/css/dark.css" media="screen and (prefers-color-scheme: dark)" />
+        <link rel="stylesheet" href="/css/dark.css" />
         <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
-        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png" media="(prefers-color-scheme: light)" />
-        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png" media="(prefers-color-scheme: light)" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png" />
+        <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png" />
         <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32-dark.png" media="(prefers-color-scheme: dark)" />
         <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16-dark.png" media="(prefers-color-scheme: dark)" />
     </head>

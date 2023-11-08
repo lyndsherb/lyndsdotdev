@@ -1,0 +1,71 @@
+body {
+    background-color: rgb(var(--color-wash));
+    color: rgb(var(--color-texas));
+}
+
+svg {
+    fill: currentColor;
+}
+
+a {
+    color: rgb(var(--color-caboose));
+}
+
+pre {
+    background-color: rgba(var(--color-texas), 0.05);
+}
+
+blockquote {
+    border-left-color: rgba(var(--color-texas), 0.25);
+}
+
+a:hover,
+a:focus {
+    color: rgb(var(--color-tucker));
+}
+
+.title-link {
+    color: rgba(var(--color-simmons), 0.75);
+}
+
+.content {
+    background-color: rgba(var(--color-texas), 0.05);
+}
+
+.icon {
+    color: rgb(var(--color-texas));
+}
+
+.icon--github:hover,
+.icon--github:active {
+    color: rgba(var(--color-texas), 0.75);
+}
+
+.icon--linkedin:hover,
+.icon--linkedin:active {
+    color: rgb(var(--color-caboose));
+}
+
+.icon--email:hover,
+.icon--email:active {
+    color: rgb(var(--color-simmons));
+}
+
+.card,
+.card > * + * {
+    border-color: rgba(var(--color-texas), 0.5);
+}
+
+@media screen and (prefers-reduced-motion: no-preference) {
+    :root {
+        /*
+            Misc variables
+        */
+        --transition: 0.2s ease-out;
+    }
+
+    svg,
+    a {
+        transition: color var(--transition, 0.2s ease-out);
+    }
+}

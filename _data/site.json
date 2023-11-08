@@ -1,7 +1,7 @@
 {
     "title": "lynds.dev",
     "subtitle": "Lyndsey Herbert, Principal Developer",
-    "description": "The site and tech blog of Lyndsey Herbert, principal front-end developer at <a href='https://ampersandcommerce.com' target='_blank' rel='noopener noreferrer'>Ampersand Commerce</a>",
+    "description": "The site and tech blog of Lyndsey Herbert, principal front-end developer at <a href='https://ampersandcommerce.com' target='_blank' rel='noopener noreferrer'>Ampersand Commerce</a>.",
     "meta": [
         {
             "name": "viewport",
@@ -14,10 +14,6 @@
         {
             "name": "robots",
             "content": "index,follow"
-        },
-        {
-            "name": "theme-color",
-            "content": "#B3094B"
         }
     ],
     "contact": [

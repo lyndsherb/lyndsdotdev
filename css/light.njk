@@ -1,0 +1,15 @@
+---
+permalink: 'css/light.css'
+---
+
+:root {
+    /*
+        Colours
+        Coolors Exported Palette - https://coolors.co/0d1b2a-e8e8e8-93a3b1-119da4-b3094b
+    */
+{% for color in theme.colors.light -%}
+    --color-{{ color.name -}}: {{ color.value }};
+{% endfor -%}
+}
+
+{% include 'css/_includes/light.css' %}
