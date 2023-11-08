@@ -15,6 +15,10 @@ pre {
     background-color: rgba(var(--color-texas), 0.05);
 }
 
+blockquote {
+    border-left-color: rgba(var(--color-texas), 0.25);
+}
+
 a:hover,
 a:focus {
     color: rgb(var(--color-tucker));

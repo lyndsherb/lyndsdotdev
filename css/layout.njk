@@ -35,9 +35,16 @@ time {
     font-style: italic;
 }
 
+blockquote {
+    margin-left: 0;
+    padding-left: calc(var(--size-base) - var(--size-yorkie));
+    border-left: var(--size-yorkie) solid;
+}
+
 pre {
     padding: var(--size-base);
     font-size: var(--size-collie);
+    white-space: pre-wrap;
 }
 
 .page-aside {
