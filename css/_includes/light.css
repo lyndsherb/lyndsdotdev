@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(var(--color-wash));
+    background-color: rgba(var(--color-wash), 0.5);
     color: rgb(var(--color-texas));
 }
 
