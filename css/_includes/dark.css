@@ -1,3 +1,7 @@
 body {
     background-color: rgb(var(--color-wyoming));
 }
+
+.content {
+    background-color: rgba(var(--color-wash), 0.05);
+}
