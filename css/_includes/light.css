@@ -1,5 +1,5 @@
 body {
-    background-color: rgb(var(--color-wash));
+    background-color: rgba(var(--color-wash), 0.4);
     color: rgb(var(--color-texas));
 }
 
@@ -8,7 +8,7 @@ svg {
 }
 
 a {
-    color: rgb(var(--color-caboose));
+    color: rgb(var(--color-simmons));
 }
 
 pre {
@@ -21,7 +21,7 @@ blockquote {
 
 a:hover,
 a:focus {
-    color: rgb(var(--color-tucker));
+    color: rgba(var(--color-caboose));
 }
 
 .title-link {
@@ -29,7 +29,7 @@ a:focus {
 }
 
 .content {
-    background-color: rgba(var(--color-texas), 0.05);
+    background-color: rgba(var(--color-wyoming), 0.5);
 }
 
 .icon {
