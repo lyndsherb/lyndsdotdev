@@ -12,7 +12,9 @@ module.exports = function(config) {
 
     return {
         dir: {
-            layouts: '_layouts',
+            templateFormat: ['11ty.js','md'],
+            input: 'src',
+            output: '_site',
         },
     }
 }

@@ -1,3 +1,4 @@
 ---
-layout: latest-post.njk
+layout: layouts/base.11ty.js
 ---
+hello?
