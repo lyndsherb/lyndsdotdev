@@ -7,8 +7,8 @@ tags:
     - blog
     - about me
 date: 2023-09-13
-layout: post.njk
-permalink: '/posts/{{ date | shortDate | slugify }}/{{ title | slugify }}'
+# layout: post.njk
+# permalink: '/posts/{{ date | shortDate | slugify }}/{{ title | slugify }}'
 ---
 
 Why hello there! Welcome to my blog!

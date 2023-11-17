@@ -7,8 +7,8 @@ tags:
     - design tokens
     - development
 date: 2023-11-08
-layout: post.njk
-permalink: '/posts/{{ date | shortDate | slugify }}/{{ title | slugify }}'
+# layout: post.njk
+# permalink: '/posts/{{ date | shortDate | slugify }}/{{ title | slugify }}'
 ---
 
 Welcome back to another post! Today I'm writing about design tokens!
