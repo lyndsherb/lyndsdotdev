@@ -6,9 +6,10 @@ tags:
     - blog
     - design tokens
     - development
+    - 11ty
 date: 2023-11-08
-layout: post.njk
-permalink: '/posts/{{ date | shortDate | slugify }}/{{ title | slugify }}'
+layout: post.11ty.js
+# permalink: '/posts/{{ date | shortDate | slugify }}/{{ title | slugify }}'
 ---
 
 Welcome back to another post! Today I'm writing about design tokens!

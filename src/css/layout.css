@@ -1,7 +1,12 @@
 :root {
-    {% for size in theme.sizes -%}
-        --size-{{ size.name -}}: {{ size.value }};
-    {% endfor -%}
+    --size-base: 1rem;
+    --size-yorkie: 0.25rem;
+    --size-beagle: 0.5rem;
+    --size-collie: 0.75rem;
+    --size-labrador: 1.25rem;
+    --size-akita: 1.5rem;
+    --size-dane: 1.75rem;
+    --size-wolf: 2rem;
 }
 
 html,
@@ -167,5 +172,3 @@ pre {
         width: calc(50% - var(--size-beagle));
     }
 }
-
-{% include 'css/_includes/utility.css' %}

@@ -1,18 +1,14 @@
-const dateUtils = require('./utils/eleventy/dates');
-const optionUtils = require('./utils/eleventy/themeOptions');
-
 module.exports = function(config) {
-    config.addPassthroughCopy({ 'images/favicons': 'images/favicons' });
-
-    config.addFilter('currentYear', dateUtils.currentYear);
-    config.addFilter('readableDate', dateUtils.readableDate);
-    config.addFilter('shortDate', dateUtils.shortDate);
-    config.addFilter('findOption', optionUtils.findOption);
-    config.addFilter('findColor', optionUtils.findColor);
+    config.addPassthroughCopy({ 'src/images': 'images' });
+    config.addPassthroughCopy({ 'src/css': 'css' });
+    config.addPassthroughCopy({ 'src/*.txt': '.' });
 
     return {
+        templateFormats: ['md', '11ty.js'],
         dir: {
-            layouts: '_layouts',
-        },
-    }
+            includes: 'src/includes',
+            layouts: 'src/layouts',
+            data: 'src/data',
+        }
+    };
 }

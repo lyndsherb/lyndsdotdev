@@ -1,3 +1,3 @@
 ---
-layout: latest-post.njk
+layout: latest-post.11ty.js
 ---
