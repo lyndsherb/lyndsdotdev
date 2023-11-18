@@ -7,7 +7,7 @@ tags:
     - blog
     - about me
 date: 2023-09-13
-# layout: post.njk
+layout: post.11ty.js
 # permalink: '/posts/{{ date | shortDate | slugify }}/{{ title | slugify }}'
 ---
 
