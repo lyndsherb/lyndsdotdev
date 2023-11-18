@@ -5,6 +5,7 @@ module.exports = (data) => {
 
     return postTheme({
         ...post.data,
+        title: '',
         date: post.date,
         content: post.content,
     });

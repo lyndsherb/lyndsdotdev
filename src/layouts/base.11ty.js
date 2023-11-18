@@ -1,10 +1,19 @@
+const getPageTitle = ({ title, site, page }) => {
+    if (!title) {
+        return `${site.title} | ${site.subtitle}`;
+    }
+
+    return `${title} | ${site.title}`;
+};
+
 module.exports = (data) => {
     const date = new Date();
+
     return `
         <!DOCTYPE html>
         <html lang="en">
             <head>
-                <title>${data.site.title} | ${data.site.subtitle}</title>
+                <title>${getPageTitle(data)}</title>
                 <meta charset="UTF-8"/>
                 ${data.site.meta.reduce((acc, meta) => (`${acc}\n<meta name="${meta.name}" content="${meta.content}" />`, ''))}
                 <meta name="theme-color" content="${data.theme.colors.light.find(({ name }) => name === data.theme.themeColor.light).value}" />
