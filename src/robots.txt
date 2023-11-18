@@ -1,5 +1,9 @@
 # Courtesy of Simon Cox's starter pack
 # https://github.com/simoncox/11ty-Simons-starter-pack/blob/main/src/robots.txt
+User-agent: *
+
+Disallow: /404/
+
 User-agent: CCBot
 Disallow: /
 

@@ -1,7 +1,7 @@
 module.exports = function(config) {
     config.addPassthroughCopy({ 'src/images': 'images' });
     config.addPassthroughCopy({ 'src/css': 'css' });
-    config.addPassthroughCopy({ 'src/robots.txt': '.' });
+    config.addPassthroughCopy({ 'src/*.txt': '.' });
 
     return {
         templateFormats: ['md', '11ty.js'],
