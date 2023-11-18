@@ -1,5 +1,4 @@
 ---
-title: Hello
-layout: base.11ty.js
+layout: latest-post.11ty.js
 ---
 hello!!

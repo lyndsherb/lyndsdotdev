@@ -1,5 +1,4 @@
 module.exports = (data) => {
-    console.log('debug', data);
     const date = new Date();
     return `
         <!DOCTYPE html>
@@ -8,6 +7,8 @@ module.exports = (data) => {
                 <title>${data.site.title} | ${data.site.subtitle}</title>
                 <meta charset="UTF-8"/>
                 ${data.site.meta.reduce((acc, meta) => (`${acc}\n<meta name="${meta.name}" content="${meta.content}" />`, ''))}
+                <meta name="theme-color" content="${data.theme.colors.light.find(({ name }) => name === data.theme.themeColor.light).value}" />
+                <meta name="theme-color" content="${data.theme.colors.dark.find(({ name }) => name === data.theme.themeColor.dark).value}" media="(prefers-color-scheme: dark)" />
                 <link rel="stylesheet" href="/css/layout.css" />
                 <link rel="stylesheet" href="/css/utility.css" />
                 <link rel="stylesheet" href="/css/light.css" />
@@ -25,9 +26,14 @@ module.exports = (data) => {
                         <a href="/" class="title-link">${data.site.title}</a>
                     </h1>
                 </header>
+                <nav>
+                </nav>
                 <main class="content">
                     ${data.content}
                 </main>
+                <aside class="page-aside no-print">
+                    <p class="mini-about">${data.site.description}</p>
+                </aside>
                 <footer class="page-footer">
                     <p class="no-print">Icons from <a href="https://icomoon.io/app/" target="_blank" rel="noreferrer noopener">IcoMoon</a> and <a href="https://material.io/icons/" target="_blank" rel="noreferrer noopener">Material Design</a>.</p>
                     <p class="no-print">Powered by <a href="https://www.11ty.dev" target="_blank" rel="noopener noreferrer">11ty</a>.</p>
