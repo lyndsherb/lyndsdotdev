@@ -13,7 +13,7 @@
         },
         {
             "name": "robots",
-            "content": "index,follow"
+            "content": "index,follow,noai,noimageai"
         }
     ],
     "contact": [

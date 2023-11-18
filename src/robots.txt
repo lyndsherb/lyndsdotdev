@@ -1,13 +1,30 @@
 # Courtesy of Simon Cox's starter pack
 # https://github.com/simoncox/11ty-Simons-starter-pack/blob/main/src/robots.txt
-User-agent: *
-Disallow:
-
 User-agent: CCBot
 Disallow: /
 
 User-agent: ChatGPT-User
 Disallow: /
 
+User-agent: GPTBot
+Disallow: /
+
 User-agent: Bard-Google
+Disallow: /
+
+# Courtesy of Neil Clarke
+# https://neil-clarke.com/block-the-bots-that-feed-ai-models-by-scraping-your-website/
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: Omgilibot
+Disallow: /
+
+User-agent: Omgili
+Disallow: /
+
+User-agent: FacebookBot
 Disallow: /
