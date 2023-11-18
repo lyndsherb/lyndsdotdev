@@ -3,6 +3,7 @@ const optionUtils = require('./src/utils/eleventy/themeOptions');
 
 module.exports = function(config) {
     config.addPassthroughCopy({ 'src/images': 'images' });
+    config.addPassthroughCopy({ 'src/css': 'css' });
 
     // config.addFilter('currentYear', dateUtils.currentYear);
     // config.addFilter('readableDate', dateUtils.readableDate);
