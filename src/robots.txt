@@ -1,0 +1,13 @@
+# Courtesy of Simon Cox's starter pack
+# https://github.com/simoncox/11ty-Simons-starter-pack/blob/main/src/robots.txt
+User-agent: *
+Disallow:
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: ChatGPT-User
+Disallow: /
+
+User-agent: Bard-Google
+Disallow: /
