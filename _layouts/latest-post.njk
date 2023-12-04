@@ -24,7 +24,7 @@ layout: base.njk
         <h3>Recent posts</h3>
         <section class="post-list">
         {% for post in collections.post | reverse %}
-            {% if loop.index0 < 2 %}
+            {% if loop.index0 < 3 %}
                 {% if loop.index0 > 0 %}
                     {% include './card.njk' %}
                 {% endif %}
