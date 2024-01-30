@@ -32,5 +32,19 @@
             "icon": "email",
             "url": "mailto: website plus hello at lynds dot dev"
         }
+    ],
+    "cool_people": [
+        {
+            "title": "RazzBerry Mand",
+            "url": ""
+        },
+        {
+            "title": "Katie Fenn",
+            "url": ""
+        },
+        {
+            "title": "Laura Kishimoto",
+            "url": ""
+        }
     ]
 }
