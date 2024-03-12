@@ -4,7 +4,7 @@ layout: base.njk
 {% if collections.post.length %}
     {% for post in collections.post | reverse %}
     {% if loop.index0 < 1 %}
-        <article>
+        <article class="post-content">
             <header>
             <h2>
                 {{ post.data.title }}
