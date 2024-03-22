@@ -20,17 +20,19 @@
     {
       "title": "Check out my projects on Github",
       "icon": "github",
-      "url": "https://www.github.com/lyndsherb/"
+      "url": "https://www.github.com/lyndsherb/",
+      "rel": "noopener noreferrer"
     },
     {
       "title": "Find me on Linkedin",
       "icon": "linkedin",
-      "url": "https://www.linkedin.com/in/lyndsherb/"
+      "url": "https://www.linkedin.com/in/lyndsherb/",
+      "rel": "noopener noreferrer"
     },
     {
-      "title": "Want to chat? Send me an email! (email is obfuscated for spam prevention)",
+      "title": "Want to chat? Send me an email!",
       "icon": "email",
-      "url": "mailto: hello[AT]lynds.dev"
+      "url": "/contact/"
     }
   ]
 }

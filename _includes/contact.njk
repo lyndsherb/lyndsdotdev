@@ -3,7 +3,7 @@
 <ul class="h-list social">
     {% for item in site.contact %}
         <li class="h-list__item">
-            <a href="{{ item.url }}" target="_blank" rel="noreferrer noopener" title="{{ item.title }}">
+            <a href="{{ item.url }}" {% if item.rel %}target="_blank" rel="{{ item.rel }}" {% endif %}title="{{ item.title }}">
                 <svg role="img" class="icon icon--{{ item.icon }}">
                     <title>{{ item.title }}</title>
                     <use xlink:href="#icon--{{ item.icon }}" />
