@@ -5,3 +5,13 @@ body {
 .content {
     background-color: rgba(var(--color-wash), 0.05);
 }
+
+.field-input,
+.field-textarea {
+    background-color: rgb(var(--color-wyoming));
+}
+
+.field-input::placeholder,
+.field-textarea::placeholder {
+    color: rgb(var(--color-caboose));
+}

@@ -167,8 +167,10 @@ input {
 
 .field-input,
 .field-textarea {
-    border: 1px solid;
-    border-radius: var(--size-yorkie);
+    border-top: 0;
+    border-right: 0;
+    border-bottom: 2px solid;
+    border-left: 0;
     padding: var(--size-beagle);
 }
 
@@ -181,6 +183,10 @@ input {
 .field-label,
 .actions {
     margin-top: var(--size-base);
+}
+
+.actions .btn + .btn {
+    margin-left: var(--size-base);
 }
 
 @media (min-width: 768px) {

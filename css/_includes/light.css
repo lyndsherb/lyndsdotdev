@@ -80,6 +80,18 @@ a:focus {
     color: rgb(var(--color-caboose));
 }
 
+.field-input,
+.field-textarea {
+    color: rgb(var(--color-texas));
+    border-color: rgb(var(--color-texas));
+}
+
+.field-input:focus,
+.field-textarea:focus {
+    border-color: rgb(var(--color-simmons));
+    outline: 2px solid rgb(var(--color-simmons));
+}
+
 @media screen and (prefers-reduced-motion: no-preference) {
     :root {
         /*
