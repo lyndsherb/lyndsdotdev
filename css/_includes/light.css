@@ -56,6 +56,30 @@ a:focus {
     border-color: rgba(var(--color-texas), 0.5);
 }
 
+.btn-primary {
+    background-color: rgb(var(--color-simmons));
+    border-color: rgb(var(--color-simmons));
+    color: rgb(var(--color-wyoming));
+}
+
+.btn-primary:hover,
+.btn-primary:focus {
+    background-color: rgb(var(--color-caboose));
+    border-color: rgb(var(--color-caboose));
+}
+
+.btn-secondary {
+    background-color: transparent;
+    border-color: rgb(var(--color-simmons));
+    color: rgb(var(--color-simmons));
+}
+
+.btn-secondary:hover,
+.btn-secondary:focus {
+    border-color: rgb(var(--color-caboose));
+    color: rgb(var(--color-caboose));
+}
+
 @media screen and (prefers-reduced-motion: no-preference) {
     :root {
         /*
@@ -67,5 +91,11 @@ a:focus {
     svg,
     a {
         transition: color var(--transition, 0.2s ease-out);
+    }
+
+    button {
+        transition: color var(--transition, 0.2s ease-out),
+                    background-color var(--transition, 0.2s ease-out),
+                    border var(--transition, 0.2s ease-out);
     }
 }
