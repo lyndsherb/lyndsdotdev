@@ -1,8 +1,4 @@
 ---
 layout: base.njk
 ---
-<article>
-    <h2>{{ title }}</h2>
-    <p><time datetime="{{ page.date | readableDate }}">{{ page.date | readableDate }}</time></p>
-    {{ content | safe }}
-</article>
+{% include './post-content.njk' %}

@@ -1,0 +1,32 @@
+<article class="post">
+    <header class="post-header">
+        {% if post.data.image %}
+            <img src=".{{ post.data.image }}" alt="" width="1000" height="300" />
+        {% elif image  %}
+            <img src=".{{ image }}" alt="" width="1000" height="300" />
+        {% endif %}
+        <h2>
+            {% if post.data.title %}
+                {{ post.data.title }}
+            {% else %}
+                {{ title }}
+            {% endif %}
+        </h2>
+        <p>
+            {% if post.data.date %}
+                <time datetime="{{ post.data.date | readableDate }}">{{ post.data.date | readableDate }}</time>
+            {% elif date %}
+                <time datetime="{{ date | readableDate }}">{{ date | readableDate }}</time>
+            {% else %}
+                <time datetime="{{ page.date | readableDate }}">{{ page.date | readableDate }}</time>
+            {% endif %}
+        </p>
+    </header>
+    <main class="post-content">
+        {% if post.content %}
+            {{ post.content | safe }}
+        {% else %}
+            {{ content | safe }}
+        {% endif %}
+    </main>
+</article>
