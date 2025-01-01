@@ -77,14 +77,18 @@ pre {
     max-width: 80ch;
 }
 
-.post-header {
+.post-header:not(.with-image) {
+    margin: var(--size-base);
+}
+
+.post-header.with-image {
     height: calc(var(--size-base) * 16.67);
     position: relative;
     display: flex;
     overflow: hidden;
 }
 
-.post-header::after {
+.post-header.with-image::after {
     content: '';
     width: 100%;
     height: 50%;
@@ -96,18 +100,18 @@ pre {
     background: linear-gradient(#0000, #000F);
 }
 
-.post-header img {
+.post-header.with-image img {
     position: absolute;
     z-index: 1;
 }
 
-.post-header h2 {
+.post-header.with-image h2 {
     margin-top: auto;
     margin-left: var(--size-base);
     z-index: 3;
 }
 
-.post-header p {
+.post-header.with-image p {
     margin-top: auto;
     margin-left: auto;
     margin-right: var(--size-base);

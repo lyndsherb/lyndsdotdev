@@ -1,9 +1,9 @@
 <article class="post">
-    <header class="post-header">
+    <header class="post-header{% if post.data.image or image %} with-image{% endif %}">
         {% if post.data.image %}
-            <img src=".{{ post.data.image }}" alt="" width="1000" height="300" />
+            <img src="{{ post.data.image }}" alt="" width="1000" height="300" />
         {% elif image  %}
-            <img src=".{{ image }}" alt="" width="1000" height="300" />
+            <img src="{{ image }}" alt="" width="1000" height="300" />
         {% endif %}
         <h2>
             {% if post.data.title %}
