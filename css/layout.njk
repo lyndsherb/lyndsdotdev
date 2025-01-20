@@ -74,12 +74,42 @@ pre {
 
 .content {
     grid-area: main;
-    padding: var(--size-base);
     max-width: 80ch;
 }
 
+.post-header:not(.with-image) {
+    margin: var(--size-base);
+}
+
+.post-header.with-image {
+    height: calc(var(--size-base) * 16.67);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+.post-header.with-image img {
+    position: absolute;
+    z-index: 1;
+}
+
+.post-header.with-image h2,
+.post-header.with-image p {
+    padding: 0 var(--size-base);
+    z-index: 3;
+}
+
+.post-header.with-image h2 {
+    margin-top: auto;
+    margin-bottom: 0;
+}
+.post-header.with-image p {
+    margin-top: 0;
+}
+
 .post-content {
-    margin-bottom: calc(var(--size-wolf) * 2)
+    margin: var(--size-base);
 }
 
 .h-list {
@@ -120,6 +150,11 @@ pre {
     flex-wrap: wrap;
     container-name: postList;
     container-type: inline-size;
+    margin: var(--size-base);
+}
+
+.post-list-title {
+    flex: 1 0 100%;
 }
 
 .card {
@@ -162,7 +197,8 @@ pre {
             main content area is full height to keep the sidebar
             correctly spaced
         */
-        min-height: calc(100vh - var(--size-wolf));
+        {# min-height: calc(100vh - var(--size-wolf)); #}
+        min-height: 100vh;
     }
 }
 

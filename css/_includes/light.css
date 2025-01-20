@@ -24,6 +24,15 @@ a:focus {
     color: rgba(var(--color-caboose));
 }
 
+.post-header.with-image img {
+    mask-image: linear-gradient(rgba(0,0,0,1) 80%, rgba(0,0,0,0));
+}
+
+.post-header.with-image h2,
+.post-header.with-image p {
+    background-color: rgba(var(--color-wyoming), 1);
+}
+
 .title-link {
     color: rgba(var(--color-simmons), 0.75);
 }
