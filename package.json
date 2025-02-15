@@ -5,7 +5,9 @@
   "main": "index.js",
   "scripts": {
     "build": "eleventy",
-    "serve": "eleventy --serve"
+    "serve": "eleventy --serve",
+    "tailwind:start": "pm2 start npx -- @tailwindcss/cli -i ./css/input.css -o ./_site/css/styles.css --watch",
+    "tailwind:stop": "pm2 stop npx"
   },
   "repository": {
     "type": "git",
@@ -18,6 +20,11 @@
   },
   "homepage": "https://github.com/lyndsherb/lyndsdotdev#readme",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1"
+    "@11ty/eleventy": "^2.0.1",
+    "@tailwindcss/cli": "^4.0.6",
+    "pm2": "^5.4.3"
+  },
+  "dependencies": {
+    "tailwindcss": "^4.0.6"
   }
 }

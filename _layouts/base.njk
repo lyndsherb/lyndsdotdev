@@ -10,11 +10,7 @@
             <meta name="theme-color" content="{{ theme.colors.light | findColor(theme.themeColor.light) }}" />
             <meta name="theme-color" content="{{ theme.colors.dark | findColor(theme.themeColor.dark) }}" media="(prefers-color-scheme: dark)" />
         {% endif %}
-        <style type="text/css">
-            {% include 'css/layout.njk' %}
-        </style>
-        <link rel="stylesheet" href="/css/light.css" />
-        <link rel="stylesheet" href="/css/dark.css" media="(prefers-color-scheme: dark)" />
+        <link rel="stylesheet" href="/css/styles.css" />
         <link rel="icon" type="image/x-icon" href="/images/favicon.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png" />
@@ -22,26 +18,26 @@
         <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16-dark.png" media="(prefers-color-scheme: dark)" />
     </head>
 
-    <body>
-        <header class="page-header">
-            <h1 class="title">
+    <body class="md:grid md:grid-columns-[max-content 1fr] md:grid-rows-[min-content 1fr]">
+        <header class="page-header md:col-start-1 md:max-w-[40ch]">
+            <h1 class="font-weight-600 text-5xl">
                 <a href="/" class="title-link">{{ site.title }}</a>
             </h1>
         </header>
         {% include 'navigation.njk' %}
-        <main class="content">
+        <main class="content md:col-start-2 md:row-span-4 md:max-w-[80ch]">
             {{ content | safe }}
         </main>
-        <aside class="page-aside no-print">
+        <aside class="page-aside print:hidden md:col-start-1  md:max-w-[40ch]">
             <p class="mini-about">{{ site.description | safe }}</p>
             {% include 'contact.njk' %}
         </aside>
-        <footer class="page-footer">
-            <p class="no-print">Icons from <a href="https://icomoon.io/app/" target="_blank" rel="noreferrer noopener">IcoMoon</a> and <a href="https://material.io/icons/" target="_blank" rel="noreferrer noopener">Material Design</a>.</p>
-            <p class="no-print">Powered by <a href="https://www.11ty.dev" target="_blank" rel="noopener noreferrer">11ty</a>.</p>
+        <footer class="page-footer md:col-start-1  md:max-w-[40ch]">
+            <p class="print:hidden">Icons from <a href="https://icomoon.io/app/" target="_blank" rel="noreferrer noopener">IcoMoon</a> and <a href="https://material.io/icons/" target="_blank" rel="noreferrer noopener">Material Design</a>.</p>
+            <p class="print:hidden">Powered by <a href="https://www.11ty.dev" target="_blank" rel="noopener noreferrer">11ty</a>.</p>
             <p>&copy; Lyndsey Herbert {{ '' | currentYear }}, all rights reserved.</p>
         </footer>
-        <div class="no-display">
+        <div class="hidden">
             {% include 'images/icons/svg-symbols.svg' %}
         </div>
     </body>

@@ -1,10 +1,10 @@
 {% if site.contact.length %}
-<h3 class="social-title">Contact me</h3>
-<ul class="h-list social">
+<h3 class="social-title font-weight-600 text-3xl mt-auto">Contact me</h3>
+<ul class="social flex space-x-[1rem]">
     {% for item in site.contact %}
         <li class="h-list__item">
             <a href="{{ item.url }}" target="_blank" rel="noreferrer noopener" title="{{ item.title }}">
-                <svg role="img" class="icon icon--{{ item.icon }}">
+                <svg role="img" class="icon icon--{{ item.icon }} size-[2rem]">
                     <title>{{ item.title }}</title>
                     <use xlink:href="#icon--{{ item.icon }}" />
                 </svg>
