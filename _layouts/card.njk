@@ -1,9 +1,9 @@
-<article class="card">
+<article class="card w-1/2">
     <header class="card-header">
-        <h3 class="card-title">
+        <h3 class="card-title font-weight-600 text-2xl">
         {{ post.data.title }}
         </h3>
-        <time datetime="{{post.data.date}}" class="card-time">{{ post.data.date | readableDate }}</time>
+        <time datetime="{{post.data.date}}" class="card-time italic">{{ post.data.date | readableDate }}</time>
     </header>
     <div class="card-content">
         {% if post.data.description %}

@@ -2,7 +2,7 @@
 layout: base.njk
 ---
 <article>
-    <h2>{{ title }}</h2>
-    <p><time datetime="{{ page.date | readableDate }}">{{ page.date | readableDate }}</time></p>
+    <h2 class="font-weight-600 text-4xl">{{ title }}</h2>
+    <p class="italic"><time datetime="{{ page.date | readableDate }}">{{ page.date | readableDate }}</time></p>
     {{ content | safe }}
 </article>

@@ -6,10 +6,10 @@ layout: base.njk
     {% if loop.index0 < 1 %}
         <article class="post-content">
             <header>
-            <h2>
+            <h2 class="font-weight-600 text-4xl">
                 {{ post.data.title }}
             </h2>
-            <time datetime="{{post.data.date}}">{{ post.data.date | readableDate }}</time>
+            <time datetime="{{post.data.date}}" class="italic">{{ post.data.date | readableDate }}</time>
             </header>
             <main>
             {{ post.data.content | safe }}
@@ -21,8 +21,8 @@ layout: base.njk
         {% endif %}
     {% endfor %}
     {% if collections.post.length > 1 %}
-        <h3>Recent posts</h3>
-        <section class="post-list">
+        <h2 class="font-weight-600 text-3xl print:hidden">Recent posts</h2>
+        <section class="post-list flex space-x-4 print:hidden">
         {% for post in collections.post | reverse %}
             {% if loop.index0 < 3 %}
                 {% if loop.index0 > 0 %}

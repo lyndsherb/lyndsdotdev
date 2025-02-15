@@ -18,8 +18,8 @@
         <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16-dark.png" media="(prefers-color-scheme: dark)" />
     </head>
 
-    <body class="md:grid md:grid-columns-[max-content 1fr] md:grid-rows-[min-content 1fr]">
-        <header class="page-header md:col-start-1 md:max-w-[40ch]">
+    <body class="min-h-screen md:grid md:grid-columns-[max-content 1fr] md:grid-rows-[min-content 1fr] md:justify-between md:gap-4 max-w-[80%]">
+        <header class="page-header md:col-start-1 md:max-w-[30ch]">
             <h1 class="font-weight-600 text-5xl">
                 <a href="/" class="title-link">{{ site.title }}</a>
             </h1>
@@ -28,14 +28,14 @@
         <main class="content md:col-start-2 md:row-span-4 md:max-w-[80ch]">
             {{ content | safe }}
         </main>
-        <aside class="page-aside print:hidden md:col-start-1  md:max-w-[40ch]">
-            <p class="mini-about">{{ site.description | safe }}</p>
+        <aside class="page-aside print:hidden md:col-start-1 md:max-w-[30ch] md:row-span-2">
+            <p class="mini-about md:self-start">{{ site.description | safe }}</p>
             {% include 'contact.njk' %}
         </aside>
-        <footer class="page-footer md:col-start-1  md:max-w-[40ch]">
+        <footer class="page-footer md:col-start-1  md:max-w-[30ch] md:self-end">
             <p class="print:hidden">Icons from <a href="https://icomoon.io/app/" target="_blank" rel="noreferrer noopener">IcoMoon</a> and <a href="https://material.io/icons/" target="_blank" rel="noreferrer noopener">Material Design</a>.</p>
             <p class="print:hidden">Powered by <a href="https://www.11ty.dev" target="_blank" rel="noopener noreferrer">11ty</a>.</p>
-            <p>&copy; Lyndsey Herbert {{ '' | currentYear }}, all rights reserved.</p>
+            <small>&copy; Lyndsey Herbert {{ '' | currentYear }}, all rights reserved.</small>
         </footer>
         <div class="hidden">
             {% include 'images/icons/svg-symbols.svg' %}
