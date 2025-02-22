@@ -1,7 +1,7 @@
 ---
 layout: base.njk
 ---
-<h2 class="font-weight-600 text-4xl">Recent posts</h2>
+<h2>Recent posts</h2>
 <section class="post-list flex flex-wrap justify-space-between">
   {% if collections.post.length %}
     {% for post in collections.post | reverse %}

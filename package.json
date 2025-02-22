@@ -4,10 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "eleventy",
-    "serve": "eleventy --serve",
+    "build": "eleventy; npm run tailwind:build",
+    "serve": "npm run tailwind:stop; npm run tailwind:start; eleventy --serve",
     "tailwind:start": "pm2 start npx -- @tailwindcss/cli -i ./css/input.css -o ./_site/css/styles.css --watch",
-    "tailwind:stop": "pm2 stop npx"
+    "tailwind:stop": "pm2 stop npx",
+    "tailwind:build": "tailwindcss -o ./_site/css/styles.css --minify"
   },
   "repository": {
     "type": "git",

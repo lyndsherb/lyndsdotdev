@@ -1,1 +1,69 @@
 @import "tailwindcss";
+
+h1 {
+    font-size: var(--text-5xl);
+    font-weight: var(--font-weight-bold);
+}
+
+h2,
+h3,
+h4,
+h5 {
+    font-weight: var(--font-weight-semibold);
+    margin-bottom: calc(var(--spacing) * 2);
+    line-height: 1.125;
+}
+
+h2 {
+    font-size: var(--text-3xl);
+}
+
+h3 {
+    font-size: var(--text-2xl);
+}
+
+h4 {
+    font-size: var(--text-xl);
+}
+
+h5 {
+    font-size: var(--text-l);
+}
+
+p,
+time {
+    margin-bottom: calc(var(--spacing) * 2);
+}
+
+.page-body {
+    grid-template-areas:
+        "header header"
+        "main main"
+        "aside aside"
+        "footer footer";
+}
+
+.page-header {
+    grid-area: header;
+}
+
+.page-aside {
+    grid-area: aside;
+}
+
+.content {
+    grid-area: main;
+}
+
+.page-footer {
+    grid-area: footer;
+}
+
+@media (min-width: 48rem) {
+    .page-body {
+        grid-template-areas:
+            "header main"
+            "aside main"
+            "footer main";
+    }
+}

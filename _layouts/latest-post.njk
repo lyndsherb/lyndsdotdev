@@ -4,9 +4,9 @@ layout: base.njk
 {% if collections.post.length %}
     {% for post in collections.post | reverse %}
     {% if loop.index0 < 1 %}
-        <article class="post-content">
+        <article class="post-content pb-4 mb-4 border-b border-current">
             <header>
-            <h2 class="font-weight-600 text-4xl">
+            <h2>
                 {{ post.data.title }}
             </h2>
             <time datetime="{{post.data.date}}" class="italic">{{ post.data.date | readableDate }}</time>
@@ -21,7 +21,7 @@ layout: base.njk
         {% endif %}
     {% endfor %}
     {% if collections.post.length > 1 %}
-        <h2 class="font-weight-600 text-3xl print:hidden">Recent posts</h2>
+        <h2 class="print:hidden">Recent posts</h2>
         <section class="post-list flex space-x-4 print:hidden">
         {% for post in collections.post | reverse %}
             {% if loop.index0 < 3 %}
