@@ -1,9 +1,9 @@
-<article class="card w-1/2 border border-current rounded-sm flex flex-col">
+<article class="card border border-current rounded-sm flex flex-col max-xl:basis-full xl:basis-(--card-xl-width)">
     <header class="card-header border-b border-current p-2">
         <h3 class="card-title">
         {{ post.data.title }}
         </h3>
-        <time datetime="{{post.data.date}}" class="card-time italic">{{ post.data.date | readableDate }}</time>
+        <time datetime="{{post.data.date}}" class="card-time">{{ post.data.date | readableDate }}</time>
     </header>
     <div class="card-content border-b border-current p-2 grow-1">
         {% if post.data.description %}

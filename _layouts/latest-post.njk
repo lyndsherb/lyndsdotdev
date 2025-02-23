@@ -9,7 +9,7 @@ layout: base.njk
             <h2>
                 {{ post.data.title }}
             </h2>
-            <time datetime="{{post.data.date}}" class="italic">{{ post.data.date | readableDate }}</time>
+            <time datetime="{{post.data.date}}">{{ post.data.date | readableDate }}</time>
             </header>
             <main>
             {{ post.data.content | safe }}

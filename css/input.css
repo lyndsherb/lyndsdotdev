@@ -1,5 +1,13 @@
 @import "tailwindcss";
 
+:root {
+    --card-xl-width: calc(50% - calc(var(--spacing) * 2));
+}
+
+a {
+    text-decoration: underline;
+}
+
 h1 {
     font-size: var(--text-5xl);
     font-weight: var(--font-weight-bold);
@@ -35,6 +43,18 @@ time {
     margin-bottom: calc(var(--spacing) * 2);
 }
 
+time {
+    font-style: italic;
+}
+
+hr {
+    margin: calc(var(--spacing) * 2) 0;
+}
+
+.title-link {
+    text-decoration: none;
+}
+
 .page-body {
     grid-template-areas:
         "header header"
@@ -59,11 +79,17 @@ time {
     grid-area: footer;
 }
 
-@media (min-width: 48rem) {
+@media (min-width: 48rem) { /* size:md */
     .page-body {
         grid-template-areas:
             "header main"
             "aside main"
             "footer main";
+    }
+}
+
+@media (min-width: 80rem) { /* size: xl */
+    .card:nth-of-type(even) {
+        margin-inline-end: 0;
     }
 }
