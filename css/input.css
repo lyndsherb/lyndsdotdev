@@ -18,7 +18,7 @@ h3,
 h4,
 h5 {
     font-weight: var(--font-weight-semibold);
-    margin-bottom: calc(var(--spacing) * 2);
+    margin-bottom: calc(var(--spacing) * 4);
     line-height: 1.125;
 }
 

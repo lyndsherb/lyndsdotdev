@@ -21,15 +21,17 @@ layout: base.njk
         {% endif %}
     {% endfor %}
     {% if collections.post.length > 1 %}
-        <h2 class="print:hidden">Recent posts</h2>
-        <section class="post-list flex space-x-4 print:hidden">
-        {% for post in collections.post | reverse %}
-            {% if loop.index0 < 3 %}
-                {% if loop.index0 > 0 %}
-                    {% include './card.njk' %}
+        <section class="print:hidden">
+            <h2>Recent posts</h2>
+            <div class="post-list grid xl:grid-cols-2 gap-4">
+            {% for post in collections.post | reverse %}
+                {% if loop.index0 < 3 %}
+                    {% if loop.index0 > 0 %}
+                        {% include './card.njk' %}
+                    {% endif %}
                 {% endif %}
-            {% endif %}
-        {% endfor %}
+            {% endfor %}
+            </div>
         </section>
     {% endif %}
 {% else %}
