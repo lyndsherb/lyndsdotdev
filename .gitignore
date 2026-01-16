@@ -1,6 +1,5 @@
 # build output
 dist/
-!dist/.gitkeep
 # generated types
 .astro/
 
