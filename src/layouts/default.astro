@@ -24,7 +24,25 @@ const pageTitle = title ? `${title} | lynds.dev` : `lynds.dev`;
 		<link rel="stylesheet" type="text/css" href="/styles/dark.css" media="(prefers-color-scheme: dark)" />
 	</head>
 	<body>
+		<header class="page-header">
+			<h1 class="title">
+				<a href="/" class="title-link">lynds.dev</a>
+			</h1>
+		</header>
+		<main class="content">
+			<slot /> 
+		</main>
+		<aside class="page-aside no-print">
+			<p class="mini-about">site description</p>
+		</aside>
 		<Navigation />
-		<slot /> 
+		<footer class="page-footer">
+				<p class="no-print">Icons from <a href="https://icomoon.io/app/" target="_blank" rel="noreferrer noopener">IcoMoon</a> and <a href="https://material.io/icons/" target="_blank" rel="noreferrer noopener">Material Design</a>.</p>
+				<p class="no-print">Powered by <a href="https://www.astro.build" target="_blank" rel="noopener noreferrer">Astro</a>.</p>
+				<p>&copy; Lyndsey Herbert {(new Date()).getFullYear()}, all rights reserved.</p>
+		</footer>
+		<div class="no-display">
+				SVGs go here
+		</div>
 	</body>
 </html>
