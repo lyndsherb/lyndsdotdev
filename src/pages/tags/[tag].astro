@@ -8,13 +8,10 @@ export async function getStaticPaths() {
     .sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
   const uniqueTags = [...new Set(posts.map((post: any) => post.data.tags).flat())];
 
-  return uniqueTags.filter(Boolean).map(tag => {
-    console.log(tag);
-    return {
-      params: { tag: `${tag}`.replace(/\s/g, "-") },
-      props: { posts: posts.filter(({ data: { tags }}) => tags.includes(tag)), unformattedTag: tag },
-    }
-  });
+  return uniqueTags.filter(Boolean).map(tag => ({
+    params: { tag: `${tag}`.replace(/\s/g, "-") },
+    props: { posts: posts.filter(({ data: { tags }}) => tags.includes(tag)), unformattedTag: tag },
+  }));
 };
 
 const { tag } = Astro.params;

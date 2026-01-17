@@ -2,7 +2,6 @@
 title: It's been a while...
 description: What's been happening since my last update at the end of 2024.
 tags:
-    - post
     - personal
     - new job
     - mental health

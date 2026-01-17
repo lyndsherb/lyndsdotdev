@@ -2,7 +2,6 @@
 title: Hello, world!
 description: A bit about me, about this blog and what you can expect to see.
 tags: 
-    - post
     - first post
     - blog
     - about me

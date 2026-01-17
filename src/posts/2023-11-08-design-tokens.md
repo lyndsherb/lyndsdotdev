@@ -2,7 +2,6 @@
 title: Playing with Design Tokens
 description: First-time setup with design tokens
 tags:
-    - post
     - blog
     - design tokens
     - development
