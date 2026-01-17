@@ -1,4 +1,6 @@
 ---
+import Date from './date.astro';
+
 const { title, date, description, href } = Astro.props;
 ---
 <article class="card">
@@ -6,7 +8,7 @@ const { title, date, description, href } = Astro.props;
         <h3 class="card-title">
         {title}
         </h3>
-        <time datetime={date} class="card-time">{date}</time>
+        <Date date={date} />
     </header>
     <div class="card-content">
         {description ?? ""}

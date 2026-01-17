@@ -1,0 +1,10 @@
+---
+import Date from './date.astro';
+
+const { title, date } = Astro.props;
+---
+<article>
+  <h2>{title}</h2>
+  <p><Date date={date}></p>
+  <slot />
+</article>

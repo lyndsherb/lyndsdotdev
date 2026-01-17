@@ -7,12 +7,10 @@ const title = "Posts"
 const posts = (await getCollection('posts')).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
 <Layout title="Posts">
-  <h1>Posts</h1>
-  <ul>
+  <h2>Recent posts</h2>
+  <section class="post-list">
     {posts.map((post) => (
-      <li>
-        <PostCard {...post.data} href={`/posts/${post.id}`} />
-      </li>
+      <PostCard {...post.data} href={`/posts/${post.id}`} />
     ))}
-  </ul>
+  </section>
 </Layout>

@@ -1,7 +1,16 @@
 ---
+import { getCollection, render } from 'astro:content';
 import Layout from "../layouts/default.astro"
+import PostBody from '../components/post-body.astro'
+
+const posts = await getCollection('posts');
+const lastPost = posts[posts.length - 1];
+
+const { Content } = await render(lastPost);
 ---
 
 <Layout>
-	<h1>Home</h1> 
-</Layout
+	<PostBody {...lastPost.data}>
+		<Content />
+	</PostBody>
+</Layout>

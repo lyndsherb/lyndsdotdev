@@ -1,12 +1,13 @@
 ---
 import Layout from './default.astro'
+import PostBody from '../components/post-body.astro'
 const { title, date, tags } = Astro.props
 ---
 
 <Layout title={title}>
-  <h1>{title}</h1>
-  <p><time datetime={date}>{date}</time></p>
-  <slot />
+  <PostBody {...Astro.props}>
+    <slot />
+  </PostBody>
   <footer>
     <small>
     Tags: 
