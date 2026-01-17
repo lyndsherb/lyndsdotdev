@@ -1,10 +1,21 @@
 ---
 import Layout from './default.astro'
-const { title, date } = Astro.props
+const { title, date, tags } = Astro.props
+console.log(tags)
 ---
 
 <Layout title={title}>
   <h1>{title}</h1>
   <p><time datetime={date}>{date}</time></p>
-  <slot>
+  <slot />
+  <footer>
+    <small>
+    Tags: 
+    {tags.map((tag, index) => {
+      const showComma = index < tags.length - 1;
+
+      return (<span><a href={`/tags/${tag.replace(/\s/g, "-")}`}>{tag}</a>{showComma ? ', ' : ''}</span>);
+    })}
+    </small>
+  </footer>
 </Layout>
