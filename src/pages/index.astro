@@ -2,6 +2,8 @@
 import "/public/styles/global.css"
 import "/public/styles/utility.css"
 
+import Navigation from "../components/navigation.astro"
+
 const title = "lynds.dev";
 ---
 
@@ -16,13 +18,7 @@ const title = "lynds.dev";
 		<link rel="stylesheet" type="text/css" href="/styles/dark.css" media="(prefers-color-scheme: dark)" />
 	</head>
 	<body>
-		<nav>
-			<ul>
-				<li><a href="/">Home</a></li>
-				<li><a href="/about">About</a></li>
-				<li><a href="/posts">Posts</a></li>
-			</ul>
-		</nav>
+		<Navigation />
 		<h1>Astro</h1>
 		<slot /> 
 	</body>
