@@ -8,7 +8,6 @@ tags:
     - mental health
     - burnout
 date: 2025-08-31
-permalink: '/posts/{{ date | shortDate | slugify }}/{{ title | slugify }}'
 ---
 Hi all, welcome back to my site! Another 'hot minute' (9 months!) has flown by without a single update. A lot can happen in that time, as it turns out; let's see how much I can remember for this post. 
 

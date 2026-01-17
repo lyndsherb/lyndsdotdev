@@ -1,13 +1,12 @@
 ---
 title: Hello, world!
 description: A bit about me, about this blog and what you can expect to see.
-tags:
+tags: 
     - post
     - first post
     - blog
     - about me
 date: 2023-09-13
-permalink: '/posts/{{ date | shortDate | slugify }}/{{ title | slugify }}'
 ---
 
 Why hello there! Welcome to my blog!
