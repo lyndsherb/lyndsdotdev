@@ -4,16 +4,16 @@ import Date from './date.astro';
 const { title, date, description, href } = Astro.props;
 ---
 <article class="card">
-    <header class="card-header">
-        <h3 class="card-title">
-        {title}
-        </h3>
-        <Date date={date} />
-    </header>
-    <div class="card-content">
-        {description ?? ""}
-    </div>
-    <footer class="card-footer">
-        <a href={href}>Read article</a>
-    </footer>
+  <header class="card-header">
+    <h3 class="card-title">
+      {title}
+    </h3>
+    <Date date={date} />
+  </header>
+  <div class="card-content">
+    {description ?? ""}
+  </div>
+  <footer class="card-footer">
+    <a href={href}>Read article</a>
+  </footer>
 </article>

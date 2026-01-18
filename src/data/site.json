@@ -30,7 +30,7 @@
     {
       "title": "Want to chat? Send me an email! (email is obfuscated for spam prevention)",
       "icon": "email",
-      "url": "mailto: hello@lynds.dev"
+      "url": "mailto: hello[AT]lynds.dev"
     }
   ]
 }
