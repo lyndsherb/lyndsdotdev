@@ -19,12 +19,8 @@ const { posts, unformattedTag } = Astro.props;
 ---
 
 <Layout title={`Posts tagged with "${unformattedTag}"`}>
-  <h1>Posts tagged with <code>{unformattedTag}</code></h1>
-  <ul>
-    {posts.map((post) => (
-      <li>
-        <PostCard {...post.data} href={`/posts/${post.id}`} />
-      </li>
-    ))}
-  </ul>
+  <h2>Posts tagged with <code>{unformattedTag}</code></h2>
+  <section class="post-list">
+    {posts.map((post) => (<PostCard {...post.data} href={`/posts/${post.id}`} />))}
+  </section>
 </Layout>
