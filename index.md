@@ -1,3 +1,0 @@
----
-layout: latest-post.njk
----

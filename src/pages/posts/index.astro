@@ -1,0 +1,16 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from "../../layouts/default.astro"
+import PostCard from "../../components/post-card.astro"
+
+const title = "Posts"
+const posts = (await getCollection('posts')).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
+---
+<Layout title="Posts">
+  <h2>Recent posts</h2>
+  <section class="post-list">
+    {posts.map((post) => (
+      <PostCard {...post.data} href={`/posts/${post.id}`} />
+    ))}
+  </section>
+</Layout>
