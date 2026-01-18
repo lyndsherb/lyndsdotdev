@@ -6,9 +6,9 @@ const { contact } = Astro.props;
   {contact.map(({ title, icon, url }) => (
     <li class="h-list__item">
       <a href={url} target="_blank" rel="noreferrer noopener" title={title}>
-        <svg role="img" class=`icon icon--${icon}`>
+        <svg role="img" class={`icon icon--${icon}`}>
           <title>{title}</title>
-          <use xlink:href=`#icon--${icon}` /> 
+          <use xlink:href={`#icon--${icon}`} /> 
         </svg>
       </a>
     </li>
