@@ -1,0 +1,36 @@
+{
+  "title": "lynds.dev",
+  "subtitle": "Lyndsey Herbert, Senior Frontend Developer",
+  "description": "The site and tech blog of Lyndsey Herbert, senior front-end developer at VYPR.",
+  "meta": [
+    {
+      "name": "viewport",
+      "content": "width=device-width, initial-scale=1.0"
+    },
+    {
+      "name": "description",
+      "content": "The tech blog of frontend developer Lyndsey Herbert"
+    },
+    {
+      "name": "robots",
+      "content": "index,follow"
+    }
+  ],
+  "contact": [
+    {
+      "title": "Check out my projects on Github",
+      "icon": "github",
+      "url": "https://www.github.com/lyndsherb/"
+    },
+    {
+      "title": "Find me on Linkedin",
+      "icon": "linkedin",
+      "url": "https://www.linkedin.com/in/lyndsherb/"
+    },
+    {
+      "title": "Want to chat? Send me an email! (email is obfuscated for spam prevention)",
+      "icon": "email",
+      "url": "mailto: hello@lynds.dev"
+    }
+  ]
+}

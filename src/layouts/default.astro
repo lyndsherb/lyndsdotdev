@@ -2,18 +2,19 @@
 import "/public/styles/global.css"
 import "/public/styles/utility.css"
 
+import site from '../data/site.json';
 import Navigation from "../components/navigation.astro"
 
 const { title } = Astro.props;
 
-const pageTitle = title ? `${title} | lynds.dev` : `lynds.dev`;
+const pageTitle = title ? `${title} | ${site.title}` : `${site.title} | ${site.subtitle}`;
 ---
 
 <html lang="en">
 	<head>
 		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+		{site.meta.map((meta) => (<meta {...meta} />))}
 		<title>{pageTitle}</title>
 		<link rel="icon" type="image/x-icon" href="/images/favicons/favicon.ico" />
 		<link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png" />
@@ -33,7 +34,7 @@ const pageTitle = title ? `${title} | lynds.dev` : `lynds.dev`;
 			<slot /> 
 		</main>
 		<aside class="page-aside no-print">
-			<p class="mini-about">site description</p>
+			<p class="mini-about">{site.description}</p>
 		</aside>
 		<Navigation />
 		<footer class="page-footer">
