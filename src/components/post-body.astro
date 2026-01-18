@@ -3,7 +3,7 @@ import Date from './date.astro';
 
 const { title, date } = Astro.props;
 ---
-<article>
+<article class="post-content">
   <h2>{title}</h2>
   <p><Date date={date}></p>
   <slot />

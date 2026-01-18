@@ -2,9 +2,13 @@
 import { getCollection, render } from 'astro:content';
 import Layout from "../layouts/default.astro"
 import PostBody from '../components/post-body.astro'
+import PostCard from '../components/post-card.astro'
 
 const posts = await getCollection('posts');
 const lastPost = posts[posts.length - 1];
+const recentPosts = posts
+	.filter(({ id }) => id !== lastPost.id)
+	.slice(-2).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 
 const { Content } = await render(lastPost);
 ---
@@ -13,4 +17,10 @@ const { Content } = await render(lastPost);
 	<PostBody {...lastPost.data}>
 		<Content />
 	</PostBody>
+	<h3>Recent posts</h3>
+	<section class="post-list">
+    {recentPosts.map((post) => (
+      <PostCard {...post.data} href={`/posts/${post.id}`} />
+    ))}
+  </section>
 </Layout>
