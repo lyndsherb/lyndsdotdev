@@ -10,5 +10,9 @@
   },
   "dependencies": {
     "astro": "^5.16.9"
+  },
+  "engines": {
+    "node": ">=22",
+    "pnpm": ">=10"
   }
 }
