@@ -1,7 +1,7 @@
 ---
 title: Joining the space race with Astro
 description: Why I chose to move from 11ty to Astro
-date: 2026-01-20
+date: 2026-01-21
 tags: 
     - development
     - 11ty
@@ -30,7 +30,7 @@ In short - I went from playing about with Astro to a fully functioning blog in l
 
 It does! If I'd changed the styles, things would have taken a bit longer, it's true. Stopping now is good though; if I decided to overhaul everything at once, I'd be tweaking things for weeks! 
 
-Alongside the styles needing a refresh, there's also a few chunks of code that could do with some tidying. As with all things, sometimes you just need to know when it's GETMO - Good Enough to Move On. And now is that time! 
+Alongside the styles needing a refresh, there's also a few chunks of code that could do with some tidying. As with all things, sometimes you just need to know when it's GETMO - Good Enough To Move On. And now is that time! 
 
 ### And that's a wrap (for now)
 
