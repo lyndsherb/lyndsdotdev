@@ -1,6 +1,6 @@
 ---
 title: Joining the space race with Astro
-description: Why I moved from 11ty to Astro
+description: Why I chose to move from 11ty to Astro
 date: 2026-01-20
 tags: 
     - development
@@ -35,6 +35,8 @@ Alongside the styles needing a refresh, there's also a few chunks of code that c
 ### And that's a wrap (for now)
 
 Thanks all for sticking with me this far - it's been fun. I still have the projects I outlined in [my last post](/posts/2025-08-31-been-a-while) to work on, so look out for posts about those. 
+
+I'm still very thankful that I found 11ty when I did. Thank you to the 11ty team for your hard work and development on your project, that allowed me to start my blog in the first place. 
 
 In the meantime, if there's anything more you want to know about this rebuild, feel free to email me with the link below and ask away. 
 
