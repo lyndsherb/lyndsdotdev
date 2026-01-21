@@ -2,7 +2,6 @@
 title: Playing with Design Tokens
 description: First-time setup with design tokens
 tags:
-    - blog
     - design tokens
     - development
 date: 2023-11-08

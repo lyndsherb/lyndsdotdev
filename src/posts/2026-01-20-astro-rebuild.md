@@ -6,8 +6,6 @@ tags:
     - development
     - 11ty
     - Astro
-    - blog
-
 ---
 
 Happy New Year! Welcome back to my blog and my posts! 
