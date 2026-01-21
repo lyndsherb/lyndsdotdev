@@ -9,3 +9,4 @@ https://miro.com/app/board/uXjVGNsyBX8=/
 * big and bold
 * maybe use a fat serif font like Alfa Slab One
 * download google fonts to own server?
+* body font: inter, montserrat, funnel sans?
