@@ -22,7 +22,7 @@ I was right - Astro wasn't quite what _that_ project needs, at least not yet. (I
 
 (I know 11ty allows for users to choose their own templating language - it was actually something I was idly working on! But along came Astro...)
 
-Me being me, that got me excited to try it out for myself, so I set about starting a new blog from scratch. Three lazy days later (a couple of hours here and there - about 6 - 8 hours in total), not only did I have everything ported over, but I also had some new features (namely post tags) that I've been meaning to do for a while! 
+Me being me, that got me excited to try it out for myself, so I set about starting a new blog from scratch. Three lazy days later, not only did I have everything ported over, but I also had some new features (namely post tags) that I've been meaning to do for a while! 
 
 In short - I went from playing about with Astro to a fully functioning blog in less than a weekend. It was easy to do, it's nice to use and I'm looking forward to working with it some more! 
 
