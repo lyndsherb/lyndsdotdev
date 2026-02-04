@@ -10,3 +10,8 @@ https://miro.com/app/board/uXjVGNsyBX8=/
 * maybe use a fat serif font like Alfa Slab One
 * download google fonts to own server?
 * body font: inter, montserrat, funnel sans?
+
+## icons
+https://iconstack.io/
+https://opensvg.dev/icons 
+https://svgicons.com/
