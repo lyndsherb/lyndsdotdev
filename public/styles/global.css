@@ -1,0 +1,65 @@
+body {
+  padding: 0;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: max-content 1fr;
+  align-items: center;
+  grid-template-areas: 
+    "header navigation"
+    "main main"
+    "aside aside"
+    "footer footer"
+  ;
+}
+
+.page-header {
+  grid-area: header;
+}
+
+.page-navigation {
+  grid-area: navigation;
+  justify-self: right;
+}
+
+.page-content {
+  grid-area: main;
+}
+
+.page-aside {
+  grid-area: aside;
+}
+
+.page-footer {
+  grid-area: footer;
+}
+
+/* Utility and common classes */
+.h-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.h-list .list-item {
+  display: inline-block;
+}
+
+.h-list .list-item + .list-item {
+  margin-left: 1rem;
+}
+
+.icon {
+  width: 2rem;
+  height: 2rem;
+}
+
+.no-display {
+  display: none !important;
+}
+
+@media print {
+  .no-print {
+    display: none !important;
+  }
+}
