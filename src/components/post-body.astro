@@ -1,10 +1,18 @@
 ---
 import Date from './date.astro';
 
-const { title, date } = Astro.props;
+const { title, date, tags } = Astro.props;
 ---
 <article class="post-content">
-  <h2>{title}</h2>
+  <div class="post-aside">
+    <h1>{title}</h1>
     <p><Date date={date}></p>
+    Tags: 
+    {tags.map((tag, index) => {
+      const showComma = index < tags.length - 1;
+
+      return (<span><a href={`/tags/${tag.replace(/\s/g, "-")}`}>{tag}</a>{showComma ? ', ' : ''}</span>);
+    })}
+  </div>
   <slot />
 </article>
