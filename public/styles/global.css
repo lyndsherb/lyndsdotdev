@@ -1,5 +1,5 @@
 body {
-  padding: 0;
+  margin: 0;
   display: grid;
   gap: 0.5rem;
   grid-template-columns: repeat(2, 1fr);
@@ -20,6 +20,7 @@ body {
 .page-navigation {
   grid-area: navigation;
   justify-self: right;
+  position: relative;
 }
 
 .page-content {
@@ -58,8 +59,39 @@ body {
   display: none !important;
 }
 
+.visually-hidden {
+  clip: rect(0 0 0 0); 
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap; 
+  width: 1px;
+}
+
 @media print {
   .no-print {
     display: none !important;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .navigation-toggle:not(:checked) + .navigation {
+    display: none;
+  }
+
+  .navigation {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 100vw;
+    z-index: 1;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .navigation-toggle,
+  .navigation-toggle-label {
+    display: none;
   }
 }
