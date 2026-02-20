@@ -2,7 +2,8 @@
   --color-white: #fafafa;
   --color-black: #212121;
 
-  --color-cyan: #25ced1;
+  --color-indigo: #19183A;
+  --color-cyan: #1FABAD;
   --color-powder: #fceade;
   --color-coral: #ff8a5b;
   --color-bubblegum: #ea526f;
@@ -11,7 +12,7 @@
 body {
   font-family: "Fira Sans", sans-serif;
   background-color: var(--color-white);
-  color: var(--color-black);
+  color: var(--color-indigo);
 }
 
 h1,
@@ -21,21 +22,24 @@ h1,
 }
 
 a,
-.link {
+.link,
+.navigation-toggle-label {
   color: var(--color-cyan);
 }
 
 a:active,
 a:visited
 .link:active,
-.link:visited {
+.link:visited,
+.navigation-toggle:checked ~ .navigation-toggle-label {
   color: var(--color-bubblegum);
 }
 
 a:hover,
 a:focus,
 .link:hover,
-.link:focus {
+.link:focus,
+.navigation-toggle:focus ~ .navigation-toggle-label {
   color: var(--color-coral);
 }
 
@@ -47,4 +51,14 @@ pre,
 
 .icon {
   fill: currentColor;
+}
+
+.navigation {
+  background-color: var(--color-white);
+}
+
+@media screen and (max-width: 63.9375rem) {
+  .page-header {
+    background-color: var(--color-white);
+  }
 }
