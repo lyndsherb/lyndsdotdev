@@ -64,3 +64,23 @@ pre,
     color: currentColor;
   }
 }
+
+@media screen and (min-width: 64rem) {
+  .content-aside {
+    background-color: var(--color-coral);
+    color: var(--color-white);
+  }
+
+  .content-aside a {
+    color: currentColor;
+  }
+
+  .content-aside h1 {
+    background-color: var(--color-bubblegum);
+    box-shadow: 1rem 1.3rem 0 var(--color-white);
+  }
+
+  .page-footer {
+    color: var(--color-white);
+  }
+}

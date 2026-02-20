@@ -48,6 +48,11 @@ h2 {
 
 .page-footer {
   grid-area: footer;
+  font-size: 0.75rem;
+}
+
+.page-footer p {
+  margin: 0 0 0.25rem 0;
 }
 
 /* Utility and common classes */
@@ -159,6 +164,7 @@ h2 {
 
 @media screen and (min-width: 64rem) {
   body {
+    column-gap: 1rem;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: max-content 1fr;
     grid-template-areas: 
@@ -172,9 +178,23 @@ h2 {
   }
 
   .page-header,
+  .page-aside {
+    padding-right: 1rem;
+  }
+
+  .page-header {
+    padding-top: 1rem;
+  }
+
+  .page-aside {
+    padding-bottom: 1rem;
+  }
+
+  .page-header,
   .page-navigation,
   .page-aside {
     grid-column: 11 / 13;
+    text-align: right;
   }
 
   .page-footer {
@@ -182,6 +202,7 @@ h2 {
     bottom: 0;
     left: 0;
     grid-column: 1 / 5;
+    padding: 1rem;
   }
 
   .page-content,
@@ -193,8 +214,19 @@ h2 {
   }
 
   .content-aside {
+    position: relative; 
     grid-column: span 4;
     grid-row: auto;
+    padding: 1rem;
+  }
+
+  .content-aside h1 {
+    position: sticky;
+    top: 1rem;
+    display: inline;
+    line-height: 3.5rem;
+    box-decoration-break: clone;
+    padding: 1rem;
   }
 
   .content-main {
