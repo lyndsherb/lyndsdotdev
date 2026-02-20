@@ -9,7 +9,6 @@ html {
 body {
   margin: 0;
   display: grid;
-  gap: 1rem;
   grid-template-columns: repeat(2, 1fr);
   grid-template-rows: max-content 1fr;
   grid-template-areas: 
@@ -20,16 +19,10 @@ body {
   ;
 }
 
-h1 {
+h1,
+h2 {
   margin-top: 0;
   margin-bottom: 0.5rem;
-}
-
-.page-header,
-.page-aside,
-.page-content,
-.page-footer {
-  padding: 0.5rem 1rem;
 }
 
 .page-header {
@@ -38,7 +31,6 @@ h1 {
 
 .page-navigation {
   justify-self: right;
-  position: relative;
   text-align: right;
 }
 
@@ -114,6 +106,14 @@ h1 {
     align-items: center;
   }
 
+  .page-header,
+  .page-aside,
+  .page-footer,
+  .content-aside,
+  .content-main {
+    padding: 0.5rem 1rem;
+  }
+
   .page-header {
     grid-column: span 2;
     display: grid;
@@ -135,7 +135,10 @@ h1 {
     top: 100%;
     right: 0;
     width: 100vw;
-    z-index: 1;
+  }
+
+  .navigation .list-item {
+    margin: 0 1rem;
   }
 }
 

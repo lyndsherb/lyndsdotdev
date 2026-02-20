@@ -22,24 +22,21 @@ h1,
 }
 
 a,
-.link,
-.navigation-toggle-label {
+.link {
   color: var(--color-cyan);
 }
 
 a:active,
 a:visited
 .link:active,
-.link:visited,
-.navigation-toggle:checked ~ .navigation-toggle-label {
+.link:visited {
   color: var(--color-bubblegum);
 }
 
 a:hover,
 a:focus,
 .link:hover,
-.link:focus,
-.navigation-toggle:focus ~ .navigation-toggle-label {
+.link:focus {
   color: var(--color-coral);
 }
 
@@ -53,12 +50,17 @@ pre,
   fill: currentColor;
 }
 
-.navigation {
-  background-color: var(--color-white);
-}
-
 @media screen and (max-width: 63.9375rem) {
-  .page-header {
-    background-color: var(--color-white);
+  .page-header,
+  .navigation,
+  .content-aside {
+    background-color: var(--color-bubblegum);
+    color: var(--color-white);
+  }
+
+  .page-header a,
+  .navigation-toggle-label,
+  .content-aside a {
+    color: currentColor;
   }
 }
