@@ -130,6 +130,7 @@ body {
   .page-navigation,
   .page-aside {
     grid-column: 11 / 13;
+    text-align: right;
   }
 
   .page-footer {

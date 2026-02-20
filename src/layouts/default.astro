@@ -2,6 +2,7 @@
 import '/public/styles/global.css';
 
 import site from '../data/site.json';
+import fonts from '../data/fonts.json';
 import Navigation from '../components/navigation.astro';
 import Contact from '../components/contact.astro';
 import Symbols from '../components/svg-symbols.astro';
@@ -17,16 +18,19 @@ const pageTitle = title ? `${title} | ${site.title}` : `${site.title} | ${site.s
 		<meta name="generator" content={Astro.generator} />
 		{site.meta.map((meta) => (<meta {...meta} />))}
 		<title>{pageTitle}</title>
+    <link rel="stylesheet" type="text/css" href="/styles/fonts.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/styles.css" />
 		<link rel="icon" type="image/x-icon" href="/images/favicons/favicon.ico" />
 		<link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png" />
 		<link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png" />
 		<link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32-dark.png" media="(prefers-color-scheme: dark)" />
 		<link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16-dark.png" media="(prefers-color-scheme: dark)" />
+    {fonts.map((font) => font.variants.map((variant) => (<link as="font" rel="preload" type="font/ttf" crossorigin="anonymous" href={`/fonts/${font.name}/${variant}.ttf`} />)))}
 	</head>
 	<body>
 		<header class="page-header">
 			<span class="title">
-				<a href="/" class="title-link">lynds.dev</a>
+				<a href="/" class="title-link heading">lynds.dev</a>
 			</span>
 		</header>
     <Navigation />

@@ -1,0 +1,50 @@
+:root {
+  --color-white: #fafafa;
+  --color-black: #212121;
+
+  --color-cyan: #25ced1;
+  --color-powder: #fceade;
+  --color-coral: #ff8a5b;
+  --color-bubblegum: #ea526f;
+}
+
+body {
+  font-family: "Fira Sans", sans-serif;
+  background-color: var(--color-white);
+  color: var(--color-black);
+}
+
+h1,
+.heading {
+  font-family: "Alfa Slab One", sans-serif;
+  font-weight: 400;
+}
+
+a,
+.link {
+  color: var(--color-cyan);
+}
+
+a:active,
+a:visited
+.link:active,
+.link:visited {
+  color: var(--color-bubblegum);
+}
+
+a:hover,
+a:focus,
+.link:hover,
+.link:focus {
+  color: var(--color-coral);
+}
+
+code,
+pre,
+.code {
+  font-family: "Fira Code", monospace;
+}
+
+.icon {
+  fill: currentColor;
+}
