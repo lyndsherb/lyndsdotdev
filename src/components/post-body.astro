@@ -3,17 +3,18 @@ import Date from './date.astro';
 
 const { title, date, tags } = Astro.props;
 ---
-<article class="content-body">
-  <div class="content-aside">
-    <h1>{title}</h1>
-    <p><Date date={date}></p>
-    Tags: 
-    {tags.map((tag, index) => {
-      const showComma = index < tags.length - 1;
+<div class="content-aside">
+  <h1><span class="highlight cool-title">{title}</span></h1>
+  <p><Date date={date} class="highlight"></p>
+  <span class="highlight">Tags: 
+  {tags.map((tag, index) => {
+    const showComma = index < tags.length - 1;
 
-      return (<span><a href={`/tags/${tag.replace(/\s/g, "-")}`}>{tag}</a>{showComma ? ', ' : ''}</span>);
-    })}
-  </div>
+    return (<span><a href={`/tags/${tag.replace(/\s/g, "-")}`}>{tag}</a>{showComma ? ', ' : ''}</span>);
+  })}
+  </span>
+</div>
+<article class="content-body">
   <div class="content-main">
     <slot />
   </div>

@@ -50,8 +50,18 @@ pre,
   fill: currentColor;
 }
 
+mark,
+.highlight {
+  background-color: var(--color-bubblegum);
+}
+
+.cool-title {
+  box-shadow: 1rem 1.3rem 0 var(--color-white);
+}
+
 @media screen and (max-width: 63.9375rem) {
   .page-header,
+  .page-navigation,
   .navigation,
   .content-aside {
     background-color: var(--color-bubblegum);
@@ -60,8 +70,13 @@ pre,
 
   .page-header a,
   .navigation-toggle-label,
+  .navigation a,
   .content-aside a {
     color: currentColor;
+  }
+
+  .navigation {
+    box-shadow: 0 5px 5px var(--color-indigo);
   }
 }
 
@@ -75,12 +90,8 @@ pre,
     color: currentColor;
   }
 
-  .content-aside h1 {
-    background-color: var(--color-bubblegum);
-    box-shadow: 1rem 1.3rem 0 var(--color-white);
-  }
-
-  .page-footer {
+  .page-footer,
+  .page-footer a {
     color: var(--color-white);
   }
 }
