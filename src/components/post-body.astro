@@ -1,9 +1,11 @@
 ---
 import Date from './date.astro';
 
-const { title, date, tags } = Astro.props;
+const { title, date, tags, background } = Astro.props;
+
+const styleProp = background ? { style: `--background-image: url(${background.image.src})` } : {};
 ---
-<div class="content-aside">
+<div class="content-aside" {...styleProp}>
   <h1><span class="highlight cool-title">{title}</span></h1>
   <p><Date date={date} class="highlight"></p>
   <span class="highlight">Tags: 
@@ -13,9 +15,10 @@ const { title, date, tags } = Astro.props;
     return (<span><a href={`/tags/${tag.replace(/\s/g, "-")}`}>{tag}</a>{showComma ? ', ' : ''}</span>);
   })}
   </span>
+  {background?.credit ? (
+    <p><span class="highlight text-small">Background image credit: <a href={background.credit.url}>{background.credit.text}</a></span></p>
+  ) : null}
 </div>
 <article class="content-body">
-  <div class="content-main">
-    <slot />
-  </div>
+  <slot />
 </article>

@@ -6,6 +6,7 @@
   --color-cyan: #1FABAD;
   --color-powder: #FCEADE;
   --color-coral: #FF8A5B;
+  --color-coral-translucent: #FF8A5B33;
   --color-bubblegum: #EA526F;
 
   --color-box-shadow: #19183A66;
@@ -65,11 +66,24 @@ mark,
   text-decoration: none;
 }
 
+.content-aside {
+  background-color: var(--color-bubblegum);
+  color: var(--color-white);
+  background-image: var(--background-image);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-blend-mode: multiply;
+  background-size: cover;
+}
+
+.page-footer {
+  background-color: var(--color-coral-translucent);
+}
+
 @media screen and (max-width: 63.9375rem) {
   .page-header,
   .page-navigation,
-  .navigation,
-  .content-aside {
+  .navigation {
     background-color: var(--color-bubblegum);
     color: var(--color-white);
   }
@@ -88,24 +102,24 @@ mark,
   .navigation {
     box-shadow: 0 5px 5px var(--color-box-shadow);
   }
+
+  .page-aside {
+    background-color: var(--color-coral-translucent);
+  }
 }
 
 @media screen and (min-width: 64rem) {
+  .page-header,
+  .page-navigation,
+  .page-aside {
+    background-color: var(--color-coral-translucent);
+  }
+
   .title-link {
     color: currentColor;
   }
 
-  .content-aside {
-    background-color: var(--color-bubblegum);
-    color: var(--color-white);
-  }
-
   .content-aside a {
     color: currentColor;
-  }
-
-  .page-footer,
-  .page-footer a {
-    color: var(--color-white);
   }
 }

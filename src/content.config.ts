@@ -11,7 +11,13 @@ const posts = defineCollection({
 			description: z.string(),
 			date: z.coerce.date(),
       tags: z.array(z.string()),
-			heroImage: image().optional(),
+			background: z.object({
+        image: image(),
+        credit: z.object({
+          url: z.string(),
+          text: z.string(),
+        }).optional(),
+      }).optional(),
 		}),
 });
 

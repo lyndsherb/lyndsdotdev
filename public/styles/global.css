@@ -36,7 +36,7 @@ mark,
 }
 
 .page-header .title {
-  font-size: 2rem;
+  font-size: 1.75rem;
 }
 
 .page-navigation {
@@ -59,7 +59,6 @@ mark,
 
 .page-footer {
   grid-area: footer;
-  font-size: 0.75rem;
 }
 
 .page-footer p {
@@ -137,6 +136,10 @@ mark,
   width: 1px;
 }
 
+.text-small {
+  font-size: 0.75rem;
+}
+
 @media print {
   .no-print {
     display: none !important;
@@ -153,7 +156,7 @@ mark,
   .page-aside,
   .page-footer,
   .content-aside,
-  .content-main {
+  .post-list {
     padding: 0.5rem 1rem;
   }
 
@@ -192,8 +195,12 @@ mark,
     align-content: start;
   }
 
+  .content-aside h1 {
+    margin-top: 1rem;
+  }
+
   .post-list {
-    padding: 0 1rem;
+    padding-bottom: 1rem;
     gap: 1rem;
   }
 
@@ -227,7 +234,7 @@ mark,
       "main header"
       "main navigation"
       "main aside"
-      "footer footer"
+      "main footer"
     ;
     position: relative;
     min-height: 100vh;
@@ -235,36 +242,23 @@ mark,
 
   .page-header,
   .page-navigation,
-  .page-aside {
-    padding-right: 1rem;
-  }
-
-  .page-header {
-    padding-top: 1rem;
-  }
-
-  .page-aside {
-    padding-bottom: 1rem;
+  .page-aside,
+  .page-footer {
+    grid-column: span 3;
+    text-align: right;
+    order: 1;
+    padding: 1rem;
   }
 
   .page-header,
   .page-navigation,
   .page-aside {
-    grid-column: 11 / 13;
-    text-align: right;
-  }
-
-  .page-footer {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    grid-column: 1 / 5;
-    padding: 1rem;
+    padding-bottom: 0;
   }
 
   .page-content,
   .post-list {
-    grid-column: 1 / 11;
+    grid-column: span 10;
     display: grid;
     grid-template-columns: subgrid;
   }
@@ -272,23 +266,17 @@ mark,
   .content-aside {
     position: relative; 
     grid-column: span 4;
-    grid-row: span 3;
+    grid-row: span 4;
     padding: 1rem;
   }
 
-  .content-main {
-    grid-column: span 6;
-    grid-row: auto;
-  }
-
-  .content-body {
-    grid-column: span 6;
-  }
-
+  .content-body,
   .post-list {
-    grid-column: 5 / 11
+    grid-column: span 6;
+    padding: 1rem;
   }
 
+  .post-list,
   .post-list .title {
     grid-column: span 6;
   }
