@@ -87,6 +87,11 @@ mark,
   left: -0.25rem;
 }
 
+.social a {
+  /* Allow the cursor outline to highlight the whole icon */
+  display: inline-block;
+}
+
 /* Utility and common classes */
 
 .no-list-style,
@@ -189,6 +194,7 @@ mark,
 
   .post-list {
     padding: 0 1rem;
+    gap: 1rem;
   }
 
   .page-aside,

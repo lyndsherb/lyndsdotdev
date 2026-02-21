@@ -61,6 +61,10 @@ mark,
   box-shadow: 1rem 1.3rem 0 var(--color-white);
 }
 
+.title-link {
+  text-decoration: none;
+}
+
 @media screen and (max-width: 63.9375rem) {
   .page-header,
   .page-navigation,
@@ -77,12 +81,20 @@ mark,
     color: currentColor;
   }
 
+  .navigation-toggle:focus ~ .navigation-toggle-label {
+    outline: 1px solid currentColor;
+  }
+
   .navigation {
     box-shadow: 0 5px 5px var(--color-box-shadow);
   }
 }
 
 @media screen and (min-width: 64rem) {
+  .title-link {
+    color: currentColor;
+  }
+
   .content-aside {
     background-color: var(--color-bubblegum);
     color: var(--color-white);
