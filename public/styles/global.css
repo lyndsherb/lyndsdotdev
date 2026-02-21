@@ -26,6 +26,10 @@ h2 {
   margin-bottom: 0.5rem;
 }
 
+a {
+  font-weight: bold;
+}
+
 mark,
 .highlight {
   padding: 0.25rem;
@@ -137,7 +141,7 @@ mark,
 }
 
 .text-small {
-  font-size: 0.75rem;
+  font-size: 0.875rem;
 }
 
 @media print {

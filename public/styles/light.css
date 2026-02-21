@@ -1,13 +1,13 @@
 :root {
-  --color-white: #FAFAFA;
+  --color-white: #FFF;
   --color-black: #212121;
 
   --color-indigo: #19183A;
-  --color-cyan: #1FABAD;
-  --color-powder: #FCEADE;
+  --color-dusk: #0042D1;
+  --color-powder: #FDF1E8;
   --color-coral: #FF8A5B;
   --color-coral-translucent: #FF8A5B33;
-  --color-bubblegum: #EA526F;
+  --color-bubblegum: #D23262;
 
   --color-box-shadow: #19183A66;
 }
@@ -26,7 +26,7 @@ h1,
 
 a,
 .link {
-  color: var(--color-cyan);
+  color: var(--color-dusk);
 }
 
 a:active,
