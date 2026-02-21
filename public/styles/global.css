@@ -17,6 +17,7 @@ body {
     "aside aside"
     "footer footer"
   ;
+  min-height: 100vh;
 }
 
 h1,
@@ -32,6 +33,10 @@ mark,
 
 .page-header {
   grid-area: header;
+}
+
+.page-header .title {
+  font-size: 2rem;
 }
 
 .page-navigation {
@@ -69,6 +74,17 @@ mark,
   line-height: 3.5rem;
   box-decoration-break: clone;
   padding: 1rem;
+}
+
+.content-aside h1 {
+  position: relative;
+  left: -1rem;
+  margin-bottom: 3.5rem;
+}
+
+.content-aside .highlight {
+  position: relative;
+  left: -0.25rem;
 }
 
 /* Utility and common classes */
@@ -145,6 +161,12 @@ mark,
     z-index: 1;
   }
 
+  .page-navigation {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+
   .navigation-toggle:not(:checked) + .navigation {
     display: none;
   }
@@ -158,6 +180,11 @@ mark,
 
   .navigation .list-item {
     margin: 0 1rem;
+  }
+
+  .page-content {
+    align-self: stretch;
+    align-content: start;
   }
 
   .post-list {
@@ -201,6 +228,7 @@ mark,
   }
 
   .page-header,
+  .page-navigation,
   .page-aside {
     padding-right: 1rem;
   }

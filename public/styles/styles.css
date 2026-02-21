@@ -1,17 +1,19 @@
 :root {
-  --color-white: #fafafa;
+  --color-white: #FAFAFA;
   --color-black: #212121;
 
   --color-indigo: #19183A;
   --color-cyan: #1FABAD;
-  --color-powder: #fceade;
-  --color-coral: #ff8a5b;
-  --color-bubblegum: #ea526f;
+  --color-powder: #FCEADE;
+  --color-coral: #FF8A5B;
+  --color-bubblegum: #EA526F;
+
+  --color-box-shadow: #19183A66;
 }
 
 body {
   font-family: "Fira Sans", sans-serif;
-  background-color: var(--color-white);
+  background-color: var(--color-powder);
   color: var(--color-indigo);
 }
 
@@ -76,13 +78,13 @@ mark,
   }
 
   .navigation {
-    box-shadow: 0 5px 5px var(--color-indigo);
+    box-shadow: 0 5px 5px var(--color-box-shadow);
   }
 }
 
 @media screen and (min-width: 64rem) {
   .content-aside {
-    background-color: var(--color-coral);
+    background-color: var(--color-bubblegum);
     color: var(--color-white);
   }
 
