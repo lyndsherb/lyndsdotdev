@@ -1,6 +1,7 @@
 ## Possible colour palettes: 
 
 https://coolors.co/25ced1-ffffff-fceade-ff8a5b-ea526f BRIGHT
+final palette: https://coolors.co/0042d1-fafafa-fdf1e8-ff8a5b-d23262 
 
 ## layout ideas: 
 https://miro.com/app/board/uXjVGNsyBX8=/
@@ -20,7 +21,6 @@ https://svgicons.com/
 * card styles - make a bit neater
 * background image - can we keep the colour border without distorting the image? 
   * if no bg image, maybe a gradient?
-* adjust colours for contrast - current white on pink / teal on everything sucks, actually
 * dark mode
 * about page
 * cv page

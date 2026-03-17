@@ -5,7 +5,8 @@ const { title, date, tags, background } = Astro.props;
 
 const styleProp = background ? { style: `--background-image: url(${background.image.src})` } : {};
 ---
-<div class="content-aside" {...styleProp}>
+<div class="content-aside">
+  <div class="content-background" {...styleProp}></div>
   <h1><span class="highlight cool-title">{title}</span></h1>
   <p><Date date={date} class="highlight"></p>
   <span class="highlight">Tags: 

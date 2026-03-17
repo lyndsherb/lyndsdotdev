@@ -79,6 +79,10 @@ mark,
   padding: 1rem;
 }
 
+.content-aside {
+  position: relative;
+}
+
 .content-aside h1 {
   position: relative;
   left: -1rem;
@@ -88,6 +92,14 @@ mark,
 .content-aside .highlight {
   position: relative;
   left: -0.25rem;
+}
+
+.content-background {
+  position: absolute;
+  top: 4rem;
+  right: 1.5rem;
+  bottom: 0.5rem;
+  left: 1.5rem;
 }
 
 .social a {
