@@ -1,0 +1,42 @@
+:root {
+  --color-midnight-violet: #211226;
+  --color-bubblegum: #740630;
+  --color-mauve: #472F40;
+}
+
+body {
+  font-family: "Fira Sans", sans-serif;
+  background-color: var(--color-midnight-violet);
+  color: var(--color-powder);
+}
+
+a,
+.link {
+  color: var(--color-coral);
+}
+
+a:hover,
+a:focus,
+.link:hover,
+.link:focus {
+  color: var(--color-powder);
+}
+
+.card {
+  border-color: var(--color-mauve);
+}
+
+.page-footer {
+  background-color: var(--color-mauve);
+}
+
+.page-aside {
+  background-color: var(--color-mauve);
+}
+
+@media screen and (min-width: 64rem) {
+  .page-header,
+  .page-navigation {
+    background-color: var(--color-mauve);
+  }
+}

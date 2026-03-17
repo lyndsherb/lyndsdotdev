@@ -26,8 +26,10 @@ h2 {
   margin-bottom: 0.5rem;
 }
 
-a {
+a,
+.link {
   font-weight: bold;
+  letter-spacing: 0.03125rem;
 }
 
 mark,
@@ -107,6 +109,42 @@ mark,
   display: inline-block;
 }
 
+.post-list {
+  display: grid;
+  grid-template-columns: subgrid;
+  grid-template-rows: auto;
+  grid-gap: 1rem;
+}
+
+.card {
+  display: grid;
+  grid-row: span 3;
+  grid-gap: 0.5rem;
+  grid-column: auto;
+  padding: 0.5rem;
+}
+
+.post-list .title {
+  margin-bottom: 1rem;
+}
+
+.card-header {
+  grid-row-start: 1;
+}
+
+.card-title {
+  margin-top: 0;
+}
+
+.card-content {
+  grid-row-start: 2;
+}
+
+.card-footer {
+  grid-row-start: 3;
+  align-self: end;
+}
+
 /* Utility and common classes */
 
 .no-list-style,
@@ -172,9 +210,12 @@ mark,
   .page-aside,
   .page-footer,
   .content-body,
-  .content-aside,
   .post-list {
     padding: 0.5rem 1rem;
+  }
+
+  .content-aside {
+    padding: 0.5rem 1rem 1rem;
   }
 
   .page-header,
@@ -222,7 +263,6 @@ mark,
 
   .post-list {
     padding-bottom: 1rem;
-    gap: 1rem;
   }
 
   .page-aside,
@@ -265,7 +305,7 @@ mark,
   .page-navigation,
   .page-aside,
   .page-footer {
-    grid-column: span 3;
+    grid-column: span 2;
     text-align: right;
     order: 1;
     padding: 1rem;
@@ -309,5 +349,20 @@ mark,
   .navigation-toggle,
   .navigation-toggle-label {
     display: none;
+  }
+}
+
+@media screen and (min-width: 100rem) {
+  .page-content {
+    grid-column: span 10;
+  }
+
+  .content-aside {
+    grid-column: span 3;
+  }
+
+  .post-list,
+  .content-body {
+    grid-column: span 6;
   }
 }

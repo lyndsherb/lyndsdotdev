@@ -58,6 +58,10 @@ mark,
   background-color: var(--color-bubblegum);
 }
 
+.card {
+  border: 1px solid var(--color-coral);
+}
+
 .cool-title {
   box-shadow: 1rem 1.3rem 0 var(--color-white);
 }
