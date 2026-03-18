@@ -1,15 +1,42 @@
 :root {
-  --color-texas: 247, 247, 247;
-  --color-wyoming: 13, 27, 42;
-  --color-tucker: 70, 227, 236;
-  --color-simmons: 249, 174, 203;
-  --color-caboose: 139, 194, 249;
+  --color-midnight-violet: #211226;
+  --color-bubblegum: #740630;
+  --color-mauve: #9D247B;
+  --color-mauve-translucent: #9D247B33;
 }
 
 body {
-  background-color: rgb(var(--color-wyoming));
+  font-family: "Fira Sans", sans-serif;
+  background-color: var(--color-midnight-violet);
+  color: var(--color-powder);
 }
 
-.content {
-  background-color: rgba(var(--color-wash), 0.05);
+a,
+.link {
+  color: var(--color-coral);
+}
+
+a:hover,
+a:focus,
+.link:hover,
+.link:focus {
+  color: var(--color-powder);
+}
+
+.card,
+.content-body + .post-list {
+  border-color: var(--color-mauve);
+}
+
+.page-aside,
+.page-footer,
+.code {
+  background-color: var(--color-mauve-translucent);
+}
+
+@media screen and (min-width: 64rem) {
+  .page-header,
+  .page-navigation {
+    background-color: var(--color-mauve-translucent);
+  }
 }

@@ -17,8 +17,8 @@ const { Content } = await render(latestPost);
 	<PostBody {...latestPost.data}>
 		<Content />
 	</PostBody>
-	<h3>Recent posts</h3>
 	<section class="post-list">
+	  <h3 class="title">Recent posts</h3>
     {recentPosts.map((post) => (
       <PostCard {...post.data} href={`/posts/${post.id}`} />
     ))}

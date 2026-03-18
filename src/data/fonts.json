@@ -1,0 +1,33 @@
+[
+  {
+    "name": "fira-sans",
+    "variants": [
+      "black",
+      "bold",
+      "extra-bold",
+      "extra-light",
+      "light",
+      "medium",
+      "semi-bold",
+      "thin",
+      "black-italic",
+      "bold-italic",
+      "extra-bold-italic",
+      "extra-light-italic",
+      "light-italic",
+      "medium-italic",
+      "semi-bold-italic",
+      "thin-italic",
+      "regular",
+      "italic"
+    ]
+  },
+  {
+    "name": "fira-code",
+    "variants": ["variable"]
+  },
+  {
+    "name": "alfa-slab-one",
+    "variants": ["regular"]
+  }
+]
