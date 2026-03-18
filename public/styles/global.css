@@ -109,6 +109,11 @@ mark,
   display: inline-block;
 }
 
+.content-body + .post-list {
+  border-top-width: 1px;
+  border-top-style: solid; 
+}
+
 .post-list {
   display: grid;
   grid-template-columns: subgrid;
@@ -122,6 +127,8 @@ mark,
   grid-gap: 0.5rem;
   grid-column: auto;
   padding: 0.5rem;
+  border-width: 1px;
+  border-style: solid;
 }
 
 .post-list .title {

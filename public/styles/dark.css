@@ -22,7 +22,8 @@ a:focus,
   color: var(--color-powder);
 }
 
-.card {
+.card,
+.content-body + .post-list {
   border-color: var(--color-mauve);
 }
 
