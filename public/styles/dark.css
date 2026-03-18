@@ -1,7 +1,8 @@
 :root {
   --color-midnight-violet: #211226;
   --color-bubblegum: #740630;
-  --color-mauve: #472F40;
+  --color-mauve: #9D247B;
+  --color-mauve-translucent: #9D247B33;
 }
 
 body {
@@ -27,17 +28,14 @@ a:focus,
   border-color: var(--color-mauve);
 }
 
+.page-aside,
 .page-footer {
-  background-color: var(--color-mauve);
-}
-
-.page-aside {
-  background-color: var(--color-mauve);
+  background-color: var(--color-mauve-translucent);
 }
 
 @media screen and (min-width: 64rem) {
   .page-header,
   .page-navigation {
-    background-color: var(--color-mauve);
+    background-color: var(--color-mauve-translucent);
   }
 }
