@@ -29,7 +29,8 @@ a:focus,
 }
 
 .page-aside,
-.page-footer {
+.page-footer,
+.code {
   background-color: var(--color-mauve-translucent);
 }
 

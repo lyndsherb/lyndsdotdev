@@ -58,6 +58,8 @@ mark,
   background-color: var(--color-bubblegum);
 }
 
+blockquote,
+.blockquote,
 .card,
 .content-body + .post-list {
   border-color: var(--color-coral);
@@ -85,7 +87,8 @@ mark,
   background-color: inherit;
 }
 
-.page-footer {
+.page-footer,
+.code {
   background-color: var(--color-coral-translucent);
 }
 

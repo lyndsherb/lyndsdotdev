@@ -37,6 +37,19 @@ mark,
   padding: 0.25rem;
 }
 
+blockquote,
+.blockquote {
+  margin: 0;
+  margin-bottom: 1rem;
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  border-left-width: 0.25rem;
+  border-left-style: solid;
+}
+
+.code {
+  padding: 0.5rem;
+}
+
 .page-header {
   grid-area: header;
 }
