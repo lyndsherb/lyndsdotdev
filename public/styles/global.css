@@ -359,7 +359,7 @@ mark,
   }
 }
 
-@media screen and (min-width: 100rem) {
+@media screen and (min-width: 80rem) {
   .page-content {
     grid-column: span 10;
   }
