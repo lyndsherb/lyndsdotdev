@@ -13,7 +13,7 @@ const styleProp = background ? { style: `--background-image: url(${background.im
   {tags.map((tag, index) => {
     const showComma = index < tags.length - 1;
 
-    return (<span><a href={`/tags/${tag.replace(/\s/g, "-")}`}>{tag}</a>{showComma ? ', ' : ''}</span>);
+    return (<span><a href={`/tags/${tag.replace(/\s/g, "-")}`}>{tag}{showComma ? ',' : ''}</a>&nbsp;</span>);
   })}
   </span>
   {background?.credit ? (

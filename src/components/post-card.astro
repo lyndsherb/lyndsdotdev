@@ -2,6 +2,7 @@
 import Date from './date.astro';
 
 const { title, date, description, href } = Astro.props;
+const ariaLabel = `Read post "${title}"`;
 ---
 <article class="card">
   <header class="card-header">
@@ -14,6 +15,6 @@ const { title, date, description, href } = Astro.props;
     {description ?? ""}
   </div>
   <footer class="card-footer">
-    <a href={href}>Read article</a>
+    <a href={href} aria-label={ariaLabel}>Read post</a>
   </footer>
 </article>
