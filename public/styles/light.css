@@ -1,5 +1,5 @@
 :root {
-  --color-saffron: #F0BE08;
+  --color-saffron: #FFB10A;
   --color-ivory: #F3F3E2;
   --color-peony: #BF367A;
   --color-graphite: #343434;
@@ -43,10 +43,11 @@ code,
 pre,
 .code {
   font-family: "Fira Code", monospace;
+  color: var(--color-ivory);
 }
 
 .icon {
-  fill: currentColor;
+  fill: inherit;
 }
 
 mark,
@@ -83,16 +84,20 @@ blockquote,
   background-color: inherit;
 }
 
-.page-footer,
-.code {
+.page-aside,
+.page-footer {
   background-color: var(--color-saffron);
+}
+
+.code {
+  background-color: var(--color-graphite);
 }
 
 .social a,
 .social .link,
 .page-footer a,
 .page-footer .link {
-  color: var(--color-graphite);
+  color: inherit;
 }
 
 @media screen and (max-width: 63.9375rem) {
@@ -107,34 +112,29 @@ blockquote,
   .navigation-toggle-label,
   .navigation a,
   .content-aside a {
-    color: currentColor;
+    color: inherit;
   }
 
   .navigation-toggle:focus ~ .navigation-toggle-label {
-    outline: 1px solid currentColor;
+    outline: 1px solid inherit;
   }
 
   .navigation {
     box-shadow: 0 5px 5px var(--color-box-shadow);
   }
-
-  .page-aside {
-    background-color: var(--color-saffron);
-  }
 }
 
 @media screen and (min-width: 64rem) {
   .page-header,
-  .page-navigation,
-  .page-aside {
+  .page-navigation {
     background-color: var(--color-saffron);
   }
 
   .title-link {
-    color: currentColor;
+    color: inherit;
   }
 
   .content-aside a {
-    color: currentColor;
+    color: inherit;
   }
 }

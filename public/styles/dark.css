@@ -1,42 +1,39 @@
 :root {
-  --color-midnight-violet: #211226;
-  --color-bubblegum: #740630;
-  --color-mauve: #9D247B;
-  --color-mauve-translucent: #9D247B33;
+  --color-peony: #AF3170;
+  --color-graphite: #141414;
+  --color-sky: #5CABFF;
 }
 
 body {
   font-family: "Fira Sans", sans-serif;
-  background-color: var(--color-midnight-violet);
-  color: var(--color-powder);
+  background-color: var(--color-graphite);
+  color: var(--color-ivory);
 }
 
 a,
 .link {
-  color: var(--color-coral);
+  color: var(--color-sky);
 }
 
 a:hover,
 a:focus,
 .link:hover,
 .link:focus {
-  color: var(--color-powder);
-}
-
-.card,
-.content-body + .post-list {
-  border-color: var(--color-mauve);
+  color: var(--color-ivory);
 }
 
 .page-aside,
-.page-footer,
-.code {
-  background-color: var(--color-mauve-translucent);
+.page-footer {
+  background-color: var(--color-azure);
 }
 
 @media screen and (min-width: 64rem) {
   .page-header,
   .page-navigation {
-    background-color: var(--color-mauve-translucent);
+    background-color: var(--color-azure);
+  }
+
+  .navigation a {
+    color: inherit;
   }
 }
