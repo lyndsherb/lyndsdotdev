@@ -1,21 +1,17 @@
 :root {
-  --color-white: #FFF;
-  --color-black: #212121;
+  --color-saffron: #F0BE08;
+  --color-ivory: #F3F3E2;
+  --color-peony: #BF367A;
+  --color-graphite: #343434;
+  --color-azure: #0063CC;
 
-  --color-indigo: #19183A;
-  --color-dusk: #0042D1;
-  --color-powder: #FDF1E8;
-  --color-coral: #FF8A5B;
-  --color-coral-translucent: #FF8A5B33;
-  --color-bubblegum: #AD264E;
-
-  --color-box-shadow: #19183A66;
+  --color-box-shadow: #34343466;
 }
 
 body {
   font-family: "Fira Sans", sans-serif;
-  background-color: var(--color-powder);
-  color: var(--color-indigo);
+  background-color: var(--color-ivory);
+  color: var(--color-graphite);
 }
 
 h1,
@@ -26,21 +22,21 @@ h1,
 
 a,
 .link {
-  color: var(--color-dusk);
+  color: var(--color-azure);
 }
 
 a:active,
 a:visited
 .link:active,
 .link:visited {
-  color: var(--color-bubblegum);
+  color: var(--color-peony);
 }
 
 a:hover,
 a:focus,
 .link:hover,
 .link:focus {
-  color: var(--color-coral);
+  color: var(--color-graphite);
 }
 
 code,
@@ -55,18 +51,18 @@ pre,
 
 mark,
 .highlight {
-  background-color: var(--color-bubblegum);
+  background-color: var(--color-peony);
 }
 
 blockquote,
 .blockquote,
 .card,
 .content-body + .post-list {
-  border-color: var(--color-coral);
+  border-color: var(--color-saffron);
 }
 
 .cool-title {
-  box-shadow: 1rem 1.3rem 0 var(--color-white);
+  box-shadow: 1rem 1.3rem 0 var(--color-ivory);
 }
 
 .title-link {
@@ -74,8 +70,8 @@ blockquote,
 }
 
 .content-aside {
-  background-color: var(--color-bubblegum);
-  color: var(--color-white);
+  background-color: var(--color-peony);
+  color: var(--color-ivory);
 }
 
 .content-background {
@@ -89,15 +85,22 @@ blockquote,
 
 .page-footer,
 .code {
-  background-color: var(--color-coral-translucent);
+  background-color: var(--color-saffron);
+}
+
+.social a,
+.social .link,
+.page-footer a,
+.page-footer .link {
+  color: var(--color-graphite);
 }
 
 @media screen and (max-width: 63.9375rem) {
   .page-header,
   .page-navigation,
   .navigation {
-    background-color: var(--color-bubblegum);
-    color: var(--color-white);
+    background-color: var(--color-peony);
+    color: var(--color-ivory);
   }
 
   .page-header a,
@@ -116,7 +119,7 @@ blockquote,
   }
 
   .page-aside {
-    background-color: var(--color-coral-translucent);
+    background-color: var(--color-saffron);
   }
 }
 
@@ -124,7 +127,7 @@ blockquote,
   .page-header,
   .page-navigation,
   .page-aside {
-    background-color: var(--color-coral-translucent);
+    background-color: var(--color-saffron);
   }
 
   .title-link {
