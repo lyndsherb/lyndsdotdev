@@ -21,7 +21,7 @@ const pageTitle = title ? `${title} | ${site.title}` : `${site.title} | ${site.s
     {fonts.map((font) => font.variants.map((variant) => (<link as="font" rel="preload" type="font/ttf" crossorigin="anonymous" href={`/fonts/${font.name}/${variant}.ttf`} />)))}
     <link rel="stylesheet" type="text/css" href="/styles/fonts.css" />
     <link rel="stylesheet" type="text/css" href="/styles/light.css" media="screen" />
-    <link rel="stylesheet" type="text/css" href="/styles/dark.css" media="screen and (prefers-color-scheme: dark)" />
+    <!-- link rel="stylesheet" type="text/css" href="/styles/dark.css" media="screen and (prefers-color-scheme: dark)" / -->
     <link rel="icon" type="image/x-icon" href="/images/favicons/favicon.ico" />
     <link rel="icon" type="image/png" sizes="32x32" href="/images/favicons/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/images/favicons/favicon-16x16.png" />
@@ -30,15 +30,15 @@ const pageTitle = title ? `${title} | ${site.title}` : `${site.title} | ${site.s
     <link rel="sitemap" href="/sitemap-index.xml" />
   </head>
   <body>
-    <main class="page-content">
-      <slot /> 
-    </main>
     <header class="page-header no-print">
-      <span class="title">
-        <a href="/" class="title-link heading">lynds.dev</a>
+      <span class="page-title">
+        <a href="/" class="page-title-link heading">lynds.dev</a>
       </span>
     </header>
     <Navigation />
+    <main class="page-content">
+      <slot /> 
+    </main>
     <aside class="page-aside no-print">
       <p class="mini-about">{site.description}</p>
       <Contact contact={site.contact} />
