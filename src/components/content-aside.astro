@@ -1,0 +1,14 @@
+---
+const { order, title } = Astro.props;
+
+const Heading = `h${order || 1}`
+---
+
+<div class="content-aside">
+  <Heading>
+    <span class="highlight cool-title">
+      {title}
+    </span>
+  </Heading>
+  <slot />
+</div>

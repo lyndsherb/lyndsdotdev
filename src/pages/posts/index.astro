@@ -2,13 +2,12 @@
 import { getCollection } from 'astro:content';
 import Layout from "../../layouts/default.astro"
 import PostList from '../../components/post-list.astro';
+import ContentAside from '../../components/content-aside.astro';
 
 const posts = (await getCollection('posts')).sort((a, b) => b.data.date.valueOf() - a.data.date.valueOf());
 ---
 <Layout title="Posts">
-  <div class="content-aside">
-    <h1><span class="highlight cool-title">Recent posts</span></h1>
-  </div>
+  <ContentAside title="Recent posts" />
   <div class="content-body">
     <PostList posts={posts} />
   </div>

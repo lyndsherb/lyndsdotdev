@@ -2,6 +2,7 @@
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/default.astro';
 import PostList from '../../components/post-list.astro';
+import ContentAside from '../../components/content-aside.astro';
 
 export async function getStaticPaths() {
   const posts = (await getCollection('posts'))
@@ -18,9 +19,7 @@ const { posts, unformattedTag } = Astro.props;
 ---
 
 <Layout title={`Posts tagged with "${unformattedTag}"`}>
-  <div class="content-aside">
-  <h1><span class="highlight cool-title">Posts tagged with &quot;{unformattedTag}&quot;</span></h1>
-  </div>
+  <ContentAside title={`Posts tagged with '${unformattedTag}'`} />
   <div class="content-body">
     <PostList posts={posts} />
   </div>

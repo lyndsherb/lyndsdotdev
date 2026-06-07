@@ -1,13 +1,13 @@
 ---
+import ContentAside from './content-aside.astro';
 import Date from './date.astro';
 
 const { title, date, tags, background } = Astro.props;
 
 const styleProp = background ? { style: `--background-image: url(${background.image.src})` } : {};
 ---
-<div class="content-aside">
+<ContentAside title={title}>
   <div class="content-background" {...styleProp}></div>
-  <h1><span class="highlight cool-title">{title}</span></h1>
   <p class="content-date"><Date date={date} class="highlight"></p>
   <span class="content-tags highlight">Tags: 
   {tags.map((tag: string, index: number) => {
@@ -19,7 +19,7 @@ const styleProp = background ? { style: `--background-image: url(${background.im
   {background?.credit ? (
     <p><span class="highlight text-small">Background image credit: <a href={background.credit.url}>{background.credit.text}</a></span></p>
   ) : null}
-</div>
+</ContentAside>
 <article class="content-body">
   <slot />
 </article>

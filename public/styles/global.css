@@ -5,15 +5,15 @@
 html {
   box-sizing: border-box;
   text-wrap-style: pretty;
-}
+} 
 
 *, *:before, *:after {
   box-sizing: inherit;
 } 
 
 body {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
+  flex-wrap: wrap;
   gap: var(--grid-gap);
   margin: 0;
   padding: 0;
@@ -25,8 +25,8 @@ body > [class*="page-"] {
   padding: 0 0.5rem;
 }
 
-h1,
-.heading {
+.heading,
+.cool-title {
   font-weight: 400;
   font-family: "Alfa Slab One", sans-serif;
 }
@@ -68,25 +68,8 @@ mark,
   padding: 1rem;
 }
 
-.page-header,
-.page-content,
-.content-posts,
-.post-list {
-  display: grid;
-  grid-template-columns: subgrid;
-  gap: var(--grid-gap);
-}
-
 .navigation {
   text-align: right;
-}
-
-.content-aside,
-.content-body,
-.content-posts,
-.content-posts .title,
-.post-list {
-  grid-column: span 2;
 }
 
 .content-date,
@@ -96,15 +79,4 @@ mark,
 
 :not(.content-body) :where(h1, h2, h3, h4, h5, h6) {
   margin-top: 0;
-}
-
-.post-list {
-  grid-template-rows: auto;
-}
-
-.post-list .card {
-  display: grid;
-  grid-column: span 2;
-  grid-row: span 3;
-  gap: var(--grid-gap);
 }
