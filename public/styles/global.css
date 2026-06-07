@@ -1,3 +1,7 @@
+:root {
+  --grid-gap: 1rem;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -9,7 +13,7 @@ html {
 body {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  grid-gap: 0.5rem;
+  gap: var(--grid-gap);
   margin: 0;
   padding: 0;
   font-family: "Fira Sans", sans-serif;
@@ -32,6 +36,15 @@ pre,
   font-family: "Fira Code", monospace;
 }
 
+mark,
+.highlight {
+  padding: 0.25rem;
+}
+
+.text-small {
+  font-size: 0.75rem;
+}
+
 .no-list-style {
   list-style-type: none;
   margin: 0;
@@ -40,7 +53,7 @@ pre,
 
 .h-list {
   display: flex;
-  gap: 0.5rem;
+  gap: var(--grid-gap);
 }
 
 .icon {
@@ -48,12 +61,19 @@ pre,
   height: 2.5rem;
 }
 
+.cool-title {
+  line-height: 3.5rem;
+  box-decoration-break: clone;
+  padding: 1rem;
+}
+
 .page-header,
 .page-content,
+.content-posts,
 .post-list {
   display: grid;
   grid-template-columns: subgrid;
-  grid-gap: 0.5rem;
+  gap: var(--grid-gap);
 }
 
 .navigation {
@@ -62,20 +82,33 @@ pre,
 
 .content-aside,
 .content-body,
-.post-list,
-.post-list .title {
+.content-posts,
+.content-posts .title,
+.post-list {
   grid-column: span 2;
+}
+
+.content-date,
+.content-tags {
+  font-size: 0.875rem;
+}
+
+:not(.content-body) h1,
+:not(.content-body) h2,
+:not(.content-body) h3,
+:not(.content-body) h4,
+:not(.content-body) h5,
+:not(.content-body) h6 {
+  margin-top: 0;
+}
+
+.post-list {
+  grid-template-rows: auto;
 }
 
 .post-list .card {
   display: grid;
-  grid-template-rows: repeat(3, max-content);
-}
-
-.page-aside {
-  
-}
-
-.page-footer {
-  
+  grid-column: span 2;
+  grid-row: span 3;
+  gap: var(--grid-gap);
 }
