@@ -1,5 +1,7 @@
 :root {
   --grid-gap: 1rem;
+
+  --color-content-border: black;
 }
 
 /* === Global styles === */
@@ -14,11 +16,29 @@ html {
 
 body {
   display: grid;
-  grid-template-columns: 30vw 1fr;
-  gap: var(--grid-gap);
+  grid-template-columns: min(30vw, 320px) 1fr;
   margin: 0;
   padding: 0;
   font-family: "Fira Sans", sans-serif;
+  color: var(--color-body-font);
+  background-color: var(--color-body-bg);
+}
+
+a {
+  color: var(--color-link-font);
+}
+
+a:hover,
+a:focus {
+  color: var(--color-link-hocus-font);
+}
+
+a:active {
+  color: var(--color-link-active-font);
+}
+
+a:visited {
+  color: var(--color-link-visited-font);
 }
 
 .heading,
@@ -31,11 +51,15 @@ code,
 pre,
 .code {
   font-family: "Fira Code", monospace;
+  color: var(--color-code-font);
+  background-color: var(--color-code-bg);
 }
 
 mark,
 .highlight {
   padding: 0.25rem;
+  color: var(--color-highlight-font);
+  background-color: var(--color-highlight-bg);
 }
 
 .text-small {
@@ -56,12 +80,14 @@ mark,
 .icon {
   width: 2.5rem;
   height: 2.5rem;
+  fill: currentColor;
 }
 
 .cool-title {
   line-height: 3.5rem;
   box-decoration-break: clone;
   padding: 1rem;
+  box-shadow: 1rem 1.3rem 0 var(--color-cool-title-shadow);
 }
 
 .content-date,
@@ -92,12 +118,20 @@ body,
   grid-column: span 2;
 }
 
-.content-body {
-  grid-column: span 2;
+.content-body,
+.content-body + .content-posts {
+  max-width: 80ch;
 }
 
-.content-body + .content-posts {
-  grid-column: span 2;
+@container (max-width: 41.9rem) {
+  .navigation {
+    text-align: right;
+  }
+
+  .content-body,
+  .content-body + .content-posts {
+    grid-column: span 2;
+  }
 }
 
 @container (min-width: 42rem) {
@@ -106,9 +140,26 @@ body,
     grid-column: span 1;
   }
 
+  .page-content {
+    border-top: 1px solid var(--color-content-border);
+    border-bottom: 1px solid var(--color-content-border);
+  }
+
+  .page-title,
+  .page-aside,
+  .content-aside {
+    border-right: 1px solid var(--color-content-border);
+  }
+
   .post-list {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
     gap: var(--grid-gap);
+  } 
+}
+
+@container (min-width: 60rem) {
+  .post-list {
+    grid-template-columns: repeat(3, 1fr);
   } 
 }

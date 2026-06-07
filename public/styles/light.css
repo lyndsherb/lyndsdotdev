@@ -1,18 +1,4 @@
 :root {
-  /* https://coolors.co/ffb10a-f3f3e2-af3170-343434-5cabff */
-  --color-saffron: #FFB10A;
-  --color-ivory: #F3F3E2;
-  --color-peony: #BF367A;
-  --color-graphite: #343434;
-  --color-azure: #0063CC;
-
   --color-box-shadow: #34343466;
-}
-
-.icon {
-  fill: currentColor;
-}
-
-.cool-title {
-  box-shadow: 1rem 1.3rem 0 var(--color-ivory);
+  /* https://coolors.co/423e3b-ff2e00-fea82f-fffecb-5448c8 */
 }
