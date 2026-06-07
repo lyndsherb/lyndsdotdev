@@ -4,6 +4,7 @@
 
 html {
   box-sizing: border-box;
+  text-wrap-style: pretty;
 }
 
 *, *:before, *:after {
@@ -93,12 +94,7 @@ mark,
   font-size: 0.875rem;
 }
 
-:not(.content-body) h1,
-:not(.content-body) h2,
-:not(.content-body) h3,
-:not(.content-body) h4,
-:not(.content-body) h5,
-:not(.content-body) h6 {
+:not(.content-body) :where(h1, h2, h3, h4, h5, h6) {
   margin-top: 0;
 }
 
