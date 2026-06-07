@@ -1,7 +1,7 @@
 ---
 import { getCollection } from 'astro:content';
 import Layout from '../../layouts/default.astro';
-import PostCard from "../../components/post-card.astro"
+import PostList from '../../components/post-list.astro';
 
 export async function getStaticPaths() {
   const posts = (await getCollection('posts'))
@@ -14,7 +14,6 @@ export async function getStaticPaths() {
   }));
 };
 
-const { tag } = Astro.params;
 const { posts, unformattedTag } = Astro.props;
 ---
 
@@ -22,7 +21,7 @@ const { posts, unformattedTag } = Astro.props;
   <div class="content-aside">
   <h1><span class="highlight cool-title">Posts tagged with &quot;{unformattedTag}&quot;</span></h1>
   </div>
-  <section class="post-list">
-    {posts.map((post) => (<PostCard {...post.data} href={`/posts/${post.id}`} />))}
-  </section>
+  <div class="content-body">
+    <PostList posts={posts} />
+  </div>
 </Layout>
