@@ -1,9 +1,9 @@
 ---
 import PostCard from "./post-card.astro";
 
-const { posts, title } = Astro.props;
+const { posts, title, className } = Astro.props;
 ---
-<div class="content-posts">
+<div class={className || "content-posts"}>
   {title && <h3 class="title">{title}</h3>}
   <div class="post-list">
     {posts.map((post: any) => (
