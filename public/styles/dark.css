@@ -7,20 +7,24 @@
   --color-cream: #FFFECB;
   --color-midnight: #2E267E;
 
+  --color-midnight-translucent: #2E267E66;
+
   --color-body-text: var(--color-cream);
   --color-body-bg: var(--color-smoke);
 
   --color-link-text: var(--color-orange);
-  --color-link-hocus-text: var(--color-orange);
+  --color-link-hocus-text: var(--color-scarlet);
   --color-link-active-text: var(--color-scarlet);
   --color-link-visited-text: var(--color-cream);
 
   --color-code-text: var(--color-cream);
-  --color-code-bg: var(--color-smoke);
+  --color-code-bg: var(--color-midnight-translucent);
 
   --color-highlight-text: var(--color-cream);
   --color-highlight-bg: var(--color-midnight);
   --color-highlight-link: currentColor;
+
+  --color-quote-border: var(--color-orange);
 
   --color-cool-title-shadow: var(--color-box-shadow);
 

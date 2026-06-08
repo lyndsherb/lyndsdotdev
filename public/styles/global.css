@@ -45,6 +45,8 @@ pre,
   font-family: "Fira Code", monospace;
   color: var(--color-code-text);
   background-color: var(--color-code-bg);
+  padding: 0.5rem;
+  overflow: auto;
 }
 
 mark,
@@ -57,6 +59,13 @@ mark,
 mark a, 
 .highlight a {
   color: var(--color-highlight-link);
+}
+
+blockquote,
+.quote {
+  margin-left: 0;
+  padding-left: 1rem;
+  border-left: 4px solid var(--color-quote-border);
 }
 
 .no-display {
@@ -194,6 +203,10 @@ body,
 .content-body + .content-posts {
   padding: 0.5rem;
   max-width: 120ch;
+}
+
+.content-body + .content-posts {
+  border-top: 1px solid var(--color-content-border);
 }
 
 .post-list {
