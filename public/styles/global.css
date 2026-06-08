@@ -1,7 +1,5 @@
 :root {
-  --grid-gap: 1rem;
-
-  --color-content-border: black;
+  --grid-gap: 0.5rem;
 }
 
 /* === Global styles === */
@@ -15,30 +13,24 @@ html {
 } 
 
 body {
+  min-height: 100vh;
   display: grid;
-  grid-template-columns: min(30vw, 320px) 1fr;
+  grid-template-columns: max(30vw, 320px) 1fr;
+  grid-template-rows: max-content 1fr;
   margin: 0;
   padding: 0;
   font-family: "Fira Sans", sans-serif;
-  color: var(--color-body-font);
+  color: var(--color-body-text);
   background-color: var(--color-body-bg);
 }
 
 a {
-  color: var(--color-link-font);
+  color: currentColor;
 }
 
 a:hover,
 a:focus {
-  color: var(--color-link-hocus-font);
-}
-
-a:active {
-  color: var(--color-link-active-font);
-}
-
-a:visited {
-  color: var(--color-link-visited-font);
+  color: var(--color-link-hocus-text);
 }
 
 .heading,
@@ -51,15 +43,24 @@ code,
 pre,
 .code {
   font-family: "Fira Code", monospace;
-  color: var(--color-code-font);
+  color: var(--color-code-text);
   background-color: var(--color-code-bg);
 }
 
 mark,
 .highlight {
   padding: 0.25rem;
-  color: var(--color-highlight-font);
+  color: var(--color-highlight-text);
   background-color: var(--color-highlight-bg);
+}
+
+mark a, 
+.highlight a {
+  color: var(--color-highlight-link);
+}
+
+.no-display {
+  display: none;
 }
 
 .text-small {
@@ -83,6 +84,19 @@ mark,
   fill: currentColor;
 }
 
+.page-title {
+  font-size: 1.75rem;
+}
+
+.page-title .page-title-link {
+  text-decoration: none;
+  color: var(--color-content-aside-text);
+}
+
+.cool-title-heading {
+  margin-right: 0.5rem;
+}
+
 .cool-title {
   line-height: 3.5rem;
   box-decoration-break: clone;
@@ -90,20 +104,44 @@ mark,
   box-shadow: 1rem 1.3rem 0 var(--color-cool-title-shadow);
 }
 
+.card {
+  padding: 0.5rem;
+  border: 1px solid var(--color-card-border);
+}
+
 .content-date,
 .content-tags {
   font-size: 0.875rem;
 }
 
-:not(.content-body) :where(h1, h2, h3, h4, h5, h6) {
+:not(.content-body) :where(h2, h3, h4, h5, h6) {
   margin-top: 0;
+}
+
+.content-body :where(a),
+.card-footer :where(a) {
+  color: var(--color-link-text);
 }
 
 /* === Layout styles === */
 
+.page-navigation {
+  align-content: center;
+}
+
 body,
 .content-body {
   container-type: inline-size;
+}
+
+.page-navigation,
+.page-title,
+.content-aside,
+.content-body,
+.content-body + .content-posts,
+.page-aside,
+.page-footer {
+  padding: 0 0.5rem;
 }
 
 .page-header,
@@ -118,44 +156,95 @@ body,
   grid-column: span 2;
 }
 
+.page-title,
+.content-aside,
+.page-aside {
+  background-color: var(--color-content-aside-bg);
+  color: var(--color-content-aside-text);
+}
+
 .content-body,
 .content-body + .content-posts {
-  max-width: 80ch;
+  padding: 0.5rem;
+  max-width: 120ch;
+}
+
+.post-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, max-content(50%, 1fr));
+  gap: var(--grid-gap);
 }
 
 @container (max-width: 41.9rem) {
-  .navigation {
+  .page-footer,
+  .page-navigation {
+    background-color: var(--color-content-aside-bg);
+    color: var(--color-content-aside-text);
+  }
+
+  .page-navigation {
     text-align: right;
   }
 
   .content-body,
-  .content-body + .content-posts {
+  .content-body + .content-posts,
+  .page-aside,
+  .page-footer {
     grid-column: span 2;
+  }
+
+  .page-aside {
+    margin-top: 0.5rem;
+    padding: 0.5rem 0;
+  }
+
+  .page-aside,
+  .page-footer {
+    text-align: center;
+  }
+
+  .cool-title-heading {
+    margin-bottom: 3rem;
+  }
+
+  .social {
+    justify-content: center;
   }
 }
 
 @container (min-width: 42rem) {
+  .page-navigation,
+  .page-title {
+    border-bottom: 1px solid var(--color-content-border);
+  }
+
+  .page-title {
+    border-bottom-color: var(--color-content-aside-border);
+  }
+
   .content-aside,
   .content-body {
     grid-column: span 1;
   }
 
   .page-content {
+    justify-self: stretch;
+    align-self: stretch;
+  }
+
+  .content-body,
+  .content-body + .content-posts {
+    padding: 0.5rem;
+  }
+
+  .page-footer,
+  .page-aside {
     border-top: 1px solid var(--color-content-border);
-    border-bottom: 1px solid var(--color-content-border);
   }
 
-  .page-title,
-  .page-aside,
-  .content-aside {
-    border-right: 1px solid var(--color-content-border);
+  .page-aside {
+    border-top-color: var(--color-content-aside-border);
   }
-
-  .post-list {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: var(--grid-gap);
-  } 
 }
 
 @container (min-width: 60rem) {
