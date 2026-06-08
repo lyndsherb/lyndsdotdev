@@ -8,5 +8,5 @@ const posts = (await getCollection('posts')).sort((a, b) => b.data.date.valueOf(
 ---
 <Layout title="Posts">
   <ContentAside title="Recent posts" />
-  <PostList className="content-body" posts={posts} />
+  <PostList class:list="content-body" posts={posts} />
 </Layout>

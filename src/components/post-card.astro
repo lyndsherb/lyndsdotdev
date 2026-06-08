@@ -9,8 +9,8 @@ const ariaLabel = `Read post "${title}"`;
     <h3 class="card-title">
       {title}
     </h3>
-    <Date date={date} />
   </header>
+  <Date class:list="card-date" date={date} />
   <div class="card-content">
     {description ?? ""}
   </div>

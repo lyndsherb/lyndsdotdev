@@ -15,7 +15,7 @@ html {
 body {
   min-height: 100vh;
   display: grid;
-  grid-template-columns: max(30vw, 320px) 1fr;
+  grid-template-columns: max(25vw, 160px) 1fr;
   grid-template-rows: max-content 1fr;
   margin: 0;
   padding: 0;
@@ -105,8 +105,23 @@ mark a,
 }
 
 .card {
-  padding: 0.5rem;
   border: 1px solid var(--color-card-border);
+  display: grid;
+  grid-template-rows: subgrid;
+  grid-row: span 4;
+}
+
+.card > [class*="card-"] {
+  padding: 0.25rem 0.5rem;
+}
+
+.card-title {
+  margin: 0;
+}
+
+.content-background {
+  position: absolute;
+  inset: 4rem 1.5rem .5rem
 }
 
 .content-date,
@@ -152,6 +167,7 @@ body,
 }
 
 .content-aside {
+  position: relative;
   grid-row: span 2;
   grid-column: span 2;
 }
@@ -171,7 +187,8 @@ body,
 
 .post-list {
   display: grid;
-  grid-template-columns: repeat(auto-fit, max-content(50%, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  grid-template-rows: auto;
   gap: var(--grid-gap);
 }
 
@@ -245,10 +262,4 @@ body,
   .page-aside {
     border-top-color: var(--color-content-aside-border);
   }
-}
-
-@container (min-width: 60rem) {
-  .post-list {
-    grid-template-columns: repeat(3, 1fr);
-  } 
 }

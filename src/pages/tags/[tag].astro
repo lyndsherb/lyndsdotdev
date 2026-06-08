@@ -20,5 +20,5 @@ const { posts, unformattedTag } = Astro.props;
 
 <Layout title={`Posts tagged with "${unformattedTag}"`}>
   <ContentAside title={`Posts tagged with '${unformattedTag}'`} />
-  <PostList className="content-body" posts={posts} />
+  <PostList class:list="content-body" posts={posts} />
 </Layout>
