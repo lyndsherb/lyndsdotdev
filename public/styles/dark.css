@@ -1,42 +1,38 @@
 :root {
-  --color-midnight-violet: #211226;
-  --color-bubblegum: #740630;
-  --color-mauve: #9D247B;
-  --color-mauve-translucent: #9D247B33;
-}
+  --color-box-shadow: #34343466;
+  /* https://coolors.co/423e3b-ff2e00-fea82f-fffecb-5448c8 */
+  --color-smoke: #2B2826;
+  --color-scarlet: #FF2E00;
+  --color-orange: #FEA82F;
+  --color-cream: #FFFECB;
+  --color-midnight: #2E267E;
 
-body {
-  font-family: "Fira Sans", sans-serif;
-  background-color: var(--color-midnight-violet);
-  color: var(--color-powder);
-}
+  --color-midnight-translucent: #2E267E66;
 
-a,
-.link {
-  color: var(--color-coral);
-}
+  --color-body-text: var(--color-cream);
+  --color-body-bg: var(--color-smoke);
 
-a:hover,
-a:focus,
-.link:hover,
-.link:focus {
-  color: var(--color-powder);
-}
+  --color-link-text: var(--color-orange);
+  --color-link-hocus-text: var(--color-scarlet);
+  --color-link-active-text: var(--color-scarlet);
+  --color-link-visited-text: var(--color-cream);
 
-.card,
-.content-body + .post-list {
-  border-color: var(--color-mauve);
-}
+  --color-code-text: var(--color-cream);
+  --color-code-bg: var(--color-midnight-translucent);
 
-.page-aside,
-.page-footer,
-.code {
-  background-color: var(--color-mauve-translucent);
-}
+  --color-highlight-text: var(--color-cream);
+  --color-highlight-bg: var(--color-midnight);
+  --color-highlight-link: currentColor;
 
-@media screen and (min-width: 64rem) {
-  .page-header,
-  .page-navigation {
-    background-color: var(--color-mauve-translucent);
-  }
+  --color-quote-border: var(--color-orange);
+
+  --color-cool-title-shadow: var(--color-box-shadow);
+
+  --color-card-border: var(--color-cream);
+  --color-content-border: var(--color-cream);
+
+  --color-content-aside-bg: var(--color-midnight);
+  --color-content-aside-text: var(--color-cream);
+  --color-content-aside-link: currentColor;
+  --color-content-aside-border: var(--color-cream);
 }

@@ -2,8 +2,8 @@
 const { contact } = Astro.props;
 ---
 <h3 class="social-title">Contact me</h3>
-<ul class="h-list social">
-  {contact.map(({ title, icon, url }) => (
+<ul class="h-list no-list-style social">
+  {contact.map(({ title, icon, url }: { [k: string]: string; }) => (
     <li class="list-item">
       <a href={url} target="_blank" rel="noreferrer noopener" title={title}>
         <svg role="img" class={`icon ${icon}`}>

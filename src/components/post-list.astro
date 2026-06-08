@@ -1,0 +1,13 @@
+---
+import PostCard from "./post-card.astro";
+
+const { posts, title, class: className } = Astro.props;
+---
+<div class={className ?? "content-posts"}>
+  {title && <h3 class="title">{title}</h3>}
+  <div class="post-list">
+    {posts.map((post: any) => (
+      <PostCard {...post.data} href={`/posts/${post.id}`} />
+    ))}
+  </div>
+</div>
