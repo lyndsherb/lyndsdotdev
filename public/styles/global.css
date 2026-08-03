@@ -1,5 +1,7 @@
+@import url("light.css");
+
 :root {
-  --grid-gap: 0.5rem;
+  --grid-gap: 1rem;
 }
 
 /* === Global styles === */
@@ -13,12 +15,12 @@ html {
 } 
 
 body {
-  /* min-height: 100vh;
+  min-height: 100vh;
   display: grid;
   grid-template-columns: max(25vw, 160px) 1fr;
   grid-template-rows: max-content 1fr;
   margin: 0;
-  padding: 0; */
+  padding: 0;
   font-family: "Fira Sans", sans-serif;
   color: var(--color-body-text);
   background-color: var(--color-body-bg);
@@ -45,7 +47,7 @@ pre,
   font-family: "Fira Code", monospace;
   color: var(--color-code-text);
   background-color: var(--color-code-bg);
-  padding: 0.5rem;
+  padding: 1rem;
   overflow: auto;
 }
 
@@ -103,7 +105,7 @@ blockquote,
 }
 
 .cool-title-heading {
-  margin-right: 0.5rem;
+  margin-right: 1rem;
 }
 
 .cool-title {
@@ -118,10 +120,11 @@ blockquote,
   display: grid;
   grid-template-rows: subgrid;
   grid-row: span 4;
+  padding: 0.5rem 1rem;
 }
 
 .card > [class*="card-"] {
-  padding: 0.25rem 0.5rem;
+  padding: 0.5rem 0;
 }
 
 .card-title {
@@ -130,7 +133,7 @@ blockquote,
 
 .content-background {
   position: absolute;
-  inset: 3rem 0.5rem 0;
+  inset: 3rem 1rem 0;
   background-image: var(--background-image);
   background-repeat: no-repeat;
   background-size: cover;

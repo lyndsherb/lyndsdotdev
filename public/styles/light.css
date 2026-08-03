@@ -1,38 +1,34 @@
 :root {
-  --color-box-shadow: #34343466;
   /* https://coolors.co/423e3b-ff2e00-fea82f-fffecb-5448c8 */
   --color-charcoal: #423E3B;
-  --color-scarlet: #FF2E00;
-  --color-orange: #FEA82F;
-  --color-cream: #FFFECB;
-  --color-twilight: #5448C8;
-
-  --color-charcoal-translucent: #423E3B33;
+  --color-gallery: #E3E3E3;
+  
+  --color-charcoal-translucent: #423E3B22;
 
   --color-body-text: var(--color-charcoal);
-  --color-body-bg: var(--color-cream);
+  --color-body-bg: var(--color-gallery);
 
-  --color-link-text: var(--color-twilight);
-  --color-link-hocus-text: var(--color-orange);
-  --color-link-active-text: var(--color-scarlet);
+  --color-link-text: var(--color-charcoal);
+  --color-link-hocus-text: var(--color-charcoal);
+  --color-link-active-text: var(--color-charcoal);
   --color-link-visited-text: var(--color-charcoal);
 
   --color-code-text: var(--color-charcoal);
   --color-code-bg: var(--color-charcoal-translucent);
 
-  --color-highlight-text: var(--color-cream);
-  --color-highlight-bg: var(--color-twilight);
+  --color-highlight-text: var(--color-gallery);
+  --color-highlight-bg: var(--color-charcoal);
   --color-highlight-link: currentColor;
 
-  --color-quote-border: var(--color-scarlet);
+  --color-quote-border: var(--color-charcoal);
 
-  --color-cool-title-shadow: var(--color-box-shadow);
+  --color-cool-title-shadow: var(--color-charcoal-translucent);
 
   --color-card-border: var(--color-charcoal);
   --color-content-border: var(--color-charcoal);
 
-  --color-content-aside-bg: var(--color-twilight);
-  --color-content-aside-text: var(--color-cream);
+  --color-content-aside-bg: var(--color-charcoal);
+  --color-content-aside-text: var(--color-charcoal);
   --color-content-aside-link: currentColor;
-  --color-content-aside-border: var(--color-cream);
+  --color-content-aside-border: var(--color-gallery);
 }
