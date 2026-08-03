@@ -28,6 +28,7 @@ const pageTitle = title ? `${title} | ${site.title}` : `${site.title} | ${site.s
     <link rel="sitemap" href="/sitemap-index.xml" />
   </head>
   <body>
+    <div class="page-body">
     <header class="page-header no-print">
       <span class="page-title">
         <a href="/" class="page-title-link heading">lynds.dev</a>
@@ -45,6 +46,7 @@ const pageTitle = title ? `${title} | ${site.title}` : `${site.title} | ${site.s
       <p class="no-print">Powered by <a href="https://www.astro.build" target="_blank" rel="noopener noreferrer">Astro.</a></p>
       <p>&copy; Lyndsey Herbert {(new Date()).getFullYear()}, all rights reserved.</p>
     </footer>
+  </div>
     <div class="no-display">
       <Symbols />
     </div>

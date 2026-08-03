@@ -15,15 +15,26 @@ html {
 } 
 
 body {
-  min-height: 100vh;
-  display: grid;
-  grid-template-columns: max(25vw, 160px) 1fr;
-  grid-template-rows: max-content 1fr;
+  display: flex;
   margin: 0;
   padding: 0;
   font-family: "Fira Sans", sans-serif;
   color: var(--color-body-text);
   background-color: var(--color-body-bg);
+}
+
+.page-body,
+.content-posts .post-list {
+  margin: 0 auto;
+  display: grid;
+  gap: var(--grid-gap);
+  max-width: 80ch;
+}
+
+.page-body {
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: max-content 1fr;
+  min-height: 100vh;
 }
 
 a {
@@ -70,6 +81,10 @@ blockquote,
   border-left: 4px solid var(--color-quote-border);
 }
 
+.navigation {
+  text-align: center;
+}
+
 .no-display {
   display: none;
 }
@@ -86,6 +101,7 @@ blockquote,
 
 .h-list {
   display: flex;
+  flex-wrap: wrap;
   gap: var(--grid-gap);
 }
 
@@ -96,10 +112,11 @@ blockquote,
 }
 
 .page-title {
-  font-size: 1.75rem;
+  text-align: center;
+  font-size: clamp(1.75rem, 5vw, 3.5rem);
 }
 
-.page-title .page-title-link {
+.page-title-link {
   text-decoration: none;
   color: var(--color-content-aside-text);
 }
@@ -109,6 +126,7 @@ blockquote,
 }
 
 .cool-title {
+  font-size: clamp(1.5rem, 3vw, 2rem);
   line-height: 3.5rem;
   box-decoration-break: clone;
   padding: 1rem;
@@ -116,19 +134,23 @@ blockquote,
 }
 
 .card {
+  display: flex;
+  flex-direction: column;
   border: 1px solid var(--color-card-border);
-  display: grid;
-  grid-template-rows: subgrid;
-  grid-row: span 4;
-  padding: 0.5rem 1rem;
+  padding: 0.75rem;
+  grid-column: span 1;
 }
 
-.card > [class*="card-"] {
-  padding: 0.5rem 0;
+.card > [class*="card-"] + [class*="card-"] {
+  padding-top: 1rem;
 }
 
 .card-title {
   margin: 0;
+}
+
+.card-footer {
+  margin-top: auto;
 }
 
 .content-background {
@@ -140,11 +162,6 @@ blockquote,
   background-position: center;
   background-blend-mode: luminosity;
   background-color: inherit; 
-}
-
-.content-aside :where(:not(.content-background)) {
-  position: relative;
-  z-index: 1;
 }
 
 .content-date,
@@ -159,4 +176,44 @@ blockquote,
 .content-body :where(a),
 .card-footer :where(a) {
   color: var(--color-link-text);
+}
+
+.page-header,
+.page-content {
+  grid-column: span 2;
+}
+
+.page-header {
+  display: flex;
+  flex-direction: column-reverse;
+  gap: calc(var(--grid-gap) / 2);
+  padding: 0.75rem 0.75rem 0;
+}
+
+.page-aside, 
+.page-footer {
+  align-self: end;
+}
+
+.page-aside {
+  padding-left: 0.75rem;
+}
+
+.page-footer {
+  padding-right: 0.75rem;
+}
+
+.content-body,
+.content-posts {
+  padding: 0 0.75rem;
+}
+
+.page-footer {
+  text-align: right;
+}
+
+@media screen and (min-width: 80ch) {
+  .content-posts .post-list {
+    grid-template-columns: repeat(2, 1fr);
+  }
 }
