@@ -155,13 +155,20 @@ blockquote,
 
 .content-background {
   position: absolute;
-  inset: 3rem 1rem 0;
+  inset: -1rem -1rem 0.5rem;
   background-image: var(--background-image);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   background-blend-mode: luminosity;
-  background-color: inherit; 
+  opacity: 0.5;
+  background-color: var(--color-content-aside-bg); 
+}
+
+.content-aside,
+.content-aside :where(:not(.content-background)) {
+  position: relative;
+  z-index: 1;
 }
 
 .content-date,

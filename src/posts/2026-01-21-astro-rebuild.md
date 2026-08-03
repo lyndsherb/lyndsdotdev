@@ -6,6 +6,11 @@ tags:
     - development
     - 11ty
     - Astro
+background:
+  image: /public/images/posts/a.jpg
+  credit: 
+    url: https://unsplash.com/
+    text: Unsplash
 ---
 
 Happy New Year! Welcome back to my blog and my posts! 
