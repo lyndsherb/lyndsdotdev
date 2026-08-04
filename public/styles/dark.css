@@ -1,38 +1,40 @@
 :root {
-  --color-box-shadow: #34343466;
-  /* https://coolors.co/423e3b-ff2e00-fea82f-fffecb-5448c8 */
-  --color-smoke: #2B2826;
-  --color-scarlet: #FF2E00;
-  --color-orange: #FEA82F;
-  --color-cream: #FFFECB;
-  --color-midnight: #2E267E;
+  --color-charcoal: #282524;
+  --color-gallery: #E3E3E3;
 
-  --color-midnight-translucent: #2E267E66;
+  --color-gallery-translucent: #E3E3E333;
 
-  --color-body-text: var(--color-cream);
-  --color-body-bg: var(--color-smoke);
+  /* https://coolors.co/7ef1ef-ffac99-D3D0F1 */
+  --color-twilight: #D3D0F1;
+  --color-scarlet: #FFAC99;
+  --color-tropical: #7EF1EF;
+  
 
-  --color-link-text: var(--color-orange);
-  --color-link-hocus-text: var(--color-scarlet);
+  --color-body-text: var(--color-gallery);
+  --color-body-bg: var(--color-charcoal);
+
+  --color-link-text: var(--color-twilight);
+  --color-link-hocus-text: var(--color-tropical);
   --color-link-active-text: var(--color-scarlet);
-  --color-link-visited-text: var(--color-cream);
+  --color-link-visited-text: var(--color-scarlet);
 
-  --color-code-text: var(--color-cream);
-  --color-code-bg: var(--color-midnight-translucent);
+  --color-code-text: var(--color-gallery);
+  --color-code-bg: var(--color-gallery-translucent);
 
-  --color-highlight-text: var(--color-cream);
-  --color-highlight-bg: var(--color-midnight);
+  --color-highlight-text: var(--color-charcoal);
+  --color-highlight-bg: var(--color-twilight);
   --color-highlight-link: currentColor;
 
-  --color-quote-border: var(--color-orange);
+  --color-quote-border: var(--color-twilight);
 
-  --color-cool-title-shadow: var(--color-box-shadow);
+  --color-cool-title-shadow: var(--color-gallery-translucent);
 
-  --color-card-border: var(--color-cream);
-  --color-content-border: var(--color-cream);
+  --color-card-bg: var(--color-body-bg);
+  --color-card-border: var(--color-gallery);
+  --color-content-border: var(--color-gallery);
 
-  --color-content-aside-bg: var(--color-midnight);
-  --color-content-aside-text: var(--color-cream);
+  --color-content-aside-bg: var(--color-gallery);
+  --color-content-aside-text: var(--color-gallery);
   --color-content-aside-link: currentColor;
-  --color-content-aside-border: var(--color-cream);
+  --color-content-aside-border: var(--color-charcoal);
 }

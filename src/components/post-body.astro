@@ -7,7 +7,7 @@ const { title, date, tags, background } = Astro.props;
 const styleProp = background ? { style: `--background-image: url(${background.image.src})` } : {};
 ---
 <ContentAside title={title}>
-  <div class="content-background" {...styleProp}></div>
+  {background ? <div class="content-background" {...styleProp}></div> : null}
   <p class="content-date"><Date date={date} class="highlight"></p>
   <span class="content-tags highlight">Tags: 
   {tags.map((tag: string, index: number) => {

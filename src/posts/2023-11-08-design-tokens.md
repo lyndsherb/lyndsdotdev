@@ -35,13 +35,11 @@ For this 11ty blog, I followed a useful post from <a href="https://heydonworks.c
 
 <pre class="code css">
 /* for example, the following loop... */
-{% raw %}
 :root {
   {% for size in theme.sizes -%}
     --size-{{ size.name -}}: {{ size.value }};
   {% endfor -%}
 }
-{% endraw %}
 
 /* ... will output everything in your 'sizes' theme array: */
 :root {
@@ -69,16 +67,14 @@ I've enjoyed trying this out. Adding the loop is super helpful, and I only have 
  "themeColor": "shiraz",
 </pre>
 
-<pre class="code html">
-{% raw %}
 <!-- todo: this snippet needs properly escaping! -->
+<pre class="code html">
 <\!-- file: _layouts/base.njk  -->
 <\!-- I use a helper function that's added in eleventy.config.js - this helps me find the right colour from the theme colours  -->
 <\meta name="theme-color" content="{{ theme.colors.light | findColor(theme.themeColor) }}" />
 
 <\!-- this outputs the following theme based off my theme colours: -->
 <\meta name="theme-color" content="rgb(179, 9, 75)" />
-{% endraw %}
 </pre>
 
 With that, not only do I have the same colours everywhere, I can update one variable in one place and it changes sitewide!
