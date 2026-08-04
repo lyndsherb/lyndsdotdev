@@ -38,12 +38,16 @@ body {
 }
 
 a {
-  color: currentColor;
+  color: var(--color-link-text);
 }
 
 a:hover,
 a:focus {
   color: var(--color-link-hocus-text);
+}
+
+a:visited:not(.page-title-link) {
+  color: var(--color-link-visited-text);
 }
 
 .heading,
@@ -70,7 +74,8 @@ mark,
 }
 
 mark a, 
-.highlight a {
+.highlight a,
+.highlight a:visited {
   color: var(--color-highlight-link);
 }
 
