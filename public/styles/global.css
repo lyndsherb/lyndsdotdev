@@ -1,10 +1,7 @@
-@import url("light.css");
-
 :root {
   --grid-gap: 1rem;
 }
 
-/* === Global styles === */
 html {
   box-sizing: border-box;
   text-wrap-style: pretty;
@@ -144,6 +141,10 @@ blockquote,
   border: 1px solid var(--color-card-border);
   padding: 0.75rem;
   grid-column: span 1;
+  background-color: var(--color-card-bg);
+  /* make sure card sits in front of titles */
+  position: relative;
+  z-index: 1;
 }
 
 .card > [class*="card-"] + [class*="card-"] {
