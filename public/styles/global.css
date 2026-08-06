@@ -38,13 +38,14 @@ a {
   color: var(--color-link-text);
 }
 
+a:active,
+a:visited {
+  color: var(--color-link-visited-text);
+}
+
 a:hover,
 a:focus {
   color: var(--color-link-hocus-text);
-}
-
-a:visited:not(.page-title-link) {
-  color: var(--color-link-visited-text);
 }
 
 .heading,
@@ -118,7 +119,8 @@ blockquote,
   font-size: clamp(1.75rem, 5vw, 3.5rem);
 }
 
-.page-title-link {
+.page-title-link,
+.page-title-link:visited {
   text-decoration: none;
   color: var(--color-content-aside-text);
 }

@@ -13,8 +13,8 @@
   --color-body-text: var(--color-gallery);
   --color-body-bg: var(--color-charcoal);
 
-  --color-link-text: var(--color-twilight);
-  --color-link-hocus-text: var(--color-tropical);
+  --color-link-text: var(--color-tropical);
+  --color-link-hocus-text: var(--color-twilight);
   --color-link-active-text: var(--color-scarlet);
   --color-link-visited-text: var(--color-scarlet);
 
@@ -22,7 +22,7 @@
   --color-code-bg: var(--color-gallery-translucent);
 
   --color-highlight-text: var(--color-charcoal);
-  --color-highlight-bg: var(--color-twilight);
+  --color-highlight-bg: var(--color-tropical);
   --color-highlight-link: currentColor;
 
   --color-quote-border: var(--color-twilight);
