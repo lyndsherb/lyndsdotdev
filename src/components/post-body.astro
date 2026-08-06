@@ -8,7 +8,7 @@ const styleProp = background ? { style: `--background-image: url(${background.im
 ---
 <ContentAside title={title}>
   {background ? <div class="content-background" {...styleProp}></div> : null}
-  <p class="content-date"><Date date={date} class="highlight"></p>
+  <p class="content-date"><Date date={date} class="highlight" /></p>
   <span class="content-tags highlight">Tags: 
   {tags.map((tag: string, index: number) => {
     const showComma = index < tags.length - 1;
