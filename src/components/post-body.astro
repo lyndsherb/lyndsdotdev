@@ -2,20 +2,24 @@
 import ContentAside from './content-aside.astro';
 import Date from './date.astro';
 
-const { title, date, tags, background } = Astro.props;
+const { title, date, tags, background, description } = Astro.props;
 
 const styleProp = background ? { style: `--background-image: url(${background.image.src})` } : {};
 ---
 <ContentAside title={title}>
   {background ? <div class="content-background" {...styleProp}></div> : null}
-  <p class="content-date"><Date date={date} class="highlight" /></p>
-  <span class="content-tags highlight">Tags: 
-  {tags.map((tag: string, index: number) => {
-    const showComma = index < tags.length - 1;
-
-    return (<span><a href={`/tags/${tag.replace(/\s/g, "-")}`}>{tag}{showComma ? ',' : ''}</a>&nbsp;</span>);
-  })}
-  </span>
+  {description ? <em class="content-description highlight">{description}</em> : null}
+  <div class="content-meta">
+    <p class="content-date"><Date date={date} class="highlight" /></p>
+    <p class="content-tags"> 
+      <span class="highlight">Tags: {tags.map((tag: string, index: number) => {
+        const showComma = index < tags.length - 1;
+        
+        return (<span><a href={`/tags/${tag.replace(/\s/g, "-")}`}>{tag}{showComma ? ',' : ''}</a>&nbsp;</span>);
+      })}
+      </span>
+    </p>
+  </div>
   {background?.credit ? (
     <p><span class="highlight text-small">Background image credit: <a href={background.credit.url}>{background.credit.text}</a></span></p>
   ) : null}

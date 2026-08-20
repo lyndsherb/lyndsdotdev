@@ -67,6 +67,8 @@ pre,
 mark,
 .highlight {
   padding: 0.25rem;
+  line-height: 1.45;
+  box-decoration-break: clone;
   color: var(--color-highlight-text);
   background-color: var(--color-highlight-bg);
 }
@@ -132,7 +134,6 @@ blockquote,
 .cool-title {
   font-size: clamp(1.5rem, 3vw, 2rem);
   line-height: 3.5rem;
-  box-decoration-break: clone;
   padding: 1rem;
   box-shadow: 1rem 1.3rem 0 var(--color-cool-title-shadow);
 }
@@ -179,9 +180,30 @@ blockquote,
   z-index: 1;
 }
 
+.content-meta {
+  display: flex;
+  justify-content: space-between;
+  gap: var(--grid-gap);
+}
+
+.content-description {
+  display: inline-block;
+  margin: calc(var(--grid-gap) * 0.5) 0;
+}
+
 .content-date,
 .content-tags {
+  display: block;
+  max-width: max-content;
   font-size: 0.875rem;
+}
+
+.content-date {
+  flex: 1 0 auto;
+}
+
+.content-tags {
+  text-align: right;
 }
 
 :not(.content-body) :where(h2, h3, h4, h5, h6) {
