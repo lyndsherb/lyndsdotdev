@@ -1,22 +1,22 @@
 :root {
+  /* https://coolors.co/f98ab5-91f3f1-282524-e3e3e3-99aaff */
   --color-charcoal: #282524;
   --color-gallery: #E3E3E3;
 
   --color-gallery-translucent: #E3E3E333;
 
-  /* https://coolors.co/7ef1ef-ffac99-D3D0F1 */
-  --color-twilight: #D3D0F1;
-  --color-scarlet: #FFAC99;
-  --color-tropical: #7EF1EF;
+  --color-bubblegum: #FBB1CE;
+  --color-wisteria: #C2CCFF;
+  --color-tropical: #91F3F1;
   
 
   --color-body-text: var(--color-gallery);
   --color-body-bg: var(--color-charcoal);
 
   --color-link-text: var(--color-tropical);
-  --color-link-hocus-text: var(--color-twilight);
-  --color-link-active-text: var(--color-scarlet);
-  --color-link-visited-text: var(--color-scarlet);
+  --color-link-hocus-text: var(--color-bubblegum);
+  --color-link-active-text: var(--color-wisteria);
+  --color-link-visited-text: var(--color-wisteria);
 
   --color-code-text: var(--color-gallery);
   --color-code-bg: var(--color-gallery-translucent);
@@ -25,7 +25,7 @@
   --color-highlight-bg: var(--color-tropical);
   --color-highlight-link: currentColor;
 
-  --color-quote-border: var(--color-twilight);
+  --color-quote-border: var(--color-bubblegum);
 
   --color-cool-title-shadow: var(--color-gallery-translucent);
 
@@ -38,6 +38,6 @@
   --color-content-aside-link: currentColor;
   --color-content-aside-border: var(--color-charcoal);
 
-  --color-separator-body: var(--color-twilight);
+  --color-separator-body: var(--color-tropical);
   --color-separator-shadow: var(--color-gallery-translucent);
 }
