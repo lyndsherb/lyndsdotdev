@@ -1,0 +1,25 @@
+---
+import { getCollection, render, type CollectionEntry } from 'astro:content';
+import Layout from "../layouts/default.astro"
+import ContentAside from '../components/content-aside.astro';
+
+export async function getStaticPaths() {
+	const pages = await getCollection('pages');
+	return pages.map((page) => ({
+		params: { slug: page.id },
+		props: page,
+	}));
+}
+
+type Props = CollectionEntry<'pages'>;
+
+const page = Astro.props;
+const { Content } = await render(page);
+---
+
+<Layout {...page.data}>
+  <ContentAside title={page.data.title} />
+  <div class="content-body content-page">
+    <Content />
+  </div>
+</Layout>

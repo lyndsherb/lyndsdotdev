@@ -3,8 +3,8 @@ import { defineCollection } from 'astro:content';
 import { glob } from 'astro/loaders';
 
 const posts = defineCollection({
-  // Load Markdown and MDX files in the `src/posts/` directory.
-  loader: glob({ base: './src/posts', pattern: '**/*.{md,mdx}' }),
+  // Load Markdown and MDX files in the `content/posts/` directory.
+  loader: glob({ base: './content/posts', pattern: '**/*.md' }),
   // Type-check frontmatter using a schema
   schema: ({ image }) =>
     z.object({
@@ -22,4 +22,12 @@ const posts = defineCollection({
   }),
 });
 
-export const collections = { posts };
+const pages = defineCollection({
+  loader: glob({ base: './content/pages', pattern: '**/*.md' }),
+  schema: () => z.object({
+    title: z.string(),
+    description: z.string(),
+  }),
+});
+
+export const collections = { posts, pages };
