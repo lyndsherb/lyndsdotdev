@@ -36,4 +36,7 @@
   --color-content-aside-text: var(--color-charcoal);
   --color-content-aside-link: currentColor;
   --color-content-aside-border: var(--color-gallery);
+
+  --color-separator-body: var(--color-twilight);
+  --color-separator-shadow: var(--color-charcoal-translucent);
 }

@@ -21,8 +21,9 @@ body {
 }
 
 hr {
-  border: 2px solid var(--color-body-text);
-  box-shadow: 1rem 0.25rem 0 var(--color-highlight-bg);
+  border: 2px solid var(--color-separator-body);
+  box-shadow: 0.35rem 0.2rem 0 var(--color-separator-shadow);
+  margin: 1rem 0;
 }
 
 .page-body,
