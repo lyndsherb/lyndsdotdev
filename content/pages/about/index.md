@@ -42,7 +42,9 @@ From code to documentation to communication, I strive towards doing my best for 
 _includes Ampersand Commerce, acquired by IDHL_
 
 **Principal Front-End Engineer** - _May 2022 - July 2025_
+
 **Senior Front-End Engineer** - _November 2018 - May 2022_
+
 **Front-End Engineer** - _June 2018 - November 2022_
 
 * Encouraged adoption of React as the main technology for a greenfield project
@@ -106,6 +108,8 @@ _includes Ampersand Commerce, acquired by IDHL_
   <span class="highlight cool-title">Education</span>
 </h2>
 
-* **Southampton Solent University** - _2007 - 2011_ - BA (Hons) Illustration
-* **Workington Sixth Form** - _2005 - 2007_ - 4 A-levels
-* **Stainburn School and Science College** - _2000 - 2005_ - 10 GCSEs; Intermediate GNVQ ICT
+**Southampton Solent University** - _2007 - 2011_ - BA (Hons) Illustration
+
+**Workington Sixth Form** - _2005 - 2007_ - 4 A-levels
+
+**Stainburn School and Science College** - _2000 - 2005_ - 10 GCSEs; Intermediate GNVQ ICT
