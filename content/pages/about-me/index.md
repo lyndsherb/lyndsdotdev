@@ -2,7 +2,6 @@
 title: About Lyndsey
 description: About Lyndsey, senior front-end developer in the Greater Manchester area
 ---
-# About me
 
 For over a decade I've been making the Internet a better place; transforming beautiful designs into accessible, functional pages across e-commerce, publishing and SaaS. 
 
@@ -10,7 +9,9 @@ I’m great within a team, always free to lend a helping hand. I work hard to en
 
 From code to documentation to communication, I strive towards doing my best for colleagues, customers and stakeholders alike.
 
-## Skills
+<h2 class="cool-title-heading">
+  <span class="highlight cool-title">Skills</span>
+</h2>
 
 * **Languages:** TypeScript, JavaScript (ES6+), HTML5, CSS3, SCSS
 * **Frameworks and libraries:** React, RxJS, Node.js, Magento 2, CSS-in-JS, Mantine
@@ -21,7 +22,9 @@ From code to documentation to communication, I strive towards doing my best for 
 * **Ways of working:** Scrum, Shape Up, documentation, presenting, mentoring
 * **AI-assisted tooling:** Claude, Claude Design
 
-## Career history
+<h2 class="cool-title-heading">
+  <span class="highlight cool-title">Career history</span>
+</h2>
 
 ### Vypr
 
@@ -31,6 +34,8 @@ From code to documentation to communication, I strive towards doing my best for 
 * Implemented new Playwright suite with core functionality tests, allowing for more confidence when shipping features and ease of adding tests for new features
 * Updated customer emails to use Resend, allowing for easier style customisation and improving stability
 * Built highly-requested new features as part of the Customer Delight team
+
+---
 
 ### IDHL
 
@@ -46,6 +51,8 @@ _includes Ampersand Commerce, acquired by IDHL_
 * Onboarded and offboarded a variety of clients, in all instances documenting codebases and providing mentoring and training resources to allow developers to get started with ease
 * Spearheaded monthly meetings with the frontend team, improving team synergy and improving standards and workflow. Following our success, similar meetings were spearheaded across the rest of the business.
 
+---
+
 ### LADbible Group
 
 **Front-End Engineer** - _March 2016 - June 2018_
@@ -57,6 +64,8 @@ _includes Ampersand Commerce, acquired by IDHL_
 * Implemented automated website testing with our Continuous Integration system
 * Gave a well-received talk at LADbible Unwrapped #lbunwrapped about the front-end development process
 
+---
+
 ### Missguided Ltd
 
 **Front-End Engineer** - _August 2014 - March 2016_
@@ -65,6 +74,8 @@ _includes Ampersand Commerce, acquired by IDHL_
 * Assisted with maintaining microsites built by the Marketing team
 * Researched and assisted with development of functionality to display sales offers during peak sales periods
 * Part of the core team on rebuilding the front-end into a fully responsive site, providing a better, more consistent experience to all customers
+
+---
 
 ### Dramco Ltd
 
@@ -75,9 +86,13 @@ _includes Ampersand Commerce, acquired by IDHL_
 * Responsible for all graphic content, from web images to printed advertisements
 * Created and edited e-mail templates for online marketing campaigns
 
+---
+
 ### Berkeley Group Holdings PLC
 
 **Accounts Assistant** - _October 2012 - December 2012_
+
+---
 
 ### Decisive Marketing
 
@@ -87,7 +102,9 @@ _includes Ampersand Commerce, acquired by IDHL_
 * Maintained and customised Wordpress-based sites for a select number of clients
 * Designed newsletters and graphics for email and print
 
-## Education
+<h2 class="cool-title-heading">
+  <span class="highlight cool-title">Education</span>
+</h2>
 
 * **Southampton Solent University** - _2007 - 2011_ - BA (Hons) Illustration
 * **Workington Sixth Form** - _2005 - 2007_ - 4 A-levels

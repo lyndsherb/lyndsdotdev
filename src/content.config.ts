@@ -23,7 +23,7 @@ const posts = defineCollection({
 });
 
 const pages = defineCollection({
-  loader: glob({ base: './content/pages', pattern: '**/*.md'}),
+  loader: glob({ base: './content/pages', pattern: '**/*.md' }),
   schema: () => z.object({
     title: z.string(),
     description: z.string(),
